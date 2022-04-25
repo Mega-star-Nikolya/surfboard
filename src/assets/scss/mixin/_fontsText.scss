@@ -1,0 +1,53 @@
+// Основные шрифты в макете
+
+@mixin titleText {
+  font-weight: 700;
+  font-size: rem(48px);
+  line-height: 1.208; //58px
+}
+
+@mixin subtitleText {
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 1.19; //25px
+}
+
+@mixin textLight {
+  font-weight: 300;
+  font-size: rem(18px);
+  line-height: 1.22222; //22px
+  color: $secondary;
+}
+
+@mixin textRegular {
+  font-weight: 400;
+  font-size: rem(18px);
+  line-height: 1.22222; //22px
+}
+
+@mixin textBold {
+  font-weight: 700;
+  font-size: rem(27px);
+  line-height: 1.185; //32px
+  color: $primary;
+}
+
+@mixin navLinkText {
+  font-weight: 700;
+  font-size: rem(18px);
+  line-height: 1.22222; //22px
+  color: $white;
+}
+
+@mixin contactsText {
+  font-weight: 700;
+  font-size: rem(22px);
+  line-height: 0.818; //18px
+  color: $white;
+}
+
+@mixin inputText {
+  font-weight: 400;
+  font-size: rem(14px);
+  line-height: 1.428571428571429; //20px
+}

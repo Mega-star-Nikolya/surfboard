@@ -1,0 +1,80 @@
+.slider--reviews {
+  background: #F8FAF9;
+  padding: rem(42px) rem(142px) rem(42px) rem(42px);
+  margin-bottom: 15px;
+}
+
+.slider-line {
+  display: flex;
+}
+
+.slider__item {
+  display: flex;
+  gap: rem(40px);
+}
+
+.slider__item__avatar {
+  width: rem(253px);
+  height: rem(264px);
+  object-fit: cover;
+  transition: transform 1s ease-in-out;
+
+  &:hover {
+    transform: scale(1.1);
+    transition-duration: 1s;
+  }
+}
+
+.slider__info {
+  padding-top: rem(28px);
+}
+
+.slider__info-title {
+  margin-bottom: rem(14px);
+  @include textBold;
+}
+
+.slider__info-text {
+  margin-bottom: rem(25px);
+  @include textRegular;
+  color: $secondary;
+}
+
+.slider__info-name {
+  font-weight: 500;
+  font-size: rem(18px);
+  line-height: 1.33333; //24px
+
+  color: $primary;
+}
+
+.slider-dots {
+  display: flex;
+  justify-content: center;
+}
+
+.slider-dots__item {
+  cursor: pointer;
+  display: block;
+  width: rem(86px);
+  height: rem(86px);
+  object-fit: cover;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 6px solid transparent;
+  position: relative;
+  transition: border .2s linear;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &.actives,
+  &:hover {
+    border: 6px solid #FEDB3F;
+  }
+
+}

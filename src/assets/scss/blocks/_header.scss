@@ -1,0 +1,18 @@
+.header__inner {
+  @include flexCentr;
+  gap: rem(47px);
+  width: 100%;
+  height: rem(40px);
+}
+
+.header__left {
+  width: 6%;
+}
+
+.header__center {
+  width: 76%;
+}
+
+.header__right {
+  width: 18%;
+}

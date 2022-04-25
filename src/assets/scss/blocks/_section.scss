@@ -1,0 +1,47 @@
+.section {
+  height: 100vh;
+  min-height: rem(650px);
+  @include flexColumnCentr;
+  border: 1px solid #000000;
+}
+
+.section--cta {
+  background: #2B2B2B url(#{$assetImages}/cta_form/bg_cta.jpg) center no-repeat;
+  background-size: cover;
+}
+
+.section--map {
+  background: url(#{$assetImages}/map/map.jpg) center no-repeat;
+  background-size: cover;
+}
+
+.sestion__header {
+  text-align: center;
+  margin-bottom: rem(49px);
+}
+
+.sestion__header--reviews {
+  margin-bottom: rem(32px);
+}
+
+.sestion__header--cta {
+  margin-bottom: rem(59px);
+}
+
+.section__title {
+  @include titleText;
+  color: $primary;
+  text-transform: uppercase;
+  margin-bottom: rem(17px);
+}
+
+.section__title--cta {
+  color: $white;
+  margin-bottom: rem(59px);
+}
+
+.section__subtitle {
+  @include textRegular;
+  color: $secondary;
+  padding: 0 27%;
+}

@@ -1,0 +1,118 @@
+<section class="section section--cta">
+  <div class="container">
+    <div class="sestion__header sestion__header--cta">
+      <h2 class="section__title section__title--cta">закажите доску</h2>
+    </div>
+
+    <form class="form">
+      <div class="form__col">
+        <div class="form__row">
+          <label class="form__item form__item--contact">
+            Имя
+            <input
+              type="text"
+              name="name"
+              style="text-transform: capitalize"
+              class="form__input"
+            />
+          </label>
+          <label class="form__item form__item--contact">
+            Телефон
+            <input
+              type="tel"
+              name="tel"
+              onkeyup="this.value = this.value.replace(/[^\d]/g,'');"
+              title="Пример: 89036850300"
+              class="form__input"
+            />
+          </label>
+        </div>
+        <div class="form__row">
+          <label class="form__item">
+            Улица
+            <input
+              type="text"
+              name="name"
+              class="form__input form__input--street"
+            />
+          </label>
+        </div>
+        <div class="form__row">
+          <label class="form__item">
+            Дом
+            <input
+              type="text"
+              onkeyup="this.value = this.value.replace(/[^\d]/g,'');"
+              class="form__input form__input--house"
+            />
+          </label>
+          <label class="form__item">
+            Корпус
+            <input type="text" class="form__input form__input--house" />
+          </label>
+          <label class="form__item">
+            Квартира
+            <input
+              type="text"
+              onkeyup="this.value = this.value.replace(/[^\d]/g,'');"
+              class="form__input form__input--house"
+            />
+          </label>
+          <label class="form__item">
+            Этаж
+            <input
+              type="text"
+              onkeyup="this.value = this.value.replace(/[^\d]/g,'');"
+              class="form__input form__input--house"
+            />
+          </label>
+        </div>
+      </div>
+      <div class="form__col">
+        <div class="form__row">
+          <label class="form__item">
+            Комментарий
+            <textarea class="form__input form__input--textarea"></textarea>
+          </label>
+        </div>
+        <div class="form__row">
+          <div class="controls">
+            <div class="controls__item">
+              <label class="controls__elem">
+                <input type="checkbox" class="controls__checkbox" />
+                <div class="checkbox__icon"></div>
+                <div class="controls__name">Оплата наличными</div>
+              </label>
+            </div>
+            <div class="controls__item">
+              <label class="controls__elem">
+                <input type="checkbox" class="controls__checkbox" />
+                <div class="checkbox__icon"></div>
+                <div class="controls__name">Оплата картой</div>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="form__row">
+          <div class="controls">
+            <div class="controls__item">
+              <label class="controls__elem">
+                <input type="checkbox" class="controls__checkbox" />
+                <div class="checkbox"></div>
+                <div class="controls__name">Не перезванивать</div>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="form__row form__row-btn">
+          <div class="form__btn">
+            <a class="btn btn--yellow" href="#">Заказать</a>
+            <button type="reset" class="btn__reset">Очистить</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>

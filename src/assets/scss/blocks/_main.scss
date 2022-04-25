@@ -1,0 +1,16 @@
+.main {
+  width: 46%;
+}
+
+.main__title {
+  margin-bottom: rem(17px);
+  @include titleText;
+  color: $white;
+  text-transform: uppercase;
+}
+
+.main__subtitle {
+  margin-bottom: rem(39px);
+  @include subtitleText;
+  color: $white;
+}

@@ -1,0 +1,15 @@
+.nav__list {
+  @include flexCentr;
+  gap: rem(22px);
+
+  a {
+    @include navLinkText; //fontsText.scss
+    text-decoration: none;
+    opacity: 1;
+    transition: opacity .2s linear;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}

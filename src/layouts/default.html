@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    {{> head }}
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="page">
+        <!-- Hero:
+            1)  Задаем задний фон для Header и Main - 3 картинки(слайдер)
+            -->
+        <section class="hero">
+          <!-- Контейнер:
+            1)  Задаем для контента габаритную рамку
+            -->
+          <div class="container hero__container">
+            <!-- Header:
+            1) Logo (div_img) header__left
+            2) Nav (nav_nav) ul>li header__center
+            3) Contacts (address_contacts_a tel) header__right
+            -->
+            {{> header }}
+            <!-- main:
+            1)title(h1)
+            2)subtitle(p)
+            3)Кнопка(btn)
+            -->
+            {{> main }}
+            <!-- bullet:
+            1)буллеты(ul>li)
+            -->
+            {{> bullet }}
+          </div>
+        </section>
+
+        <!-- 1) Section - features title(h2) subtitle(h3) + container -->
+        {{> features }}
+
+        <!-- 2) div-Shop -->
+
+        <!-- 3) section- Team title(h2) + container -->
+
+        <!-- 4) div- Slider -->
+
+        <!-- 5) section - reviews title(h2) + container -->
+        {{> reviews }}
+
+        <!-- 6) section- video title(h2) + container -->
+
+        <!-- 7) section- CTA (call to action)  title(h2) -->
+        {{> cta }}
+
+        <!-- 8) div- map -->
+        {{> body }}
+
+        <!-- footer -->
+        {{> footer }}
+      </div>
+    </div>
+
+    {{> nav }}
+    <!-- в секции удалить бордер !!!!!! -->
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>

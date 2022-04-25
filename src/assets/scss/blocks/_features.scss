@@ -1,0 +1,61 @@
+.features {
+  display: flex;
+  text-align: center;
+}
+
+
+.features__item {
+  flex: 1;
+  padding: 0 2.7%;
+  position: relative;
+
+  &:first-child {
+    padding-left: 0;
+  }
+
+  &:last-child {
+    padding-right: 0;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  &::before {
+    content: url(#{$assetImages}/feature/combined_shape.png);
+    position: absolute;
+    top: 22%;
+    right: 0;
+    transform: translateX(50%);
+  }
+}
+
+.features__img {
+  margin-bottom: rem(13px);
+  display: inline-block;
+  width: rem(128px);
+  height: rem(128px);
+  background-color: #F2F5F4;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+}
+
+.features__icon {
+  display: block;
+  width: rem(68px);
+  height: rem(68px);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.features__title {
+  margin-bottom: rem(20px);
+  @include textBold;
+}
+
+.reatures__text {
+  @include textLight;
+}

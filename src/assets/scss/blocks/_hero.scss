@@ -1,0 +1,7 @@
+.hero {
+  height: 100vh;
+  min-height: rem(650px);
+  background: #1968B1 url(#{$assetImages}/main/main_1.jpg) center no-repeat;
+  background-size: cover;
+  border: 1px solid #000000;
+}

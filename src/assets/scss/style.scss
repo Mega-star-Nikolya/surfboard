@@ -1,0 +1,72 @@
+// Переменные
+@import "_vars";
+
+// Сброс всех стандартных настроек
+@import "vendor/reset";
+
+// Функции
+@import "vendor/px-rem";
+
+// Миксины
+@import "mixin/fontsText";
+@import "mixin/varMixin";
+
+
+body {
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    /*Дальше нужно посмотреть какой основной шрифт везде используется*/
+
+    font-family: 'Alegreya Sans', Arial, Helvetica, sans-serif;
+    font-size: rem(18px);
+    line-height: 1.22222; //22px
+
+    background-color: $white;
+    color: $secondary;
+}
+
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+    /*Свойства width и height включают в себя значения полей и границ, но не отступов (margin)*/
+}
+
+p {
+    margin: 0 0 10px;
+}
+
+.btn {
+    padding: 0;
+}
+
+.wrapper {
+    position: relative;
+    width: 100%;
+    min-width: rem(940px) + rem(20px);
+    min-height: 100%;
+    overflow: hidden;
+}
+
+
+/* blocks */
+@import "blocks/container";
+@import "blocks/header";
+@import "blocks/nav";
+@import "blocks/contacts";
+@import "blocks/hero";
+@import "blocks/main";
+@import "blocks/btn";
+@import "blocks/bullet";
+@import "blocks/section";
+@import "blocks/features";
+@import "blocks/reviews";
+@import "blocks/form";
+@import "blocks/controls";
+
+
+
+
+
+@import "blocks/map";
+@import "blocks/fixedMenu";

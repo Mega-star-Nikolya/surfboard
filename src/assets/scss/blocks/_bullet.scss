@@ -1,0 +1,21 @@
+.bullet {
+  display: flex;
+  gap: rem(30px);
+}
+
+.bullet__item {
+  @include flexCentr;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  color: $white;
+  gap: rem(18px);
+}
+
+.bullet__icon {
+  width: rem(35px);
+}
+
+.bullet__text {
+  max-width: rem(90px);
+}

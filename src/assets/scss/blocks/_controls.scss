@@ -1,0 +1,66 @@
+.controls {
+  display: flex;
+  gap: rem(20px);
+}
+
+.controls__elem {
+  @include flexCentr;
+  gap: rem(10px);
+  cursor: pointer;
+}
+
+.controls__checkbox {
+  display: none;
+
+  &:checked~.checkbox__icon::after,
+  &:checked~.checkbox::after {
+    display: block;
+  }
+}
+
+.checkbox {
+  display: inline-block;
+  width: rem(26px);
+  height: rem(26px);
+  position: relative;
+  border-radius: rem(4px);
+  background-color: $white;
+
+  &::after {
+    content: url(#{$assetImages}/cta_form/tick_symbol.png);
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    transform: translate(-50%, -10%);
+    width: rem(10px);
+    height: rem(8px);
+  }
+}
+
+.checkbox__icon {
+  display: inline-block;
+  width: rem(26px);
+  height: rem(26px);
+  position: relative;
+  border-radius: 50%;
+  background-color: $white;
+
+  &::after {
+    content: "";
+    border-radius: 50%;
+    display: none;
+    background: $btnYellow;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    height: rem(13px);
+    width: rem(13px);
+  }
+}
+
+.controls__name {
+  @include textRegular;
+  color: $white;
+}

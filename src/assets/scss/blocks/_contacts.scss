@@ -1,0 +1,12 @@
+.contacts__phone {
+  @include contactsText;
+  text-decoration: none;
+  transition: color .2s linear;
+
+  opacity: 1;
+  transition: opacity .2s linear;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}

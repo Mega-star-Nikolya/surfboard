@@ -1,0 +1,41 @@
+.btn {
+  display: inline-block;
+
+  background: none;
+  color: $black;
+  border-radius: rem(100px);
+
+  font-family: inherit;
+  font-weight: 800;
+  font-size: rem(16px);
+  line-height: 1.125; //18px
+
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  &--yellow {
+    padding: rem(21px) rem(42px);
+    background: $btnYellow;
+    transition: color .3s linear, background-color .3s linear;
+
+    &:hover {
+      background-color: $black;
+      color: $btnYellow;
+    }
+  }
+}
+
+.btn__reset {
+  background: none;
+  border: none;
+
+  font-family: inherit;
+  @include textRegular;
+  color: $white;
+  transition: color .2s linear;
+
+  &:hover {
+    color: $Yellow;
+  }
+}
