@@ -365,7 +365,7 @@ body {
     margin: 0;
     -webkit-font-smoothing: antialiased;
   /*Дальше нужно посмотреть какой основной шрифт везде используется*/
-    font-family: "Alegreya Sans", Arial, Helvetica, sans-serif;
+    font-family: "Alegreya Sans", "Play", Arial, Helvetica, sans-serif;
     font-size: 1.125rem;
     line-height: 1.22222;
     background-color: white;
@@ -399,17 +399,6 @@ p {
 .container {
     max-width: 58.75rem;
     margin: 0 auto;
-}
-
-.hero__container {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    height: 100%;
-    padding: 1.75rem 0 4rem;
 }
 
 .header__inner {
@@ -475,12 +464,23 @@ p {
     opacity: 0.7;
 }
 
-.hero {
+.hero__section {
     height: 100vh;
     min-height: 40.625rem;
     background: #1968B1 url(../images/main/main_1.jpg) center no-repeat;
     background-size: cover;
     border: 1px solid #000000;
+}
+
+.hero__container {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    height: 100%;
+    padding: 1.75rem 0 4rem;
 }
 
 .main {
@@ -508,7 +508,8 @@ p {
     display: inline-block;
     background: none;
     color: #000000;
-    border-radius: 6.25rem;
+    border-radius: 100px;
+    border: none;
     font-family: inherit;
     font-weight: 800;
     font-size: 1rem;
@@ -717,22 +718,17 @@ p {
     gap: 2.5rem;
 }
 
-.slider__item__avatar {
+.slider__item__photo {
     width: 15.8125rem;
     height: 16.5rem;
     -o-object-fit: cover;
     object-fit: cover;
-    transition: -webkit-transform 1s ease-in-out;
-    transition: transform 1s ease-in-out;
-    transition: transform 1s ease-in-out, -webkit-transform 1s ease-in-out;
 }
 
-.slider__item__avatar:hover {
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
-    transition-duration: 1s;
-}
-
+/* .slider__item__avatar {
+  width: 100%;
+  height: 100%;
+} */
 .slider__info {
     padding-top: 1.75rem;
 }
@@ -754,9 +750,10 @@ p {
 }
 
 .slider__info-name {
-    font-weight: 500;
+    font-family: "Play", sans-serif;
+    font-weight: 700;
     font-size: 1.125rem;
-    line-height: 1.33333;
+    line-height: 1.3333333;
     color: #292929;
 }
 
@@ -778,7 +775,7 @@ p {
     border-radius: 50%;
     border: 6px solid transparent;
     position: relative;
-    transition: border 0.2s linear;
+    transition: border 0.3s linear;
 }
 
 .slider-dots__item img {
@@ -856,8 +853,8 @@ textarea {
     height: 3.625rem;
     padding: 1rem 1.375rem;
     background: white;
-    border: 0.1875rem solid transparent;
-    border-radius: 0.25rem;
+    border: 3px solid transparent;
+    border-radius: 4px;
     font-weight: 400;
     font-size: 0.875rem;
     line-height: 1.4285714286;
@@ -866,7 +863,7 @@ textarea {
 }
 
 .form__input:focus {
-    border: 0.1875rem solid #FEDB3F;
+    border: 3px solid #FEDB3F;
 }
 
 .form__input--street {
@@ -903,24 +900,24 @@ textarea {
     cursor: pointer;
 }
 
-.controls__checkbox {
+.controls__input {
     display: none;
 }
 
-.controls__checkbox:checked ~ .checkbox__icon::after, .controls__checkbox:checked ~ .checkbox::after {
+.controls__input:checked ~ .controls__icon::after, .controls__input:checked ~ .controls__icon-symbol::after {
     display: block;
 }
 
-.checkbox {
+.controls__icon-symbol {
     display: inline-block;
     width: 1.625rem;
     height: 1.625rem;
     position: relative;
-    border-radius: 0.25rem;
+    border-radius: 4px;
     background-color: white;
 }
 
-.checkbox::after {
+.controls__icon-symbol::after {
     content: url(../images/cta_form/tick_symbol.png);
     display: none;
     position: absolute;
@@ -932,7 +929,7 @@ textarea {
     height: 0.5rem;
 }
 
-.checkbox__icon {
+.controls__icon {
     display: inline-block;
     width: 1.625rem;
     height: 1.625rem;
@@ -941,7 +938,7 @@ textarea {
     background-color: white;
 }
 
-.checkbox__icon::after {
+.controls__icon::after {
     content: "";
     border-radius: 50%;
     display: none;
@@ -986,7 +983,7 @@ textarea {
     width: 1rem;
     height: 1rem;
     border-radius: 50%;
-    border: 0.0625rem solid transparent;
+    border: 1px solid transparent;
     position: relative;
 }
 
