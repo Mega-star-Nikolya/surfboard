@@ -529,6 +529,21 @@ p {
     color: #FFD517;
 }
 
+.btn__reset {
+    background: none;
+    border: none;
+    font-family: inherit;
+    font-weight: 400;
+    font-size: 1.125rem;
+    line-height: 1.22222;
+    color: white;
+    transition: color 0.2s linear;
+}
+
+.btn__reset:hover {
+    color: #FEDB3F;
+}
+
 .bullet {
     display: -ms-flexbox;
     display: flex;
@@ -571,6 +586,11 @@ p {
 
 .section--cta {
     background: #2B2B2B url(../images/cta_form/bg_cta.jpg) center no-repeat;
+    background-size: cover;
+}
+
+.section--map {
+    background: url(../images/map/map.jpg) center no-repeat;
     background-size: cover;
 }
 
@@ -655,6 +675,7 @@ p {
 }
 
 .features__icon {
+    display: block;
     width: 4.25rem;
     height: 4.25rem;
     position: absolute;
@@ -748,6 +769,7 @@ p {
 
 .slider-dots__item {
     cursor: pointer;
+    display: block;
     width: 5.375rem;
     height: 5.375rem;
     -o-object-fit: cover;
@@ -785,7 +807,7 @@ textarea {
 .form__col {
     -ms-flex: 1;
     flex: 1;
-    margin-right: 1.25rem;
+    margin-right: 1.875rem;
 }
 
 .form__col:last-child {
@@ -800,6 +822,17 @@ textarea {
 
 .form__row:last-child {
     margin-bottom: 0;
+}
+
+.form__row-btn {
+    margin-top: 2.875rem;
+    margin-left: -0.625rem;
+}
+
+.form__btn {
+    display: -ms-flexbox;
+    display: flex;
+    gap: 1.25rem;
 }
 
 .form__item {
@@ -847,8 +880,8 @@ textarea {
 }
 
 .form__input--textarea {
-    margin-bottom: 2.375rem;
-    width: 28.75rem;
+    margin-bottom: 1.625rem;
+    width: 28.125rem;
     height: 9.5rem;
     resize: none;
 }
@@ -856,6 +889,7 @@ textarea {
 .controls {
     display: -ms-flexbox;
     display: flex;
+    gap: 1.25rem;
 }
 
 .controls__elem {
@@ -865,22 +899,60 @@ textarea {
     align-items: center;
     -ms-flex-pack: center;
     justify-content: center;
-    gap: 10px;
+    gap: 0.625rem;
+    cursor: pointer;
 }
 
-.controls__elem input {
-    border-radius: 50%;
+.controls__checkbox {
+    display: none;
 }
 
-.controls__radio {
+.controls__checkbox:checked ~ .checkbox__icon::after, .controls__checkbox:checked ~ .checkbox::after {
     display: block;
-    width: 25px;
-    height: 25px;
-    border-radius: 15px;
 }
 
-.controls__radio:checked {
-    background: #F2D4C9;
+.checkbox {
+    display: inline-block;
+    width: 1.625rem;
+    height: 1.625rem;
+    position: relative;
+    border-radius: 0.25rem;
+    background-color: white;
+}
+
+.checkbox::after {
+    content: url(../images/cta_form/tick_symbol.png);
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    -webkit-transform: translate(-50%, -10%);
+    transform: translate(-50%, -10%);
+    width: 0.625rem;
+    height: 0.5rem;
+}
+
+.checkbox__icon {
+    display: inline-block;
+    width: 1.625rem;
+    height: 1.625rem;
+    position: relative;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.checkbox__icon::after {
+    content: "";
+    border-radius: 50%;
+    display: none;
+    background: #FFD517;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate3d(-50%, -50%, 0);
+    transform: translate3d(-50%, -50%, 0);
+    height: 0.8125rem;
+    width: 0.8125rem;
 }
 
 .controls__name {
@@ -888,4 +960,46 @@ textarea {
     font-size: 1.125rem;
     line-height: 1.22222;
     color: white;
+}
+
+.map {
+    text-align: center;
+}
+
+.fixed-menu {
+    position: fixed;
+    top: 20%;
+    right: 3%;
+    z-index: 1000;
+}
+
+.fixed-menu__item {
+    margin-bottom: 0.3125rem;
+}
+
+.fixed-menu__item--active .fixed-menu__link {
+    border-color: white;
+}
+
+.fixed-menu__link {
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    border: 0.0625rem solid transparent;
+    position: relative;
+}
+
+.fixed-menu__link::before {
+    content: "";
+    display: block;
+    width: 0.375rem;
+    height: 0.375rem;
+    border-radius: 50%;
+    background: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }

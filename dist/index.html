@@ -22,8 +22,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Play:wght@700&display=swap"
       rel="stylesheet"
     />
     
@@ -37,11 +39,11 @@
   </head>
   <body>
     <div class="wrapper">
-      <div class="page">
+      <main class="page">
         <!-- Hero:
             1)  Задаем задний фон для Header и Main - 3 картинки(слайдер)
             -->
-        <section class="hero">
+        <section class="hero hero__section">
           <!-- Контейнер:
             1)  Задаем для контента габаритную рамку
             -->
@@ -104,13 +106,13 @@
             2)subtitle(p)
             3)Кнопка(btn)
             -->
-            <main class="main">
+            <div class="main">
               <div class="main__title-section">
                 <h1 class="main__title">Профессиональные доски для серфинга</h1>
                 <p class="main__subtitle">Самый большой выбор серфбордов в мире</p>
-                <a class="btn btn--yellow" href="#">Заказать</a>
+                <button type="submit" class="btn btn--yellow">Заказать</button>
               </div>
-            </main>
+            </div>
             <!-- bullet:
             1)буллеты(ul>li)
             -->
@@ -396,15 +398,15 @@
                   <div class="controls">
                     <div class="controls__item">
                       <label class="controls__elem">
-                        <input type="checkbox" class="controls__checkbox" />
-                        <div class="checkbox__icon"></div>
+                        <input type="radio" class="controls__input" />
+                        <div class="controls__icon"></div>
                         <div class="controls__name">Оплата наличными</div>
                       </label>
                     </div>
                     <div class="controls__item">
                       <label class="controls__elem">
-                        <input type="checkbox" class="controls__checkbox" />
-                        <div class="checkbox__icon"></div>
+                        <input type="radio" class="controls__input" />
+                        <div class="controls__icon"></div>
                         <div class="controls__name">Оплата картой</div>
                       </label>
                     </div>
@@ -415,8 +417,8 @@
                   <div class="controls">
                     <div class="controls__item">
                       <label class="controls__elem">
-                        <input type="checkbox" class="controls__checkbox" />
-                        <div class="checkbox"></div>
+                        <input type="radio" class="controls__input" />
+                        <div class="controls__icon-symbol"></div>
                         <div class="controls__name">Не перезванивать</div>
                       </label>
                     </div>
@@ -425,7 +427,7 @@
         
                 <div class="form__row form__row-btn">
                   <div class="form__btn">
-                    <a class="btn btn--yellow" href="#">Заказать</a>
+                    <button type="submit" class="btn btn--yellow">Заказать</button>
                     <button type="reset" class="btn__reset">Очистить</button>
                   </div>
                 </div>
@@ -451,9 +453,9 @@
 
         <!-- footer -->
         <footer></footer>
-      </div>
+      </main>
     </div>
-
+    <!-- Фиксированная навигация -->
     <nav class="fixed-menu">
       <ul class="fixed-menu__list">
         <li class="fixed-menu__item fixed-menu__item--active">

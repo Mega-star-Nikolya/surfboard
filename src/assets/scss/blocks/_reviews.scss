@@ -13,17 +13,16 @@
   gap: rem(40px);
 }
 
-.slider__item__avatar {
+.slider__item__photo {
   width: rem(253px);
   height: rem(264px);
   object-fit: cover;
-  transition: transform 1s ease-in-out;
-
-  &:hover {
-    transform: scale(1.1);
-    transition-duration: 1s;
-  }
 }
+
+/* .slider__item__avatar {
+  width: 100%;
+  height: 100%;
+} */
 
 .slider__info {
   padding-top: rem(28px);
@@ -41,10 +40,7 @@
 }
 
 .slider__info-name {
-  font-weight: 500;
-  font-size: rem(18px);
-  line-height: 1.33333; //24px
-
+  @include PlayBold;
   color: $primary;
 }
 
@@ -63,7 +59,7 @@
   border-radius: 50%;
   border: 6px solid transparent;
   position: relative;
-  transition: border .2s linear;
+  transition: border .3s linear;
 
   img {
     display: block;

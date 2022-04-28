@@ -9,21 +9,21 @@
   cursor: pointer;
 }
 
-.controls__checkbox {
+.controls__input {
   display: none;
 
-  &:checked~.checkbox__icon::after,
-  &:checked~.checkbox::after {
+  &:checked~.controls__icon::after,
+  &:checked~.controls__icon-symbol::after {
     display: block;
   }
 }
 
-.checkbox {
+.controls__icon-symbol {
   display: inline-block;
   width: rem(26px);
   height: rem(26px);
   position: relative;
-  border-radius: rem(4px);
+  border-radius: 4px;
   background-color: $white;
 
   &::after {
@@ -38,7 +38,7 @@
   }
 }
 
-.checkbox__icon {
+.controls__icon {
   display: inline-block;
   width: rem(26px);
   height: rem(26px);

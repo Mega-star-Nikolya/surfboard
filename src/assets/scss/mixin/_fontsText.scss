@@ -51,3 +51,10 @@
   font-size: rem(14px);
   line-height: 1.428571428571429; //20px
 }
+
+@mixin PlayBold {
+  font-family: 'Play', sans-serif;
+  font-weight: 700;
+  font-size: rem(18px);
+  line-height: 1.3333333; //24px
+}
