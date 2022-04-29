@@ -365,7 +365,7 @@ body {
     margin: 0;
     -webkit-font-smoothing: antialiased;
   /*Дальше нужно посмотреть какой основной шрифт везде используется*/
-    font-family: "Alegreya Sans", "Play", Arial, Helvetica, sans-serif;
+    font-family: "Alegreya Sans", Arial, Helvetica, sans-serif;
     font-size: 1.125rem;
     line-height: 1.22222;
     background-color: white;
@@ -436,6 +436,7 @@ p {
 }
 
 .nav__list a {
+    font-family: inherit;
     font-weight: 700;
     font-size: 1.125rem;
     line-height: 1.22222;
@@ -450,6 +451,7 @@ p {
 }
 
 .contacts__phone {
+    font-family: inherit;
     font-weight: 700;
     font-size: 1.375rem;
     line-height: 0.818;
@@ -489,6 +491,7 @@ p {
 
 .main__title {
     margin-bottom: 1.0625rem;
+    font-family: inherit;
     font-weight: 700;
     font-size: 3rem;
     line-height: 1.208;
@@ -498,6 +501,7 @@ p {
 
 .main__subtitle {
     margin-bottom: 2.4375rem;
+    font-family: inherit;
     font-weight: 400;
     font-size: 21px;
     line-height: 1.19;
@@ -533,6 +537,7 @@ p {
 .btn__reset {
     background: none;
     border: none;
+    font-family: inherit;
     font-family: inherit;
     font-weight: 400;
     font-size: 1.125rem;
@@ -609,6 +614,7 @@ p {
 }
 
 .section__title {
+    font-family: inherit;
     font-weight: 700;
     font-size: 3rem;
     line-height: 1.208;
@@ -623,6 +629,7 @@ p {
 }
 
 .section__subtitle {
+    font-family: inherit;
     font-weight: 400;
     font-size: 1.125rem;
     line-height: 1.22222;
@@ -688,6 +695,7 @@ p {
 
 .features__title {
     margin-bottom: 1.25rem;
+    font-family: inherit;
     font-weight: 700;
     font-size: 1.6875rem;
     line-height: 1.185;
@@ -695,6 +703,7 @@ p {
 }
 
 .reatures__text {
+    font-family: inherit;
     font-weight: 300;
     font-size: 1.125rem;
     line-height: 1.22222;
@@ -721,20 +730,24 @@ p {
 .slider__item__photo {
     width: 15.8125rem;
     height: 16.5rem;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+}
+
+.slider__item__avatar {
+    width: 100%;
+    height: 100%;
     -o-object-fit: cover;
     object-fit: cover;
 }
 
-/* .slider__item__avatar {
-  width: 100%;
-  height: 100%;
-} */
 .slider__info {
     padding-top: 1.75rem;
 }
 
 .slider__info-title {
     margin-bottom: 0.875rem;
+    font-family: inherit;
     font-weight: 700;
     font-size: 1.6875rem;
     line-height: 1.185;
@@ -743,6 +756,7 @@ p {
 
 .slider__info-text {
     margin-bottom: 1.5625rem;
+    font-family: inherit;
     font-weight: 400;
     font-size: 1.125rem;
     line-height: 1.22222;
@@ -750,7 +764,7 @@ p {
 }
 
 .slider__info-name {
-    font-family: "Play", sans-serif;
+    font-family: inherit;
     font-weight: 700;
     font-size: 1.125rem;
     line-height: 1.3333333;
@@ -833,6 +847,7 @@ textarea {
 }
 
 .form__item {
+    font-family: inherit;
     font-weight: 400;
     font-size: 1.125rem;
     line-height: 1.22222;
@@ -855,6 +870,7 @@ textarea {
     background: white;
     border: 3px solid transparent;
     border-radius: 4px;
+    font-family: inherit;
     font-weight: 400;
     font-size: 0.875rem;
     line-height: 1.4285714286;
@@ -953,6 +969,7 @@ textarea {
 }
 
 .controls__name {
+    font-family: inherit;
     font-weight: 400;
     font-size: 1.125rem;
     line-height: 1.22222;
