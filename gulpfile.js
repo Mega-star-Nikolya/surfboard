@@ -28,21 +28,24 @@ const path = {
         js:     distPath + "assets/js/",
         css:    distPath + "assets/css/",
         images: distPath + "assets/images/",
-        fonts:  distPath + "assets/fonts/"
+        fonts: distPath + "assets/fonts/",
+        video: distPath + "assets/video/"
     },
     src: {
         html:   srcPath + "*.html",
         js:     srcPath + "assets/js/*.js",
         css:    srcPath + "assets/scss/*.scss",
         images: srcPath + "assets/images/**/*.{jpg,png,svg,gif,ico,webp,webmanifest,xml,json}",
-        fonts:  srcPath + "assets/fonts/**/*.{eot,woff,woff2,ttf,svg}"
+        fonts: srcPath + "assets/fonts/**/*.{eot,woff,woff2,ttf,svg}",
+        video: srcPath + "assets/video/**/*.{mp4}"
     },
     watch: {
         html:   srcPath + "**/*.html",
         js:     srcPath + "assets/js/**/*.js",
         css:    srcPath + "assets/scss/**/*.scss",
         images: srcPath + "assets/images/**/*.{jpg,png,svg,gif,ico,webp,webmanifest,xml,json}",
-        fonts:  srcPath + "assets/fonts/**/*.{eot,woff,woff2,ttf,svg}"
+        fonts: srcPath + "assets/fonts/**/*.{eot,woff,woff2,ttf,svg}",
+        video: srcPath + "assets/video/**/*.{mp4}"
     },
     clean: "./" + distPath
 }
@@ -148,9 +151,11 @@ function js(cb) {
             }
         }))
         .pipe(webpackStream({
-          mode: "production",
+            mode: "development",
+            devtool: "source-map",
           output: {
-            filename: 'app.js',
+              filename: 'app.js',
+                iife: false,
           }
         }))
         .pipe(dest(path.build.js))
@@ -171,9 +176,11 @@ function jsWatch(cb) {
             }
         }))
         .pipe(webpackStream({
-          mode: "development",
+            mode: "development",
+            devtool: "source-map",
           output: {
-            filename: 'app.js',
+              filename: 'app.js',
+              iife: false,
           }
         }))
         .pipe(dest(path.build.js))
@@ -197,6 +204,13 @@ function fonts(cb) {
 
     cb();
 }
+function video(cb) {
+    return src(path.src.video)
+        .pipe(dest(path.build.video))
+        .pipe(browserSync.reload({stream: true}));
+
+    cb();
+}
 
 function clean(cb) {
     return del(path.clean);
@@ -210,9 +224,10 @@ function watchFiles() {
     gulp.watch([path.watch.js], jsWatch);
     gulp.watch([path.watch.images], images);
     gulp.watch([path.watch.fonts], fonts);
+    gulp.watch([path.watch.video], video);
 }
 
-const build = gulp.series(clean, gulp.parallel(html, css, js, images, fonts));
+const build = gulp.series(clean, gulp.parallel(html, css, js, images, fonts, video));
 const watch = gulp.parallel(build, watchFiles, serve);
 
 
@@ -223,6 +238,7 @@ exports.css = css;
 exports.js = js;
 exports.images = images;
 exports.fonts = fonts;
+exports.video = video;
 exports.clean = clean;
 exports.build = build;
 exports.watch = watch;

@@ -1,5 +1,7 @@
-.contacts__phone {
+.contacts__phone-header {
   @include contactsText;
+  color: $white;
+
   text-decoration: none;
   transition: color .2s linear;
 
@@ -9,4 +11,24 @@
   &:hover {
     opacity: 0.7;
   }
+}
+
+.contacts__phone-footer {
+  font-family: inherit;
+  font-weight: 400;
+  font-size: rem(21px);
+  line-height: 1; //21px
+  color: $primary;
+
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.phonewhite-icon {
+  width: rem(13px);
+  height: rem(14px);
+  fill: $white;
 }

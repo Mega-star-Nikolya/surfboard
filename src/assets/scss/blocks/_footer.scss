@@ -1,0 +1,29 @@
+footer {
+  background-color: $white;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.footer__inner {
+  padding: rem(18px) 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__address {
+  margin-bottom: rem(6px);
+}
+
+.footer__text {
+  @include subtitleText;
+  color: $primary;
+}
+
+.phoneblack-icon {
+  width: rem(12px);
+  height: rem(12px);
+  fill: $primary;
+}

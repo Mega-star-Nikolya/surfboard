@@ -36,10 +36,6 @@ p {
     margin: 0 0 10px;
 }
 
-.btn {
-    padding: 0;
-}
-
 .wrapper {
     position: relative;
     width: 100%;
@@ -47,7 +43,6 @@ p {
     min-height: 100%;
     overflow: hidden;
 }
-
 
 /* blocks */
 @import "blocks/container";
@@ -60,13 +55,11 @@ p {
 @import "blocks/bullet";
 @import "blocks/section";
 @import "blocks/features";
+@import "blocks/embed";
 @import "blocks/reviews";
 @import "blocks/form";
 @import "blocks/controls";
-
-
-
-
-
 @import "blocks/map";
+@import "blocks/footer";
+@import "blocks/social";
 @import "blocks/fixedMenu";

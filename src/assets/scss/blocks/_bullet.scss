@@ -13,7 +13,11 @@
 }
 
 .bullet__icon {
+  display: block;
   width: rem(35px);
+  height: rem(35px);
+  fill: $white;
+  text-align: center;
 }
 
 .bullet__text {
