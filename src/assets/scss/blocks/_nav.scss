@@ -1,8 +1,9 @@
 .nav__list {
   @include flexCentr;
   gap: rem(22px);
+  flex-wrap: wrap;
 
-  a {
+  .nav__link {
     @include navLinkText; //fontsText.scss
     text-decoration: none;
     opacity: 1;
@@ -12,4 +13,36 @@
       opacity: 0.7;
     }
   }
+}
+
+@include tablet {
+  .nav {
+    display: none;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    background-color: $bcMenuActive;
+
+    &.active {
+      display: block;
+    }
+
+    .nav__list {
+      @include flexColumnCentr;
+      padding: 20%;
+      gap: 0;
+    }
+
+    .nav__item {}
+
+    .nav__link {
+      font-weight: 400;
+      font-size: rem(36px);
+      line-height: rem(72px);
+    }
+  }
+
 }

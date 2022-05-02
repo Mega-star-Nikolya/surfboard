@@ -1,36 +1,70 @@
-// .embed,
-// .fr-video {
-//     display: block;
-//     width: 100px;
-//     height: 100px;
-//     position: relative;
-//     overflow: hidden;
-// 
-// 
-//     &:before {
-//         content: "";
-//         display: block;
-//         padding-top: 56.25%;
-//         /*Правильная пропорция 9х16 */
-//     }
-// 
-//     iframe,
-//     video,
-//     object,
-//     embed {
-//         width: 100%;
-//         height: 100%;
-//         position: absolute;
-//         top: 0;
-//         left: 0;
-//         z-index: 1;
-//     }
-// }
-
 .embed {
+    display: block;
+    width: rem(662px);
+    height: rem(392px);
+    position: relative;
+    margin: 0 auto;
 
     .video {
-        width: 662px;
-        height: 392px;
+        width: 100%;
+        height: 100%;
+    }
+
+    .player {
+        display: flex;
+        width: 100%;
+        align-items: center;
+
+        background-color: #404040;
+        padding: rem(9px) rem(17px);
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: 1;
+
+        .player__start {
+            margin-right: rem(29px);
+        }
+
+        .player__track {
+            margin-right: rem(43px);
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            .progress {
+                background: aqua;
+
+                &--volume {
+                    width: rem(56px);
+                }
+
+                &--track {
+                    width: rem(446px);
+                }
+            }
+        }
+
+        .player__volume {
+            margin-right: rem(25px);
+        }
+
+        .player__icon {
+            display: block;
+            text-align: center;
+            cursor: pointer;
+            fill: $white;
+
+            &--play {
+                width: rem(11px);
+                height: rem(16px);
+            }
+
+            &--volume {
+                width: rem(14px);
+                height: rem(17px);
+            }
+        }
     }
 }

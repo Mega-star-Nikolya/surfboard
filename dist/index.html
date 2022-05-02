@@ -29,12 +29,19 @@
       rel="stylesheet"
     />
     
+    <!-- Подключение иконок -->
     <script
       src="https://kit.fontawesome.com/11f3843a4c.js"
       crossorigin="anonymous"
     ></script>
     
-    <!-- Подключение иконок -->
+    <!-- Библиотека jquery -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     
     <title>LoftSchool | Surfboard</title>
   </head>
@@ -64,7 +71,7 @@
                   />
                 </div>
                 <div class="header__center">
-                  <nav class="nav">
+                  <nav class="nav" id="jsnav">
                     <ul class="nav__list">
                       <li class="nav__item">
                         <a class="nav__link" href="#">О нас</a>
@@ -98,6 +105,9 @@
                     8 800 903 90 90
                   </a>
                 </div>
+                <button class="burger" id="jsburger" type="button">
+                  <span class="burger__item">Menu</span>
+                </button>
               </div>
             </header>
             <!-- main:
@@ -308,10 +318,28 @@
               <h2 class="section__title section__title--video">как мы работаем</h2>
             </div>
             <div class="embed">
-              <video class="video" controls poster="assets/video/video.jpg">
+              <video controls class="video" poster="assets/images/video/video.jpg">
                 <source src="assets/video/videos.mp4" />
                 <source src="assets/video/videos.webm" />
               </video>
+              <div class="player">
+                <div class="player__start">
+                  <svg class="player__icon player__icon--play">
+                    <use xlink:href="assets/images/sprite/sprite.svg#play"></use>
+                  </svg>
+                </div>
+                <div class="player__track">
+                  <input class="progress progress--track" type="range" />
+                </div>
+                <div class="player__volume">
+                  <svg class="player__icon player__icon--volume">
+                    <use xlink:href="assets/images/sprite/sprite.svg#volume"></use>
+                  </svg>
+                </div>
+                <div class="player__track">
+                  <input class="progress progress--volume" type="range" />
+                </div>
+              </div>
             </div>
           </div>
         </section>

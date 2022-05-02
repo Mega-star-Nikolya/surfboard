@@ -1,0 +1,32 @@
+@mixin flexCentr {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flexColumnCentr {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+// Не потеряться в z-index 9999
+@function findZ($name) {
+  @if index($z-indexes, $name) {
+    @return (length($z-indexes) - index($z-indexes, $name))+1;
+  }
+
+  @else {
+    @warn 'There is no item "#{$name}" in this lixt; choose one of: #{$z-indexes}';
+    @return null;
+  }
+}
+
+$z-indexes:("outdated-browser",
+  "site-header",
+  "page-wrapper",
+  "site-footer",
+  "fixed-menu",
+  "modal",
+);

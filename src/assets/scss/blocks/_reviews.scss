@@ -1,7 +1,7 @@
 .slider--reviews {
   background: $bcSectionGray;
   padding: rem(42px) rem(142px) rem(42px) rem(42px);
-  margin-bottom: 15px;
+  margin-bottom: rem(15px);
 }
 
 .slider-line {
@@ -74,4 +74,27 @@
     border: 6px solid #FEDB3F;
   }
 
+}
+
+@include tablet {
+  .slider--reviews {
+    padding: rem(50px) rem(24px);
+    margin-bottom: rem(32px);
+  }
+
+  .slider__item {
+    @include flexColumnCentr;
+    align-items: center;
+    gap: rem(30px);
+  }
+
+  .slider__item__photo {
+    width: rem(130px);
+    height: rem(130px);
+  }
+
+  .slider__info {
+    padding-top: 0;
+    text-align: center;
+  }
 }

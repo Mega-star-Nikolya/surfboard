@@ -14,3 +14,19 @@
   @include subtitleText;
   color: $white;
 }
+
+
+@include tablet {
+  .main {
+    @include flexColumnCentr;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    flex: 1;
+    padding: 0 7%;
+  }
+
+  .main__subtitle {
+    margin-bottom: rem(44px);
+  }
+}

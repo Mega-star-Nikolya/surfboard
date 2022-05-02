@@ -23,3 +23,9 @@
 .bullet__text {
   max-width: rem(90px);
 }
+
+@include tablet {
+  .bullet {
+    display: none;
+  }
+}

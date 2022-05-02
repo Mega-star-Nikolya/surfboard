@@ -3,6 +3,7 @@
   gap: rem(47px);
   width: 100%;
   height: rem(40px);
+  white-space: nowrap;
 }
 
 .header__left {
@@ -15,4 +16,34 @@
 
 .header__right {
   width: 18%;
+}
+
+@include tablet {
+
+  .header {
+    height: 91px;
+    background-color: $bcheader;
+  }
+
+  .header__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .header__left {
+    padding-left: 5%;
+    padding-top: 6%;
+  }
+
+  .header__right {
+    display: none;
+  }
+}
+
+@include mobile {
+
+  .header__left {
+    padding-top: 10%;
+  }
+
 }

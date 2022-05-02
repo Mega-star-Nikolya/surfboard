@@ -64,3 +64,9 @@
   @include textRegular;
   color: $white;
 }
+
+@include tablet {
+  .controls {
+    margin-bottom: rem(14px);
+  }
+}

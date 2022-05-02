@@ -37,7 +37,7 @@ const path = {
         css:    srcPath + "assets/scss/*.scss",
         images: srcPath + "assets/images/**/*.{jpg,png,svg,gif,ico,webp,webmanifest,xml,json}",
         fonts: srcPath + "assets/fonts/**/*.{eot,woff,woff2,ttf,svg}",
-        video: srcPath + "assets/video/**/*.{mp4}"
+        video: srcPath + "assets/video/**/*.{mp4,webm}"
     },
     watch: {
         html:   srcPath + "**/*.html",
@@ -45,7 +45,7 @@ const path = {
         css:    srcPath + "assets/scss/**/*.scss",
         images: srcPath + "assets/images/**/*.{jpg,png,svg,gif,ico,webp,webmanifest,xml,json}",
         fonts: srcPath + "assets/fonts/**/*.{eot,woff,woff2,ttf,svg}",
-        video: srcPath + "assets/video/**/*.{mp4}"
+        video: srcPath + "assets/video/**/*.{mp4,webm}"
     },
     clean: "./" + distPath
 }
@@ -153,10 +153,10 @@ function js(cb) {
         .pipe(webpackStream({
             mode: "development",
             devtool: "source-map",
-          output: {
-              filename: 'app.js',
-                iife: false,
-          }
+            output: {
+            filename: 'app.js',
+            iife: false,
+        }
         }))
         .pipe(dest(path.build.js))
         .pipe(browserSync.reload({stream: true}));
@@ -178,10 +178,10 @@ function jsWatch(cb) {
         .pipe(webpackStream({
             mode: "development",
             devtool: "source-map",
-          output: {
-              filename: 'app.js',
-              iife: false,
-          }
+        output: {
+            filename: 'app.js',
+            iife: false,
+        }
         }))
         .pipe(dest(path.build.js))
         .pipe(browserSync.reload({stream: true}));

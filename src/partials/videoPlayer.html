@@ -4,10 +4,28 @@
       <h2 class="section__title section__title--video">как мы работаем</h2>
     </div>
     <div class="embed">
-      <video class="video" controls poster="assets/video/video.jpg">
+      <video controls class="video" poster="assets/images/video/video.jpg">
         <source src="assets/video/videos.mp4" />
         <source src="assets/video/videos.webm" />
       </video>
+      <div class="player">
+        <div class="player__start">
+          <svg class="player__icon player__icon--play">
+            <use xlink:href="assets/images/sprite/sprite.svg#play"></use>
+          </svg>
+        </div>
+        <div class="player__track">
+          <input class="progress progress--track" type="range" />
+        </div>
+        <div class="player__volume">
+          <svg class="player__icon player__icon--volume">
+            <use xlink:href="assets/images/sprite/sprite.svg#volume"></use>
+          </svg>
+        </div>
+        <div class="player__track">
+          <input class="progress progress--volume" type="range" />
+        </div>
+      </div>
     </div>
   </div>
 </section>

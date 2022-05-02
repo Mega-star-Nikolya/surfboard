@@ -5,10 +5,20 @@ $white: #ffff;
 $black: #000000;
 $Yellow: #FEDB3F;
 $social: #B3B3B3;
-$bcSectionGray: #F8FAF9;
-
+$bcSectionGray: #F8FAF9; // background секции gray
+$bcheader: #1968B1;
+$bcMenuActive: #313131;
 $btnYellow: #FFD517;
 
+//fonts
+$htmlFontSize: 18px;
 
-
+//Путь
 $assetImages: "../images";
+
+//Брекпойнты
+$breakpoint__xxl: 1230px; //desktop
+$breakpoint__xl: 990px; //laptop
+$breakpoint__md: 768px; //tablet
+$breakpoint__sm: 480px; //mobile
+$breakpoint__xs: 370px; //mobileSmall

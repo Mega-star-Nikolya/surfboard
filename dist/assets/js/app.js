@@ -42,6 +42,52 @@ function showSlides(n) {
     dots[slideIndex - 1].className += " actives";
 }
 
+$(function() {
+    var header = $("#jsheader"),
+        introH = $("#jsintro").innerHeight(),
+        scrolloffset = $(window).scrollTop();
+
+
+    /* Fixed Header */
+    checkScroll(scrolloffset);
+
+    $(window).on("scroll", function() {
+        scrolloffset = $(this).scrollTop();
+        checkScroll(scrolloffset);
+    });
+
+    function checkScroll(scrolloffset) {
+        if (scrolloffset >= introH) {
+            header.addClass("fixed")
+        } else {
+            header.removeClass("fixed")
+        }
+    }
+
+    /* Smooth scroll */
+    $("[data-scroll]").on("click", function(event) {
+        event.preventDefault();
+        var $this = $(this),
+            blockID = $(this).data('scroll'),
+            blockOffset = $(blockID).offset().top;
+
+        $("#jsnav a").removeClass("active");
+        $this.addClass("active");
+
+        $("html, body").animate({
+            scrollTop: blockOffset
+        }, 500)
+    });
+
+    /* Menu nav burger */
+    $("#jsburger").on("click", function(event) {
+        event.preventDefault();
+
+        $(this).toggleClass("active");
+        $("#jsnav").toggleClass("active");
+    })
+});
+
 
 
 //# sourceMappingURL=app.js.map

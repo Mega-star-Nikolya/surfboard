@@ -1,5 +1,5 @@
 // Число 16рх не изменное
-$html-font-size: 16px;
+$html-font-size: $htmlFontSize;
 
 // Функция для перевода px в rem
 @function stripUnit($value) {
