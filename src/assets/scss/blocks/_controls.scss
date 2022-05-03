@@ -65,8 +65,18 @@
   color: $white;
 }
 
+
+// Media
+
 @include tablet {
   .controls {
-    margin-bottom: rem(14px);
+    margin-bottom: 14px;
+  }
+}
+
+
+@include mobile {
+  .controls {
+    margin: 0 auto;
   }
 }

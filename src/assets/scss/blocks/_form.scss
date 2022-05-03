@@ -84,6 +84,10 @@ textarea {
   }
 }
 
+
+
+// Media
+
 @include tablet {
   .form {
     flex-direction: column;
@@ -117,5 +121,13 @@ textarea {
   .form__row-btn {
     margin-top: rem(24px);
     margin-left: 0;
+  }
+}
+
+
+@include mobile {
+
+  .form__row-btn {
+    margin-top: 38px;
   }
 }

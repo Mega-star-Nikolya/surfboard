@@ -24,6 +24,9 @@
   max-width: rem(90px);
 }
 
+
+// Media
+
 @include tablet {
   .bullet {
     display: none;

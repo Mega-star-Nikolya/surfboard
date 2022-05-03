@@ -30,3 +30,17 @@
     margin-bottom: rem(44px);
   }
 }
+
+@include mobile {
+  .main__title {
+    font-size: rem(40px);
+    line-height: rem(36px);
+    margin-bottom: rem(12px);
+  }
+
+  .main__subtitle {
+    margin-bottom: rem(43px);
+    font-size: rem(18px);
+    line-height: rem(20px);
+  }
+}

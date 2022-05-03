@@ -651,8 +651,8 @@ p {
 
 .hero__section {
   height: 100vh;
-  min-height: 36.1111111111rem;
-  background: url(../images/main/main_1.jpg) center no-repeat;
+  min-height: 36.2222222222rem;
+  background: url(../images/main/main_desktop.jpg) center no-repeat;
   background-color: #1968B1;
   background-size: cover;
   border: 1px solid #000000;
@@ -668,7 +668,7 @@ p {
 
 @media screen and (max-width: 768px) {
   .hero__section {
-    background-position: 88%;
+    background-position: 88% 2.7777777778rem;
     border: none;
   }
 
@@ -676,6 +676,13 @@ p {
     width: 100%;
     height: 100%;
     padding: 0;
+  }
+}
+@media screen and (max-width: 480px) {
+  .hero__section {
+    background: url(../images/main/main_mobile.jpg) center no-repeat;
+    background-size: cover;
+    background-position: 74%;
   }
 }
 .main {
@@ -717,6 +724,19 @@ p {
     margin-bottom: 2.4444444444rem;
   }
 }
+@media screen and (max-width: 480px) {
+  .main__title {
+    font-size: 2.2222222222rem;
+    line-height: 2rem;
+    margin-bottom: 0.6666666667rem;
+  }
+
+  .main__subtitle {
+    margin-bottom: 2.3888888889rem;
+    font-size: 1rem;
+    line-height: 1.1111111111rem;
+  }
+}
 .btn {
   display: inline-block;
   background: none;
@@ -725,14 +745,14 @@ p {
   border: none;
   font-family: inherit;
   font-weight: 800;
-  font-size: 0.8888888889rem;
+  font-size: 16px;
   line-height: 1.125;
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
 }
 .btn--yellow {
-  padding: 1.1666666667rem 2.3333333333rem;
+  padding: 21px 42px;
   background: #FFD517;
   transition: color 0.3s linear, background-color 0.3s linear;
 }
@@ -792,7 +812,7 @@ p {
 /* SECTION */
 .section {
   height: 100vh;
-  min-height: 36.1111111111rem;
+  min-height: 36.2222222222rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -863,8 +883,12 @@ p {
 }
 
 @media screen and (max-width: 768px) {
-  .section--map {
-    background-position: 88%;
+  .section__title {
+    margin-bottom: 0.5rem;
+  }
+
+  .section__subtitle {
+    padding: 0;
   }
 }
 .features {
@@ -897,8 +921,8 @@ p {
 .features__img {
   margin-bottom: 0.7222222222rem;
   display: inline-block;
-  width: 7.1111111111rem;
-  height: 7.1111111111rem;
+  width: 128px;
+  height: 128px;
   background-color: #F2F5F4;
   border-radius: 50%;
   overflow: hidden;
@@ -933,6 +957,37 @@ p {
   color: #666666;
 }
 
+@media screen and (max-width: 480px) {
+  .features {
+    display: block;
+    text-align: left;
+  }
+
+  .features__item {
+    padding: 0;
+    display: flex;
+    margin-bottom: 31px;
+  }
+  .features__item::before {
+    display: none;
+  }
+
+  .features__img {
+    margin-right: 31px;
+    flex-shrink: 0;
+  }
+
+  .features__title {
+    margin-bottom: 10px;
+    font-size: 27px;
+    line-height: 1.185;
+  }
+
+  .reatures__text {
+    font-size: 18px;
+    line-height: 1.22222;
+  }
+}
 .embed {
   display: block;
   width: 36.7777777778rem;
@@ -964,14 +1019,11 @@ p {
 .embed .player .player__track:last-child {
   margin-right: 0;
 }
-.embed .player .player__track .progress {
-  background: aqua;
-}
 .embed .player .player__track .progress--volume {
-  width: 3.1111111111rem;
+  width: 56px;
 }
 .embed .player .player__track .progress--track {
-  width: 24.7777777778rem;
+  width: 446px;
 }
 .embed .player .player__volume {
   margin-right: 1.3888888889rem;
@@ -991,6 +1043,22 @@ p {
   height: 0.9444444444rem;
 }
 
+@media screen and (max-width: 480px) {
+  .embed {
+    display: block;
+    width: 394px;
+    height: 233px;
+  }
+  .embed .player .player__track {
+    margin-right: 17px;
+  }
+  .embed .player .player__track .progress--volume {
+    width: 50px;
+  }
+  .embed .player .player__track .progress--track {
+    width: 226px;
+  }
+}
 .slider--reviews {
   background: #F8FAF9;
   padding: 2.3333333333rem 7.8888888889rem 2.3333333333rem 2.3333333333rem;
@@ -1215,6 +1283,11 @@ textarea {
     margin-left: 0;
   }
 }
+@media screen and (max-width: 480px) {
+  .form__row-btn {
+    margin-top: 38px;
+  }
+}
 .controls {
   display: flex;
   gap: 1.1111111111rem;
@@ -1285,7 +1358,12 @@ textarea {
 
 @media screen and (max-width: 768px) {
   .controls {
-    margin-bottom: 0.7777777778rem;
+    margin-bottom: 14px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .controls {
+    margin: 0 auto;
   }
 }
 .map {
@@ -1329,6 +1407,20 @@ footer {
   .footer__inner {
     padding-left: 0.2777777778rem;
     padding-right: 0.2777777778rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .footer__inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer__contacts {
+    margin-bottom: 20px;
+  }
+
+  .footer__text {
+    margin-bottom: 12px;
   }
 }
 .social {

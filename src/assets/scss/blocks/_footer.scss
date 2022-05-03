@@ -28,9 +28,29 @@ footer {
   fill: $primary;
 }
 
+
+
+// Media
+
 @include tablet {
   .footer__inner {
     padding-left: rem(5px);
     padding-right: rem(5px);
+  }
+}
+
+
+@include mobile {
+  .footer__inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer__contacts {
+    margin-bottom: 20px;
+  }
+
+  .footer__text {
+    margin-bottom: 12px;
   }
 }

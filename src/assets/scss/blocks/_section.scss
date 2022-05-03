@@ -1,7 +1,7 @@
 /* SECTION */
 .section {
   height: 100vh;
-  min-height: rem(650px);
+  min-height: rem(652px);
   @include flexColumnCentr;
 }
 
@@ -65,7 +65,11 @@
 
 
 @include tablet {
-  .section--map {
-    background-position: 88%;
+  .section__title {
+    margin-bottom: rem(9px);
+  }
+
+  .section__subtitle {
+    padding: 0;
   }
 }
