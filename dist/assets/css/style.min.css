@@ -1020,10 +1020,10 @@ p {
   margin-right: 0;
 }
 .embed .player .player__track .progress--volume {
-  width: 56px;
+  width: 3.1111111111rem;
 }
 .embed .player .player__track .progress--track {
-  width: 446px;
+  width: 24.7777777778rem;
 }
 .embed .player .player__volume {
   margin-right: 1.3888888889rem;

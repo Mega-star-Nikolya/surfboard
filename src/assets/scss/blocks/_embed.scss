@@ -35,11 +35,11 @@
 
             .progress {
                 &--volume {
-                    width: 56px;
+                    width: rem(56px);
                 }
 
                 &--track {
-                    width: 446px;
+                    width: rem(446px);
                 }
             }
         }
