@@ -1,6 +1,12 @@
 .features {
   display: flex;
   text-align: center;
+
+  // Media
+  @include mobile {
+    display: block;
+    text-align: left;
+  }
 }
 
 .features__item {
@@ -20,24 +26,47 @@
     }
   }
 
+  // Media
+  @include tablet {
+    padding: 0 1.5%;
+  }
+
   &::before {
     content: url(#{$assetImages}/feature/combined_shape.png);
     position: absolute;
     top: 22%;
     right: 0;
     transform: translateX(50%);
+
+    // Media
+    @include tablet {
+      display: none;
+    }
+  }
+
+  // Media
+  @include mobile {
+    padding: 0;
+    display: flex;
+    margin-bottom: rem(31px);
   }
 }
 
 .features__img {
   margin-bottom: rem(13px);
   display: inline-block;
-  width: 128px;
-  height: 128px;
+  width: rem(128px);
+  height: rem(128px);
   background-color: #F2F5F4;
   border-radius: 50%;
   overflow: hidden;
   position: relative;
+
+  // Media
+  @include mobile {
+    margin-right: rem(31px);
+    flex-shrink: 0;
+  }
 }
 
 .features__icon {
@@ -55,44 +84,17 @@
 .features__title {
   margin-bottom: rem(20px);
   @include textBold;
+
+  // Media
+  @include tablet {
+    margin-bottom: rem(7px);
+  }
+
+  @include mobile {
+    margin-bottom: rem(10px);
+  }
 }
 
 .reatures__text {
   @include textLight;
-}
-
-
-// Media
-
-@include mobile {
-  .features {
-    display: block;
-    text-align: left;
-  }
-
-  .features__item {
-    padding: 0;
-    display: flex;
-    margin-bottom: 31px;
-
-    &::before {
-      display: none;
-    }
-  }
-
-  .features__img {
-    margin-right: 31px;
-    flex-shrink: 0;
-  }
-
-  .features__title {
-    margin-bottom: 10px;
-    font-size: 27px;
-    line-height: 1.185; //32px
-  }
-
-  .reatures__text {
-    font-size: 18px;
-    line-height: 1.22222; //22px
-  }
 }

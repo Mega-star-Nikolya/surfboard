@@ -21,8 +21,9 @@
 
 html {
     font-size: $htmlFontSize;
+    // font-size: 3.75vmin;
 
-    @include tablet {
+    /*   @include tablet {
         font-size: $htmlFontSize - 1px;
     }
 
@@ -32,6 +33,9 @@ html {
 
     @include mobileSmall {
         font-size: $htmlFontSize - 3px;
+    } */
+    @include mobile {
+        font-size: 3.75vmin;
     }
 }
 
@@ -66,10 +70,29 @@ p {
 }
 
 .container {
-    width: 95%;
-    max-width: 940px;
+    width: 100%;
+    max-width: rem(940px);
     margin: 0 auto;
+
+    &--features {
+
+        // Media
+        @include tablet {
+            padding: 0 rem(7px);
+        }
+    }
+
+    &--reviews {
+
+        // Media
+        @include tablet {
+            padding: 0 rem(22px);
+        }
+    }
+
 }
+
+
 
 /* blocks */
 @import "blocks/header";
@@ -82,6 +105,7 @@ p {
 @import "blocks/bullet";
 @import "blocks/section";
 @import "blocks/features";
+@import "blocks/team";
 @import "blocks/embed";
 @import "blocks/reviews";
 @import "blocks/form";

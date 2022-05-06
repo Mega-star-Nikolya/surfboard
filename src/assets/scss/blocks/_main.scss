@@ -1,5 +1,16 @@
 .main {
   width: 46%;
+
+  // Media
+  @include tablet {
+    @include flexColumnCentr;
+    margin-top: 10%;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    flex: 1;
+    padding: 0 7%;
+  }
 }
 
 .main__title {
@@ -7,38 +18,31 @@
   @include titleText;
   color: $white;
   text-transform: uppercase;
+
+  // Media
+  @include tablet {
+    margin-bottom: rem(9px);
+  }
+
+  @include mobile {
+    font-size: rem(40px);
+    line-height: rem(36px);
+    margin-bottom: rem(12px);
+  }
 }
 
 .main__subtitle {
   margin-bottom: rem(39px);
   @include subtitleText;
   color: $white;
-}
 
 
-@include tablet {
-  .main {
-    @include flexColumnCentr;
-    align-items: center;
-    text-align: center;
-    width: 100%;
-    flex: 1;
-    padding: 0 7%;
-  }
-
-  .main__subtitle {
+  // Media
+  @include tablet {
     margin-bottom: rem(44px);
   }
-}
 
-@include mobile {
-  .main__title {
-    font-size: rem(40px);
-    line-height: rem(36px);
-    margin-bottom: rem(12px);
-  }
-
-  .main__subtitle {
+  @include mobile {
     margin-bottom: rem(43px);
     font-size: rem(18px);
     line-height: rem(20px);

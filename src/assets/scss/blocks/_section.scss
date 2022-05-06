@@ -3,40 +3,111 @@
   height: 100vh;
   min-height: rem(652px);
   @include flexColumnCentr;
+
+  @include tablet {
+    min-height: rem(500px); // Media
+  }
+
+  &--features {
+    @include tablet {
+      margin-top: rem(-4px); // Media
+      min-height: rem(1000px);
+    }
+  }
+
+  &--shop {
+    background: $bcSectionGray;
+    background-size: cover;
+
+    @include tablet {
+      max-height: rem(800px); // Media
+    }
+  }
+
+  &--team {
+    @include tablet {
+      margin-bottom: 19px; // Media
+      min-height: rem(1000px);
+    }
+  }
+
+  &--slider {
+    @include tablet {
+      min-height: rem(908px); // Media
+    }
+  }
+
+  &--reviews {
+    @include tablet {
+      min-height: rem(990px); // Media
+    }
+  }
+
+  &--video {
+    background: $bcSectionGray;
+    background-size: cover;
+
+    @include tablet {
+      max-height: rem(593px); // Media
+    }
+  }
+
+  &--cta {
+    background: #2B2B2B url(#{$assetImages}/cta_form/bg_cta.jpg) center no-repeat;
+    background-size: cover;
+
+    @include tablet {
+      background: url(#{$assetImages}/cta_form/cta_tablet.jpg) center no-repeat;
+      background-size: cover;
+      min-height: rem(975px); // Media
+    }
+  }
+
+  &--map {
+    position: relative;
+    background: url(#{$assetImages}/map/map.jpg) center no-repeat;
+    background-size: cover;
+
+    @include tablet {
+      background: url(#{$assetImages}/map/map_tablet.jpg) center no-repeat;
+      background-size: cover;
+      max-height: rem(617px); // Media
+    }
+  }
 }
 
-.section--cta {
-  background: #2B2B2B url(#{$assetImages}/cta_form/bg_cta.jpg) center no-repeat;
-  background-size: cover;
-}
 
-.section--map {
-  position: relative;
-  background: url(#{$assetImages}/map/map.jpg) center no-repeat;
-  background-size: cover;
-}
 
-.section--video {
-  background: $bcSectionGray;
-  background-size: cover;
-}
 
 /* HEADER */
 .sestion__header {
   text-align: center;
   margin-bottom: rem(49px);
-}
 
-.sestion__header--reviews {
-  margin-bottom: rem(32px);
-}
+  // Media
+  @include tablet {
+    margin-bottom: rem(49px);
+  }
 
-.sestion__header--cta {
-  margin-bottom: rem(59px);
-}
+  &--reviews {
+    margin-bottom: rem(32px);
+  }
 
-.sestion__header--video {
-  margin-bottom: rem(31px);
+  &--cta {
+    margin-bottom: rem(59px);
+
+    @include tablet {
+      margin-bottom: rem(30px); // Media
+    }
+  }
+
+  &--video {
+    margin-bottom: rem(31px);
+
+    @include tablet {
+      margin-bottom: rem(40px); // Media
+    }
+  }
 }
 
 /* TITLE */
@@ -45,15 +116,19 @@
   color: $primary;
   text-transform: uppercase;
   margin-bottom: rem(17px);
-}
 
-.section__title--cta {
-  color: $white;
-  margin-bottom: rem(59px);
-}
+  @include tablet {
+    margin-bottom: rem(16px); // Media
+  }
 
-.section__title--video {
-  color: $primary;
+  &--cta {
+    color: $white;
+    margin-bottom: 21px;
+  }
+
+  &--video {
+    color: $primary;
+  }
 }
 
 /* SUBTITLE */
@@ -61,15 +136,9 @@
   @include textRegular;
   color: $secondary;
   padding: 0 27%;
-}
 
-
-@include tablet {
-  .section__title {
-    margin-bottom: rem(9px);
-  }
-
-  .section__subtitle {
-    padding: 0;
+  // Media
+  @include tablet {
+    padding: 0 20%;
   }
 }

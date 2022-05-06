@@ -1,13 +1,34 @@
+.header {
+
+  // Media
+  @include tablet {
+    height: 91px;
+    background-color: $bcheader;
+  }
+}
+
 .header__inner {
   @include flexCentr;
   gap: rem(47px);
   width: 100%;
   height: rem(40px);
   white-space: nowrap;
+
+  // Media
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .header__left {
   width: 6%;
+
+  // Media
+  @include tablet {
+    padding-left: 4%;
+    padding-top: 7%;
+  }
 }
 
 .header__center {
@@ -16,38 +37,13 @@
 
 .header__right {
   width: 18%;
-}
 
-
-
-// Media
-
-@include tablet {
-
-  .header {
-    height: 91px;
-    background-color: $bcheader;
-  }
-
-  .header__inner {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .header__left {
-    padding-left: 5%;
-    padding-top: 6%;
-  }
-
-  .header__right {
+  // Media
+  @include tablet {
     display: none;
   }
-}
 
-@include mobile {
-
-  .header__left {
+  @include mobile {
     padding-top: 10%;
   }
-
 }

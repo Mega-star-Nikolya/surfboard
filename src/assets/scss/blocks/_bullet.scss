@@ -1,6 +1,11 @@
 .bullet {
   display: flex;
   gap: rem(30px);
+
+  // Media
+  @include tablet {
+    display: none;
+  }
 }
 
 .bullet__item {
@@ -22,13 +27,4 @@
 
 .bullet__text {
   max-width: rem(90px);
-}
-
-
-// Media
-
-@include tablet {
-  .bullet {
-    display: none;
-  }
 }

@@ -10,7 +10,7 @@
 @mixin subtitleText {
   font-family: inherit;
   font-weight: 400;
-  font-size: 21px;
+  font-size: rem(21px);
   line-height: 1.19; //25px
 }
 

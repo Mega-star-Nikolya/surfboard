@@ -1,6 +1,11 @@
 .controls {
   display: flex;
   gap: rem(20px);
+
+  @include tablet {
+    margin-bottom: 11px; // Media 
+    gap: rem(14px);
+  }
 }
 
 .controls__elem {
@@ -26,6 +31,11 @@
   border-radius: 4px;
   background-color: $white;
 
+  @include tablet {
+    width: rem(24px); // Media
+    height: rem(24px);
+  }
+
   &::after {
     content: url(#{$assetImages}/cta_form/tick_symbol.png);
     display: none;
@@ -45,6 +55,11 @@
   position: relative;
   border-radius: 50%;
   background-color: $white;
+
+  @include tablet {
+    width: rem(25px); // Media
+    height: rem(25px);
+  }
 
   &::after {
     content: "";

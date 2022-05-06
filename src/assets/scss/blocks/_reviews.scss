@@ -2,6 +2,12 @@
   background: $bcSectionGray;
   padding: rem(42px) rem(142px) rem(42px) rem(42px);
   margin-bottom: rem(15px);
+
+  // Media
+  @include tablet {
+    padding: rem(56px) rem(23px) rem(42px);
+    margin-bottom: 32px;
+  }
 }
 
 .slider-line {
@@ -11,12 +17,25 @@
 .slider__item {
   display: flex;
   gap: rem(40px);
+
+  // Media
+  @include tablet {
+    @include flexColumnCentr;
+    align-items: center;
+    gap: rem(32px);
+  }
 }
 
 .slider__item__photo {
   width: rem(253px);
   height: rem(264px);
   flex-shrink: 0; //flex-shrink: 0; запрещает отдавать ширину картинки
+
+  // Media
+  @include tablet {
+    width: rem(130px);
+    height: rem(130px);
+  }
 }
 
 .slider__item__avatar {
@@ -27,17 +46,33 @@
 
 .slider__info {
   padding-top: rem(28px);
+
+  // Media
+  @include tablet {
+    padding-top: 0;
+    text-align: center;
+  }
 }
 
 .slider__info-title {
   margin-bottom: rem(14px);
   @include textBold;
+
+  // Media
+  @include tablet {
+    margin-bottom: rem(16px);
+  }
 }
 
 .slider__info-text {
   margin-bottom: rem(25px);
   @include textRegular;
   color: $secondary;
+
+  // Media
+  @include tablet {
+    margin-bottom: rem(16px);
+  }
 }
 
 .slider__info-name {
@@ -58,7 +93,7 @@
   object-fit: cover;
   overflow: hidden;
   border-radius: 50%;
-  border: 6px solid transparent;
+  border: rem(6px) solid transparent;
   position: relative;
   transition: border .3s linear;
 
@@ -71,34 +106,6 @@
 
   &.actives,
   &:hover {
-    border: 6px solid #FEDB3F;
-  }
-
-}
-
-
-
-// Media
-
-@include tablet {
-  .slider--reviews {
-    padding: rem(50px) rem(24px);
-    margin-bottom: rem(32px);
-  }
-
-  .slider__item {
-    @include flexColumnCentr;
-    align-items: center;
-    gap: rem(30px);
-  }
-
-  .slider__item__photo {
-    width: rem(130px);
-    height: rem(130px);
-  }
-
-  .slider__info {
-    padding-top: 0;
-    text-align: center;
+    border: rem(6px) solid #FEDB3F;
   }
 }

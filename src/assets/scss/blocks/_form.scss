@@ -6,11 +6,20 @@ textarea {
 
 .form {
   display: flex;
+
+  @include tablet {
+    flex-direction: column; // Media
+    align-items: center;
+  }
 }
 
 .form__col {
   flex: 1;
   margin-right: rem(30px);
+
+  @include tablet {
+    margin-right: 0; // Media
+  }
 
   &:last-child {
     margin-right: 0;
@@ -21,19 +30,36 @@ textarea {
   display: flex;
   margin-bottom: rem(12px);
 
+  @include tablet {
+    margin-bottom: rem(11px); // Media
+  }
+
   &:last-child {
     margin-bottom: 0;
+
+    @include tablet {
+      margin-bottom: rem(14px); // Media
+    }
   }
 }
 
 .form__row-btn {
   margin-top: rem(46px);
   margin-left: rem(-10px);
+
+  @include tablet {
+    margin-top: rem(24px); // Media
+    margin-left: 0;
+  }
 }
 
 .form__btn {
   display: flex;
   gap: rem(20px);
+
+  @include tablet {
+    margin: 0 auto; // Media
+  }
 }
 
 .form__item {
@@ -41,17 +67,25 @@ textarea {
   color: $white;
   margin-right: rem(12px);
 
+  @include tablet {
+    margin-right: rem(14px); // Media
+  }
+
   &:last-child {
     margin-right: 0;
   }
 
   &--contact {
     margin-right: rem(16px);
+
+    @include tablet {
+      margin-right: rem(21px); // Media
+    }
   }
 }
 
 .form__input {
-  width: 222px;
+  width: rem(222px);
   height: rem(58px);
   padding: rem(16px) rem(22px);
   background: $white;
@@ -62,12 +96,20 @@ textarea {
   outline: none;
   color: $black;
 
+  @include tablet {
+    height: rem(36px); // Media
+  }
+
   &:focus {
     border: 3px solid $Yellow;
   }
 
   &--street {
-    width: 460px;
+    width: rem(460px);
+
+    @include tablet {
+      width: rem(466px);
+    }
   }
 
   &--house {
@@ -78,56 +120,14 @@ textarea {
 
   &--textarea {
     margin-bottom: rem(26px);
-    width: 460px;
+    width: rem(460px);
     height: rem(152px);
     resize: none;
-  }
-}
 
-
-
-// Media
-
-@include tablet {
-  .form {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .form__col {
-    margin-right: 0;
-  }
-
-  .form__row {
-    margin-bottom: rem(14px);
-
-    &:last-child {
-      margin-bottom: rem(14px);
+    @include tablet {
+      margin-bottom: rem(18px);
+      width: rem(466px);
+      height: rem(82px); // Media
     }
-  }
-
-  .form__input {
-    height: rem(36px);
-
-    &--textarea {
-      height: rem(82px);
-    }
-  }
-
-  .form__btn {
-    margin: 0 auto;
-  }
-
-  .form__row-btn {
-    margin-top: rem(24px);
-    margin-left: 0;
-  }
-}
-
-
-@include mobile {
-
-  .form__row-btn {
-    margin-top: 38px;
   }
 }

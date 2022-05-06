@@ -3,6 +3,10 @@
   top: 20%;
   right: 3%;
   z-index: 1000;
+
+  @include tablet {
+    display: none; // Media
+  }
 }
 
 .fixed-menu__item {
@@ -34,14 +38,5 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-  }
-}
-
-
-// Media
-
-@include tablet {
-  .fixed-menu {
-    display: none;
   }
 }
