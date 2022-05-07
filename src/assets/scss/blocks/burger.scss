@@ -18,6 +18,11 @@
   @include tablet {
     display: block;
   }
+
+  @include mobile {
+    top: rem(43px);
+    right: rem(10px);
+  }
 }
 
 .burger__item {

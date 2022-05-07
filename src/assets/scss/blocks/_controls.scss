@@ -6,12 +6,18 @@
     margin-bottom: 11px; // Media 
     gap: rem(14px);
   }
+
+  @include mobile {
+    gap: 16px;
+  }
 }
 
 .controls__elem {
   @include flexCentr;
   gap: rem(10px);
   cursor: pointer;
+
+
 }
 
 .controls__input {
@@ -78,20 +84,4 @@
 .controls__name {
   @include textRegular;
   color: $white;
-}
-
-
-// Media
-
-@include tablet {
-  .controls {
-    margin-bottom: 14px;
-  }
-}
-
-
-@include mobile {
-  .controls {
-    margin: 0 auto;
-  }
 }

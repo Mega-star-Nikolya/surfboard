@@ -11,13 +11,13 @@
     background: url(#{$assetImages}/main/main_tablet.jpg) center no-repeat;
     background-position: 100% rem(91px);
     border: none;
-    min-height: 1000px;
+    min-height: rem(1000px);
   }
 
   @include mobile {
     background: url(#{$assetImages}/main/main_mobile.jpg) center no-repeat;
-    background-size: cover;
-    background-position: 74%;
+    background-position: 100% rem(91px);
+    min-height: rem(800px);
   }
 }
 

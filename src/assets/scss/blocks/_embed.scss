@@ -16,7 +16,6 @@
         height: rem(233px);
     }
 
-
     .video {
         width: 100%;
         height: 100%;
@@ -40,6 +39,10 @@
             @include tablet {
                 margin-right: rem(23px); // Media
             }
+
+            @include mobile {
+                margin-right: rem(17px); // Media
+            }
         }
 
         .player__track {
@@ -47,6 +50,10 @@
 
             @include tablet {
                 margin-right: rem(34px); // Media
+            }
+
+            @include mobile {
+                margin-right: rem(17px); // Media
             }
 
             &:last-child {
@@ -64,12 +71,20 @@
                     @include tablet {
                         width: rem(400px); // Media
                     }
+
+                    @include mobile {
+                        width: rem(230px); // Media
+                    }
                 }
             }
         }
 
         .player__volume {
             margin-right: rem(25px);
+
+            @include mobile {
+                margin-right: rem(17px); // Media
+            }
         }
 
         .player__icon {

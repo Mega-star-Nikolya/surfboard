@@ -31,6 +31,23 @@
     padding: 0 1.5%;
   }
 
+  @include mobile {
+    padding: 0;
+    display: flex;
+
+    &:first-child {
+      margin-bottom: rem(31px);
+    }
+
+    &:nth-child(n+2) {
+      margin-bottom: rem(43px);
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
   &::before {
     content: url(#{$assetImages}/feature/combined_shape.png);
     position: absolute;
@@ -44,12 +61,6 @@
     }
   }
 
-  // Media
-  @include mobile {
-    padding: 0;
-    display: flex;
-    margin-bottom: rem(31px);
-  }
 }
 
 .features__img {
@@ -64,7 +75,8 @@
 
   // Media
   @include mobile {
-    margin-right: rem(31px);
+    margin-bottom: 0;
+    margin-right: 12px;
     flex-shrink: 0;
   }
 }
@@ -91,10 +103,19 @@
   }
 
   @include mobile {
-    margin-bottom: rem(10px);
+    margin-top: 9px;
+    margin-bottom: 10px;
   }
 }
 
 .reatures__text {
   @include textLight;
+
+  p {
+
+    // Media
+    @include mobile {
+      margin-bottom: 0;
+    }
+  }
 }

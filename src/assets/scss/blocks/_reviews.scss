@@ -8,6 +8,11 @@
     padding: rem(56px) rem(23px) rem(42px);
     margin-bottom: 32px;
   }
+
+  @include tablet {
+    padding: rem(56px) rem(30px) rem(31px) rem(25px);
+    margin-bottom: rem(29px);
+  }
 }
 
 .slider-line {
@@ -23,6 +28,12 @@
     @include flexColumnCentr;
     align-items: center;
     gap: rem(32px);
+  }
+
+  @include mobile {
+    @include flexColumnCentr;
+    align-items: center;
+    gap: rem(27px);
   }
 }
 
@@ -62,6 +73,11 @@
   @include tablet {
     margin-bottom: rem(16px);
   }
+
+  @include mobile {
+    margin-bottom: rem(13px);
+    padding: 0 10%;
+  }
 }
 
 .slider__info-text {
@@ -72,6 +88,10 @@
   // Media
   @include tablet {
     margin-bottom: rem(16px);
+  }
+
+  @include mobile {
+    margin-bottom: rem(12px);
   }
 }
 
@@ -96,6 +116,12 @@
   border: rem(6px) solid transparent;
   position: relative;
   transition: border .3s linear;
+
+  // Media
+  @include mobile {
+    width: rem(74px);
+    height: rem(74px);
+  }
 
   img {
     display: block;

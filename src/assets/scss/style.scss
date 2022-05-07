@@ -80,6 +80,10 @@ p {
         @include tablet {
             padding: 0 rem(7px);
         }
+
+        @include mobile {
+            padding: 0 rem(11px);
+        }
     }
 
     &--reviews {
@@ -87,6 +91,10 @@ p {
         // Media
         @include tablet {
             padding: 0 rem(22px);
+        }
+
+        @include mobile {
+            padding: 0 rem(15px);
         }
     }
 

@@ -11,6 +11,10 @@ textarea {
     flex-direction: column; // Media
     align-items: center;
   }
+
+  @include mobile {
+    gap: 12px; // Media
+  }
 }
 
 .form__col {
@@ -19,6 +23,10 @@ textarea {
 
   @include tablet {
     margin-right: 0; // Media
+  }
+
+  @include mobile {
+    margin-left: 5px; // Media
   }
 
   &:last-child {
@@ -34,12 +42,24 @@ textarea {
     margin-bottom: rem(11px); // Media
   }
 
+  @include mobile {
+    margin-bottom: 20px; // Media
+  }
+
   &:last-child {
     margin-bottom: 0;
 
     @include tablet {
       margin-bottom: rem(14px); // Media
     }
+
+    @include mobile {
+      margin-bottom: 10px; // Media
+    }
+  }
+
+  &:nth-child(n+2) {
+    margin-bottom: 8px; // Media
   }
 }
 
@@ -71,6 +91,10 @@ textarea {
     margin-right: rem(14px); // Media
   }
 
+  @include mobile {
+    margin-right: 11px; // Media
+  }
+
   &:last-child {
     margin-right: 0;
   }
@@ -80,6 +104,10 @@ textarea {
 
     @include tablet {
       margin-right: rem(21px); // Media
+    }
+
+    @include mobile {
+      margin-right: rem(17px); // Media
     }
   }
 }
@@ -110,6 +138,10 @@ textarea {
     @include tablet {
       width: rem(466px);
     }
+
+    @include mobile {
+      width: rem(460px);
+    }
   }
 
   &--house {
@@ -128,6 +160,11 @@ textarea {
       margin-bottom: rem(18px);
       width: rem(466px);
       height: rem(82px); // Media
+    }
+
+    @include mobile {
+      width: rem(460px);
+      margin-bottom: 0;
     }
   }
 }

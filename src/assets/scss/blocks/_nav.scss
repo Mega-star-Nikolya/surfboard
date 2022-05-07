@@ -21,12 +21,6 @@
   gap: rem(22px);
   flex-wrap: wrap;
 
-  // Media
-  @include tablet {
-    @include flexColumnCentr;
-    padding: 20%;
-    gap: 0;
-
     .nav__link {
       @include navLinkText; //fontsText.scss
       text-decoration: none;
@@ -45,5 +39,11 @@
 
       }
     }
+      // Media
+  @include tablet {
+    @include flexColumnCentr;
+    padding: 20%;
+    gap: 0;
+
   }
 }
