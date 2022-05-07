@@ -401,17 +401,18 @@ input[type=range]::-webkit-slider-thumb {
 
 html {
   font-size: 18px;
-  /*   @include tablet {
+  /*      @include tablet {
       font-size: $htmlFontSize - 1px;
   }
 
   @include mobile {
       font-size: $htmlFontSize - 2px;
-  }
-
-  @include mobileSmall {
-      font-size: $htmlFontSize - 3px;
   } */
+}
+@media screen and (max-width: 370px) {
+  html {
+    font-size: 15px;
+  }
 }
 
 body {
