@@ -8,7 +8,11 @@
   }
 
   @include mobile {
-    gap: 16px;
+    margin-bottom: 15px;
+
+    &:last-child {
+      margin: 0 auto;
+    }
   }
 }
 
@@ -16,8 +20,6 @@
   @include flexCentr;
   gap: rem(10px);
   cursor: pointer;
-
-
 }
 
 .controls__input {

@@ -2,6 +2,7 @@ label,
 input,
 textarea {
   display: block;
+  margin: 0 auto;
 }
 
 .form {
@@ -13,7 +14,9 @@ textarea {
   }
 
   @include mobile {
-    gap: 12px; // Media
+    margin-bottom: 18px;
+    align-items: center;
+    justify-content: center;
   }
 }
 
@@ -43,7 +46,7 @@ textarea {
   }
 
   @include mobile {
-    margin-bottom: 20px; // Media
+    margin-bottom: 15px; // Media
   }
 
   &:last-child {
@@ -54,13 +57,10 @@ textarea {
     }
 
     @include mobile {
-      margin-bottom: 10px; // Media
+      margin-bottom: 12px; // Media
     }
   }
 
-  &:nth-child(n+2) {
-    margin-bottom: 8px; // Media
-  }
 }
 
 .form__row-btn {

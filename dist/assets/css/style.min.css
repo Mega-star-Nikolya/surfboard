@@ -413,11 +413,6 @@ html {
       font-size: $htmlFontSize - 3px;
   } */
 }
-@media screen and (max-width: 480px) {
-  html {
-    font-size: 3.75vmin;
-  }
-}
 
 body {
   margin: 0;
@@ -965,7 +960,7 @@ p {
 }
 @media screen and (max-width: 480px) {
   .section--cta {
-    min-height: 766px;
+    min-height: 42.5555555556rem;
   }
 }
 .section--map {
@@ -1027,7 +1022,6 @@ p {
 }
 @media screen and (max-width: 480px) {
   .sestion__header--cta {
-    margin-top: -30px;
     margin-bottom: 39px;
   }
 }
@@ -1472,6 +1466,7 @@ label,
 input,
 textarea {
   display: block;
+  margin: 0 auto;
 }
 
 .form {
@@ -1485,7 +1480,9 @@ textarea {
 }
 @media screen and (max-width: 480px) {
   .form {
-    gap: 12px;
+    margin-bottom: 18px;
+    align-items: center;
+    justify-content: center;
   }
 }
 
@@ -1518,7 +1515,7 @@ textarea {
 }
 @media screen and (max-width: 480px) {
   .form__row {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
   }
 }
 .form__row:last-child {
@@ -1531,11 +1528,8 @@ textarea {
 }
 @media screen and (max-width: 480px) {
   .form__row:last-child {
-    margin-bottom: 10px;
+    margin-bottom: 12px;
   }
-}
-.form__row:nth-child(n+2) {
-  margin-bottom: 8px;
 }
 
 .form__row-btn {
@@ -1666,7 +1660,10 @@ textarea {
 }
 @media screen and (max-width: 480px) {
   .controls {
-    gap: 16px;
+    margin-bottom: 15px;
+  }
+  .controls:last-child {
+    margin: 0 auto;
   }
 }
 
@@ -1796,7 +1793,13 @@ footer {
   .footer__contacts {
     margin-bottom: 20px;
   }
-
+}
+@media screen and (max-width: 480px) and (max-width: 480px) {
+  .footer__contacts {
+    margin-bottom: 14px;
+  }
+}
+@media screen and (max-width: 480px) {
   .footer__text {
     margin-bottom: 12px;
   }
