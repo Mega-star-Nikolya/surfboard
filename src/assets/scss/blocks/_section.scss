@@ -64,7 +64,7 @@
     }
 
     @include mobile {
-      margin-top: rem(-27px);
+      margin-top: rem(-22px);
       min-height: rem(800px); // Media
     }
   }
@@ -157,6 +157,7 @@
     }
 
     @include mobile {
+      margin-top: 9px;
       margin-bottom: 39px;
     }
   }

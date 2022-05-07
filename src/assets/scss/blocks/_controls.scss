@@ -8,12 +8,19 @@
   }
 
   @include mobile {
-    margin-bottom: 15px;
+    margin: 0 auto; // Media 
+  }
+}
 
-    &:last-child {
-      margin: 0 auto;
+.controls__item {
+  @include mobile {
+    margin: 0;
+
+    &:nth-child(2) {
+      margin-right: 32px;
     }
   }
+
 }
 
 .controls__elem {

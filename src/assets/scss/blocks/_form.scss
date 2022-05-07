@@ -2,7 +2,6 @@ label,
 input,
 textarea {
   display: block;
-  margin: 0 auto;
 }
 
 .form {
@@ -11,12 +10,6 @@ textarea {
   @include tablet {
     flex-direction: column; // Media
     align-items: center;
-  }
-
-  @include mobile {
-    margin-bottom: 18px;
-    align-items: center;
-    justify-content: center;
   }
 }
 
@@ -46,7 +39,7 @@ textarea {
   }
 
   @include mobile {
-    margin-bottom: 15px; // Media
+    margin-bottom: 14px; // Media
   }
 
   &:last-child {
@@ -57,19 +50,41 @@ textarea {
     }
 
     @include mobile {
-      margin-bottom: 12px; // Media
+      margin-bottom: 14px; // Media
     }
   }
 
-}
+  &--textarea {
+    @include mobile {
+      margin-bottom: 24px; // Media
+    }
+  }
 
-.form__row-btn {
-  margin-top: rem(46px);
-  margin-left: rem(-10px);
+  &--radio {
+    @include mobile {
+      margin-bottom: 24px; // Media
+    }
+  }
 
-  @include tablet {
-    margin-top: rem(24px); // Media
-    margin-left: 0;
+  &--checkbox {
+    @include mobile {
+      margin-bottom: 38px; // Media
+    }
+  }
+
+  &--btn {
+    margin-top: rem(46px);
+    margin-left: rem(-10px);
+
+    @include tablet {
+      margin-top: rem(24px); // Media
+      margin-left: 0;
+    }
+
+    @include mobile {
+      margin-top: 0; // Media
+      margin-left: 0;
+    }
   }
 }
 
