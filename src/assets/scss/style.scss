@@ -72,6 +72,11 @@ p {
     max-width: rem(940px);
     margin: 0 auto;
 
+
+    @include mobileSmall {
+        padding: 0 rem(11px);
+    }
+
     &--features {
 
         // Media

@@ -34,12 +34,12 @@
 
   &--team {
     @include tablet {
-      margin-bottom: 19px; // Media удалить
+      margin-bottom: rem(19px); // Media удалить
       min-height: rem(1000px);
     }
 
     @include mobile {
-      margin-bottom: -34px; //удалить
+      margin-bottom: rem(-34px); //удалить
       min-height: rem(756px); // Media
     }
   }
@@ -94,6 +94,10 @@
 
     @include mobile {
       min-height: rem(766px); // Media
+    }
+
+    @include mobileSmall {
+      min-height: rem(1100px); // Media
     }
   }
 
@@ -157,8 +161,8 @@
     }
 
     @include mobile {
-      margin-top: 9px;
-      margin-bottom: 39px;
+      margin-top: rem(9px);
+      margin-bottom: rem(39px);
     }
   }
 }

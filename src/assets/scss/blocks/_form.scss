@@ -22,7 +22,7 @@ textarea {
   }
 
   @include mobile {
-    margin-left: 5px; // Media
+    margin-left: rem(5px); // Media
   }
 
   &:last-child {
@@ -39,7 +39,7 @@ textarea {
   }
 
   @include mobile {
-    margin-bottom: 14px; // Media
+    margin-bottom: rem(14px); // Media
   }
 
   &:last-child {
@@ -50,25 +50,25 @@ textarea {
     }
 
     @include mobile {
-      margin-bottom: 14px; // Media
+      margin-bottom: rem(14px); // Media
     }
   }
 
   &--textarea {
     @include mobile {
-      margin-bottom: 24px; // Media
+      margin-bottom: rem(24px); // Media
     }
   }
 
   &--radio {
     @include mobile {
-      margin-bottom: 24px; // Media
+      margin-bottom: rem(24px); // Media
     }
   }
 
   &--checkbox {
     @include mobile {
-      margin-bottom: 38px; // Media
+      margin-bottom: rem(38px); // Media
     }
   }
 
@@ -85,6 +85,10 @@ textarea {
       margin-top: 0; // Media
       margin-left: 0;
     }
+  }
+
+  @include mobileSmall {
+    display: block; // Media
   }
 }
 
@@ -107,7 +111,7 @@ textarea {
   }
 
   @include mobile {
-    margin-right: 11px; // Media
+    margin-right: rem(11px); // Media
   }
 
   &:last-child {
@@ -133,7 +137,7 @@ textarea {
   padding: rem(16px) rem(22px);
   background: $white;
   border: 3px solid transparent;
-  border-radius: 4px;
+  border-radius: rem(4px);
 
   @include inputText;
   outline: none;
@@ -141,6 +145,10 @@ textarea {
 
   @include tablet {
     height: rem(36px); // Media
+  }
+
+  @include mobileSmall {
+    width: 350px; // Media
   }
 
   &:focus {
@@ -157,12 +165,20 @@ textarea {
     @include mobile {
       width: rem(460px);
     }
+
+    @include mobileSmall {
+      width: 350px; // Media
+    }
   }
 
   &--house {
     width: 100%;
     width: 106px;
     padding: rem(16px) rem(12px);
+
+    @include mobileSmall {
+      width: 350px; // Media
+    }
   }
 
   &--textarea {
@@ -180,6 +196,10 @@ textarea {
     @include mobile {
       width: rem(460px);
       margin-bottom: 0;
+    }
+
+    @include mobileSmall {
+      width: 350px; // Media
     }
   }
 }

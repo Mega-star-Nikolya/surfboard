@@ -3,7 +3,7 @@
   gap: rem(20px);
 
   @include tablet {
-    margin-bottom: 11px; // Media 
+    margin-bottom: rem(11px); // Media 
     gap: rem(14px);
   }
 
@@ -17,7 +17,7 @@
     margin: 0;
 
     &:nth-child(2) {
-      margin-right: 32px;
+      margin-right: rem(32px);
     }
   }
 
