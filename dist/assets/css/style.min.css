@@ -409,7 +409,7 @@ html {
       font-size: $htmlFontSize - 2px;
   } */
 }
-@media screen and (max-width: 460px) {
+@media screen and (max-width: 470px) {
   html {
     font-size: 15px;
   }
@@ -448,7 +448,7 @@ p {
   max-width: 52.2222222222rem;
   margin: 0 auto;
 }
-@media screen and (max-width: 460px) {
+@media screen and (max-width: 470px) {
   .container {
     padding: 0 0.6111111111rem;
   }
@@ -969,7 +969,7 @@ p {
     min-height: 42.5555555556rem;
   }
 }
-@media screen and (max-width: 460px) {
+@media screen and (max-width: 470px) {
   .section--cta {
     min-height: 61.1111111111rem;
   }
@@ -1566,7 +1566,7 @@ textarea {
     margin-left: 0;
   }
 }
-@media screen and (max-width: 460px) {
+@media screen and (max-width: 470px) {
   .form__row {
     display: block;
   }
@@ -1636,7 +1636,7 @@ textarea {
     height: 2rem;
   }
 }
-@media screen and (max-width: 460px) {
+@media screen and (max-width: 470px) {
   .form__input {
     width: 350px;
   }
@@ -1657,7 +1657,7 @@ textarea {
     width: 25.5555555556rem;
   }
 }
-@media screen and (max-width: 460px) {
+@media screen and (max-width: 470px) {
   .form__input--street {
     width: 350px;
   }
@@ -1667,7 +1667,7 @@ textarea {
   width: 106px;
   padding: 0.8888888889rem 0.6666666667rem;
 }
-@media screen and (max-width: 460px) {
+@media screen and (max-width: 470px) {
   .form__input--house {
     width: 350px;
   }
@@ -1691,7 +1691,7 @@ textarea {
     margin-bottom: 0;
   }
 }
-@media screen and (max-width: 460px) {
+@media screen and (max-width: 470px) {
   .form__input--textarea {
     width: 350px;
   }
