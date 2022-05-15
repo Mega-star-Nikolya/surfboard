@@ -7,6 +7,13 @@
   line-height: 1.208; //58px
 }
 
+@mixin titleShop {
+  font-family: inherit;
+  font-weight: 700;
+  font-size: rem(36px);
+  line-height: 1.194444; //43px
+}
+
 @mixin subtitleText {
   font-family: inherit;
   font-weight: 400;
@@ -64,4 +71,12 @@
   font-weight: 700;
   font-size: rem(18px);
   line-height: 1.3333333; //24px
+}
+
+
+@mixin moneyShop {
+  font-family: inherit;
+  font-weight: 300;
+  font-size: rem(60px);
+  line-height: 1; //60px
 }

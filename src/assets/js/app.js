@@ -1,3 +1,5 @@
+
+// Слайдер в секции с отзывами начало
 /* Индекс слайда по умолчанию */
 var slideIndex = 1;
 showSlides(slideIndex);
@@ -37,50 +39,84 @@ function showSlides(n) {
     slides[slideIndex - 1].style.display = "flex";
     dots[slideIndex - 1].className += " actives";
 }
+// Слайдер в секции с отзывами конец
 
-$(function() {
-    var header = $("#jsheader"),
-        introH = $("#jsintro").innerHeight(),
-        scrolloffset = $(window).scrollTop();
+// Бургер меню с открытием навигации начало
+$("#jsburger").on("click", function(event) {
+event.preventDefault();
 
+$(this).toggleClass("active");
+$("#jsnav").toggleClass("active");
+})
+// Бургер меню с открытием навигации конец
 
-    /* Fixed Header */
-    checkScroll(scrolloffset);
+// Секция shop со слайдером - при наведение на блок параметры всплывает окно. -начало-
+// const parametersHover = document.querySelector('.shop__parameters');
+// const parameterShow = document.querySelector('.shop__parameters-info');
+// const parameterClose = document.querySelector('.section--shop');
 
-    $(window).on("scroll", function() {
-        scrolloffset = $(this).scrollTop();
-        checkScroll(scrolloffset);
-    });
+const parametersHover = document.querySelectorAll('.shop__parameters')[0];
+const parameterShow = document.querySelectorAll('.shop__parameters-info') [0];
+const parameterClose = document.querySelectorAll('.shop__item') [0];
 
-    function checkScroll(scrolloffset) {
-        if (scrolloffset >= introH) {
-            header.addClass("fixed")
-        } else {
-            header.removeClass("fixed")
-        }
-    }
+parametersHover.onmouseover = hover => {
+    parameterShow.style.display = 'block';
+}
 
-    /* Smooth scroll */
-    $("[data-scroll]").on("click", function(event) {
-        event.preventDefault();
-        var $this = $(this),
-            blockID = $(this).data('scroll'),
-            blockOffset = $(blockID).offset().top;
+parameterShow.onmouseover = show => {
+    parameterShow.style.display = 'block';
+}
 
-        $("#jsnav a").removeClass("active");
-        $this.addClass("active");
+parameterClose.onmouseout = close => {
+    parameterShow.style.display = 'none';
+}
 
-        $("html, body").animate({
-            scrollTop: blockOffset
-        }, 500)
-    });
+// Секция shop со слайдером - при наведение на блок параметры всплывает окно. -конец-
 
-    /* Menu nav burger */
-    $("#jsburger").on("click", function(event) {
-        event.preventDefault();
+// Секция shop со слайдером - сам слайдер -начало-
+let position = 0;
+const slidesToShow = 1;
+const slidesToScroll = 1;
+const container = document.querySelector('.shop__slider__container');
+const track = document.querySelector('.shop__slider__track');
+const items = document.querySelectorAll('.shop__item');
+const btnPrev = document.querySelector('.sliderCarousel__btn--prev');
+const btnNext = document.querySelector('.sliderCarousel__btn--next');
+const itemsCount = items.length;
+const itemWidth = container.clientWidth / slidesToShow;
+const movePosition = slidesToScroll * itemWidth;
 
-        $(this).toggleClass("active");
-        $("#jsnav").toggleClass("active");
-    })
+items.forEach((item) => {
+    item.style.minWidth = `${itemWidth}px`;
 });
+
+
+btnNext.addEventListener('click', () => {
+    const itemsLeft = itemsCount - (Math.abs(position) + slidesToShow * itemWidth) / itemWidth;
+
+    position -= itemsLeft >= slidesToScroll ? movePosition : itemsLeft * itemWidth;
+
+    setPosition();
+    checkBtns();
+});
+
+btnPrev.addEventListener('click', () => {
+    const itemsLeft = Math.abs(position) / itemWidth;
+
+    position += itemsLeft >= slidesToScroll ? movePosition : itemsLeft * itemWidth;
+
+    setPosition();
+    checkBtns();
+});
+
+const setPosition = () => {
+    track.style.transform = `translateX(${position}px)`;
+};
+
+const checkBtns = () => {
+    btnPrev.disabled = position === 0;
+    btnNext.disabled = position <= -(itemsCount - slidesToShow) * itemWidth;
+};
+checkBtns();
+// Секция shop со слайдером - сам слайдер -конец-
 

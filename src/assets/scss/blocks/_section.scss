@@ -24,11 +24,11 @@
     background-size: cover;
 
     @include tablet {
-      max-height: rem(800px); // Media
+      max-height: rem(816px); // Media
     }
 
     @include mobile {
-      min-height: rem(816px); // Media
+      max-height: rem(816px); // Media
     }
   }
 
