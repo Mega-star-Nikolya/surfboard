@@ -21,10 +21,6 @@ textarea {
     margin-right: 0; // Media
   }
 
-  @include mobile {
-    margin-left: rem(5px); // Media
-  }
-
   &:last-child {
     margin-right: 0;
   }
@@ -35,40 +31,30 @@ textarea {
   margin-bottom: rem(12px);
 
   @include tablet {
-    margin-bottom: rem(11px); // Media
-  }
-
-  @include mobile {
-    margin-bottom: rem(14px); // Media
-  }
-
-  &:last-child {
-    margin-bottom: 0;
-
-    @include tablet {
-      margin-bottom: rem(14px); // Media
-    }
-
-    @include mobile {
-      margin-bottom: rem(14px); // Media
-    }
+    margin-bottom: 0; // Media
   }
 
   &--textarea {
-    @include mobile {
-      margin-bottom: rem(24px); // Media
+    @include tablet {
+      margin-bottom: rem(14px); // Media
     }
   }
 
   &--radio {
-    @include mobile {
-      margin-bottom: rem(24px); // Media
+    @include tablet {
+      margin-bottom: rem(14px); // Media
     }
   }
 
   &--checkbox {
-    @include mobile {
-      margin-bottom: rem(38px); // Media
+    @include tablet {
+      margin-bottom: rem(25px); // Media
+    }
+  }
+
+  &--checkbox {
+    @include tablet {
+      margin-bottom: rem(25px); // Media
     }
   }
 
@@ -76,20 +62,15 @@ textarea {
     margin-top: rem(46px);
     margin-left: rem(-10px);
 
+    // Media
     @include tablet {
-      margin-top: rem(24px); // Media
-      margin-left: 0;
-    }
-
-    @include mobile {
-      margin-top: 0; // Media
-      margin-left: 0;
+      margin: 0 0 rem(9px); // Media
     }
   }
+}
 
-  @include mobileSmall {
-    display: block; // Media
-  }
+.form__item {
+  margin-bottom: rem(14px);
 }
 
 .form__btn {
@@ -136,7 +117,7 @@ textarea {
   height: rem(58px);
   padding: rem(16px) rem(22px);
   background: $white;
-  border: 3px solid transparent;
+  border: rem(3px) solid transparent;
   border-radius: rem(4px);
 
   @include inputText;
@@ -148,36 +129,36 @@ textarea {
   }
 
   @include mobileSmall {
-    width: 350px; // Media
+    width: rem(350px); // Media
   }
 
   &:focus {
-    border: 3px solid $Yellow;
+    border: rem(3px) solid $Yellow;
   }
 
   &--street {
     width: rem(460px);
 
     @include tablet {
-      width: rem(466px);
+      width: rem(466px); // Media
     }
 
     @include mobile {
-      width: rem(460px);
+      width: rem(460px); // Media
     }
 
     @include mobileSmall {
-      width: 350px; // Media
+      width: rem(350px); // Media
     }
   }
 
   &--house {
     width: 100%;
-    width: 106px;
+    width: rem(106px);
     padding: rem(16px) rem(12px);
 
     @include mobileSmall {
-      width: 350px; // Media
+      width: rem(350px); // Media
     }
   }
 
@@ -188,18 +169,18 @@ textarea {
     resize: none;
 
     @include tablet {
-      margin-bottom: rem(18px);
+      margin-bottom: rem(-5px); // Media
       width: rem(466px);
-      height: rem(82px); // Media
+      height: rem(82px);
     }
 
     @include mobile {
-      width: rem(460px);
+      width: rem(460px); // Media
       margin-bottom: 0;
     }
 
     @include mobileSmall {
-      width: 350px; // Media
+      width: rem(350px); // Media
     }
   }
 }

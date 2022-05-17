@@ -1,9 +1,8 @@
 .main {
   width: 46%;
 
-  // Media
   @include tablet {
-    @include flexColumnCentr;
+    @include flexColumnCentr; // Media
     margin-top: 10%;
     align-items: center;
     text-align: center;
@@ -13,7 +12,7 @@
   }
 
   @include mobile {
-    margin-top: 4%;
+    margin-top: 0; // Media
     padding: 0 3%;
   }
 }
@@ -24,13 +23,12 @@
   color: $white;
   text-transform: uppercase;
 
-  // Media
   @include tablet {
-    margin-bottom: rem(9px);
+    margin-bottom: rem(9px); // Media
   }
 
   @include mobile {
-    font-size: rem(40px);
+    font-size: rem(40px); // Media
     line-height: rem(36px);
     margin-bottom: rem(12px);
   }
@@ -41,14 +39,12 @@
   @include subtitleText;
   color: $white;
 
-
-  // Media
   @include tablet {
-    margin-bottom: rem(44px);
+    margin-bottom: rem(44px); // Media
   }
 
   @include mobile {
-    margin-bottom: rem(43px);
+    margin-bottom: rem(43px); // Media
     font-size: rem(18px);
     line-height: rem(20px);
   }

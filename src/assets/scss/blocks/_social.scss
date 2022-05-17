@@ -1,7 +1,6 @@
 .social {
   @include flexCentr;
-
-  gap: 11px;
+  gap: rem(11px);
 }
 
 .social__item {

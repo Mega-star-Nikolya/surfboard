@@ -74,30 +74,28 @@ p {
 
 
     @include mobileSmall {
-        padding: 0 rem(11px);
+        padding: 0 rem(11px); // Media
     }
 
     &--features {
 
-        // Media
         @include tablet {
-            padding: 0 rem(7px);
+            padding: 0 rem(7px); // Media
         }
 
         @include mobile {
-            padding: 0 rem(11px);
+            padding: 0 rem(11px); // Media
         }
     }
 
     &--reviews {
 
-        // Media
         @include tablet {
-            padding: 0 rem(22px);
+            padding: 0 rem(22px); // Media
         }
 
         @include mobile {
-            padding: 0 rem(15px);
+            padding: 0 rem(15px); // Media
         }
     }
 

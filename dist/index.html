@@ -35,14 +35,6 @@
       crossorigin="anonymous"
     ></script>
     
-    <!-- Библиотека jquery -->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    
     <title>LoftSchool | Surfboard</title>
   </head>
   <body>
@@ -210,8 +202,8 @@
         <section class="section section--shop">
           <div class="container">
             <div class="shop__slider">
-              <div class="shop__slider__container">
-                <div class="shop__slider__track">
+              <div class="shop__slider-container">
+                <div class="shop__slider-track">
                   <div class="shop__item">
                     <div class="shop__product">
                       <img
@@ -305,7 +297,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="shop__item">
+                  <!-- <div class="shop__item">
                     <div class="shop__product">
                       <img
                         class="shop__img"
@@ -398,8 +390,8 @@
                         <button type="submit" class="btn btn--yellow">Заказать</button>
                       </div>
                     </div>
-                  </div>
-                  <div class="shop__item">
+                  </div> -->
+                  <!-- <div class="shop__item">
                     <div class="shop__product">
                       <img
                         class="shop__img"
@@ -491,7 +483,7 @@
                         <button type="submit" class="btn btn--yellow">Заказать</button>
                       </div>
                     </div>
-                  </div>
+                  </div> -->
                 </div>
               </div>
               <div class="shop__slider__btn">
@@ -541,9 +533,9 @@
                 <div class="slider-line">
                   <div class="slider__track">
                     <div class="slider__item">
-                      <div class="slider__item__photo">
+                      <div class="slider__item-photo">
                         <img
-                          class="slider__item__avatar"
+                          class="slider__item-avatar"
                           src="assets/images/reviews/reviews_1.jpg"
                           alt="Ольга Макарова"
                         />
@@ -563,9 +555,9 @@
                   </div>
                   <div class="slider__track">
                     <div class="slider__item">
-                      <div class="slider__item__photo">
+                      <div class="slider__item-photo">
                         <img
-                          class="slider__item__avatar"
+                          class="slider__item-avatar"
                           src="assets/images/reviews/reviews_2.jpg"
                           alt="Марк Брюлов"
                         />
@@ -584,9 +576,9 @@
                   </div>
                   <div class="slider__track">
                     <div class="slider__item">
-                      <div class="slider__item__photo">
+                      <div class="slider__item-photo">
                         <img
-                          class="slider__item__avatar"
+                          class="slider__item-avatar"
                           src="assets/images/reviews/reviews_3.jpg"
                           alt="Василий Поперечный"
                         />
@@ -606,14 +598,14 @@
                   </div>
                 </div>
               </div>
-              <div class="slider-dots">
-                <span class="slider-dots__item" onclick="currentSlide(1)">
+              <div class="slider__dots">
+                <span class="slider__dots-item" onclick="currentSlide(1)">
                   <img src="assets/images/reviews/reviews_1.jpg" alt="Ольга Макарова" />
                 </span>
-                <span class="slider-dots__item" onclick="currentSlide(2)">
+                <span class="slider__dots-item" onclick="currentSlide(2)">
                   <img src="assets/images/reviews/reviews_2.jpg" alt="Марк Брюлов" />
                 </span>
-                <span class="slider-dots__item" onclick="currentSlide(3)">
+                <span class="slider__dots-item" onclick="currentSlide(3)">
                   <img
                     src="assets/images/reviews/reviews_3.jpg"
                     alt="Василий Поперечный"
@@ -663,7 +655,7 @@
         
             <form class="form">
               <div class="form__col">
-                <div class="form__row">
+                <div class="form__row form__row--contants">
                   <label class="form__item form__item--contact">
                     Имя
                     <input
@@ -893,6 +885,13 @@
     <button class="burger" id="jsburger" type="button">
       <span class="burger__item">Menu</span>
     </button>
+    <!-- Библиотека jquery -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <script src="assets/js/app.js"></script>
   </body>
 </html>

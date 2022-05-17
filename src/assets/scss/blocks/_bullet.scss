@@ -2,17 +2,16 @@
   display: flex;
   gap: rem(30px);
 
-  // Media
   @include tablet {
-    display: none;
+    display: none; // Media
   }
 }
 
 .bullet__item {
   @include flexCentr;
   font-weight: 700;
-  font-size: 16px;
-  line-height: 18px;
+  font-size: rem(16px);
+  line-height: rem(18px);
   color: $white;
   gap: rem(18px);
 }

@@ -3,7 +3,7 @@
 
   background: none;
   color: $black;
-  border-radius: 100px;
+  border-radius: rem(100px);
   border: none;
 
   font-family: inherit;
@@ -16,9 +16,16 @@
   text-decoration: none;
 
   &--yellow {
-    padding: 21px 42px;
+    padding: rem(21px) rem(42px);
     background: $btnYellow;
     transition: color .3s linear, background-color .3s linear;
+
+    // Media
+    @include mobile {
+      padding: rem(21px) rem(38px);
+      font-size: rem(19px);
+      line-height: 1.005; //18px
+    }
 
     &:hover {
       background-color: $black;

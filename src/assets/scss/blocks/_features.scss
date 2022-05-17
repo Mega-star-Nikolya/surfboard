@@ -2,9 +2,12 @@
   display: flex;
   text-align: center;
 
-  // Media
+  @include tablet {
+    margin-bottom: rem(10px); // Media
+  }
+
   @include mobile {
-    display: block;
+    display: block; // Media
     text-align: left;
   }
 }
@@ -26,13 +29,12 @@
     }
   }
 
-  // Media
   @include tablet {
-    padding: 0 1.5%;
+    padding: 0 1.5%; // Media
   }
 
   @include mobile {
-    padding: 0;
+    padding: 0; // Media
     display: flex;
 
     &:first-child {
@@ -55,9 +57,8 @@
     right: 0;
     transform: translateX(50%);
 
-    // Media
     @include tablet {
-      display: none;
+      display: none; // Media
     }
   }
 
@@ -73,10 +74,9 @@
   overflow: hidden;
   position: relative;
 
-  // Media
   @include mobile {
-    margin-bottom: 0;
-    margin-right: 12px;
+    margin-bottom: 0; // Media
+    margin-right: rem(12px);
     flex-shrink: 0;
   }
 }
@@ -97,14 +97,13 @@
   margin-bottom: rem(20px);
   @include textBold;
 
-  // Media
   @include tablet {
-    margin-bottom: rem(7px);
+    margin-bottom: rem(7px); // Media
   }
 
   @include mobile {
-    margin-top: 9px;
-    margin-bottom: 10px;
+    margin-top: rem(9px); // Media
+    margin-bottom: rem(10px);
   }
 }
 
@@ -112,10 +111,8 @@
   @include textLight;
 
   p {
-
-    // Media
     @include mobile {
-      margin-bottom: 0;
+      margin-bottom: 0; // Media
     }
   }
 }

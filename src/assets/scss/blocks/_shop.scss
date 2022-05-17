@@ -4,25 +4,25 @@
 
   // Media
   @include tablet {
-    margin-top: rem(-25px);
+    display: block;
   }
 
-  @include mobile {
-    margin-top: -22px;
-  }
+  @include mobile {}
 }
 
-.shop__slider__container {
+.shop__slider-container {
   overflow: hidden;
 }
 
-.shop__slider__track {
+.shop__slider-track {
   display: flex;
   transition: .2s;
 }
 
 .shop__item {
   display: flex;
+  width: 100%;
+  flex-shrink: 0;
   gap: rem(57px);
 
   // Media
@@ -34,12 +34,9 @@
 }
 
 .shop__product {
-
-  // Media
   @include tablet {
-    display: block;
-    margin-bottom: rem(-15px);
-    margin-left: rem(10px);
+    display: block; // Media
+    margin: 0 auto rem(-15px);
 
     .shop__img {
       width: rem(318px);
@@ -48,11 +45,8 @@
   }
 
   @include mobile {
-    margin-bottom: 25px;
-    margin-left: -270px;
-
     .shop__img {
-      width: rem(253px);
+      width: rem(253px); // Media
       height: rem(331px);
     }
   }
@@ -70,36 +64,27 @@
     text-transform: uppercase;
     color: $titeShop;
 
-    // Media
     @include tablet {
-      font-size: rem(30px);
+      font-size: rem(30px); // Media
       line-height: 1.2; //36px
-      margin-left: rem(-5px);
-      margin-bottom: rem(15px);
-    }
-
-    @include mobile {
-      margin-left: rem(-285px);
-
+      margin: 0 auto rem(15px);
     }
   }
 
   &-text {
     margin-bottom: rem(24px);
-    width: rem(368px);
+    width: 100%;
+    max-width: rem(368px);
     @include textRegular;
     color: $secondary;
 
-    // Media
     @include tablet {
-      width: rem(528px);
-      margin-left: rem(120px);
+      max-width: rem(528px); // Media
+      margin: 0 auto rem(24px);
     }
 
     @include mobile {
-      width: rem(380px);
-      margin-left: 50px;
-
+      max-width: rem(380px); // Media
     }
   }
 
@@ -108,30 +93,48 @@
     display: flex;
     gap: rem(52px);
 
-    // Media
     @include tablet {
-      margin-left: rem(258px);
-      gap: rem(46px);
+      margin-left: rem(30px); // Media
+      justify-content: center;
+      align-items: center;
     }
 
     @include mobile {
-      margin-bottom: rem(15px);
+      margin-bottom: rem(15px); // Media
       margin-left: rem(115px);
+    }
+
+    .content-parameter__item {
+      @include tablet {
+        text-align: left; // Media
+      }
+
+      .content-parameter__title {
+        @include textRegular;
+        color: $secondary;
+      }
+
+      .content-parameter__characteristic {
+        @include navLinkText;
+        color: $black;
+      }
     }
   }
 
   &-price {
     display: flex;
+    align-items: center;
     gap: rem(59px);
 
-    // Media
     @include tablet {
-      margin-left: rem(209px);
+      justify-content: center; // Media
+      align-items: center;
+      margin-bottom: 50px;
       gap: rem(40px);
     }
 
     @include mobile {
-      margin-left: rem(73px);
+      margin-left: rem(73px); // Media
       gap: rem(30px);
     }
   }
@@ -280,16 +283,6 @@
   }
 }
 
-.content-parameter__title {
-  @include textRegular;
-  color: $secondary;
-}
-
-.content-parameter__characteristic {
-  @include navLinkText;
-  color: $black;
-}
-
 // Стрелочки вперед и назад
 
 .sliderCarousel__btn {
@@ -304,7 +297,7 @@
 
   // Media
   @include tablet {
-    top: 30%;
+    top: 29%;
   }
 
   @include mobile {

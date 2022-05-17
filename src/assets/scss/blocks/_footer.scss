@@ -13,7 +13,7 @@ footer {
   justify-content: space-between;
 
   @include tablet {
-    padding: rem(18px) rem(30px); // Media
+    padding: rem(27px) rem(25px) rem(27px) rem(31px); // Media
   }
 }
 
@@ -24,6 +24,11 @@ footer {
 .footer__text {
   @include subtitleText;
   color: $primary;
+  margin-bottom: rem(12px);
+
+  @include tablet {
+    margin-bottom: rem(6px);
+  }
 }
 
 .phoneblack-icon {
@@ -32,23 +37,10 @@ footer {
   fill: $primary;
 }
 
+.footer__contacts {
+  margin-bottom: rem(20px);
 
-
-@include mobile {
-  .footer__inner {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .footer__contacts {
-    margin-bottom: 20px;
-
-    @include mobile {
-      margin-bottom: 14px; // Media
-    }
-  }
-
-  .footer__text {
-    margin-bottom: 12px;
+  @include tablet {
+    margin-bottom: 0; // Media
   }
 }

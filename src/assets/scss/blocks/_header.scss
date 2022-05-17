@@ -1,8 +1,6 @@
 .header {
-
-  // Media
   @include tablet {
-    height: 91px;
+    height: rem(91px); // Media
     background-color: $bcheader;
   }
 }
@@ -14,9 +12,8 @@
   height: rem(40px);
   white-space: nowrap;
 
-  // Media
   @include tablet {
-    display: flex;
+    display: flex; // Media
     justify-content: space-between;
   }
 }
@@ -24,14 +21,13 @@
 .header__left {
   width: 6%;
 
-  // Media
   @include tablet {
-    padding-left: 4%;
+    padding-left: 4%; // Media
     padding-top: 7%;
   }
 
   @include mobile {
-    padding-left: 2%;
+    padding-left: 2%; // Media
     padding-top: 10%;
   }
 }
@@ -43,12 +39,11 @@
 .header__right {
   width: 18%;
 
-  // Media
   @include tablet {
-    display: none;
+    display: none; // Media
   }
 
   @include mobile {
-    padding-top: 10%;
+    padding-top: 10%; // Media
   }
 }

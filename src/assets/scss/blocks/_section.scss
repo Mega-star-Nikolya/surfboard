@@ -5,17 +5,19 @@
   @include flexColumnCentr;
 
   @include tablet {
+    height: 0;
     min-height: rem(500px); // Media
   }
 
   &--features {
     @include tablet {
-      margin-top: rem(-4px); // Media
+      // Media
       min-height: rem(1000px);
     }
 
     @include mobile {
-      min-height: rem(707px); // Media
+      margin-top: rem(-4px); // Media
+      min-height: rem(1000px);
     }
   }
 
@@ -24,22 +26,20 @@
     background-size: cover;
 
     @include tablet {
-      max-height: rem(816px); // Media
+      min-height: rem(816px); // Media
     }
 
     @include mobile {
-      max-height: rem(816px); // Media
+      min-height: rem(816px); // Media
     }
   }
 
   &--team {
     @include tablet {
-      margin-bottom: rem(19px); // Media удалить
       min-height: rem(1000px);
     }
 
     @include mobile {
-      margin-bottom: rem(-34px); //удалить
       min-height: rem(756px); // Media
     }
   }
@@ -60,11 +60,10 @@
 
   &--reviews {
     @include tablet {
-      min-height: rem(990px); // Media
+      min-height: rem(976px); // Media
     }
 
     @include mobile {
-      margin-top: rem(-22px);
       min-height: rem(800px); // Media
     }
   }
@@ -74,11 +73,11 @@
     background-size: cover;
 
     @include tablet {
-      max-height: rem(593px); // Media
+      min-height: rem(606px); // Media
     }
 
     @include mobile {
-      max-height: rem(511px); // Media
+      min-height: rem(511px); // Media
     }
   }
 
@@ -89,7 +88,7 @@
     @include tablet {
       background: url(#{$assetImages}/cta_form/cta_tablet.jpg) center no-repeat;
       background-size: cover;
-      min-height: rem(975px); // Media
+      min-height: rem(966px); // Media
     }
 
     @include mobile {
@@ -109,27 +108,23 @@
     @include tablet {
       background: url(#{$assetImages}/map/map_tablet.jpg) center no-repeat;
       background-size: cover;
-      max-height: rem(617px); // Media
+      min-height: rem(633px); // Media
     }
   }
 }
-
-
-
 
 /* HEADER */
 .sestion__header {
   text-align: center;
   margin-bottom: rem(49px);
 
-  // Media
   @include tablet {
-    margin-bottom: rem(49px);
+    margin-bottom: rem(49px); // Media
   }
 
   &--features {
     @include mobile {
-      margin-bottom: rem(54px);
+      margin-bottom: rem(54px); // Media
     }
   }
 
@@ -137,7 +132,7 @@
     margin-bottom: rem(32px);
 
     @include mobile {
-      margin-bottom: rem(26px);
+      margin-bottom: rem(26px); // Media
     }
   }
 
@@ -161,7 +156,7 @@
     }
 
     @include mobile {
-      margin-top: rem(9px);
+      margin-top: rem(9px); // Media
       margin-bottom: rem(39px);
     }
   }
@@ -174,24 +169,22 @@
   text-transform: uppercase;
   margin-bottom: rem(17px);
 
-  // Media
-  @include tablet {
-    margin-bottom: rem(16px);
-  }
-
   @include mobile {
-    margin-bottom: rem(6px);
+    margin-bottom: rem(6px); // Media
     font-size: rem(40px);
     line-height: 1.11111; //36px
-
   }
 
   &--cta {
     color: $white;
     margin-bottom: rem(21px);
 
+    @include tablet {
+      margin-bottom: rem(30px); // Media
+    }
+
     @include mobile {
-      margin-bottom: 0;
+      margin-bottom: 0; // Media
     }
   }
 
@@ -206,12 +199,11 @@
   color: $secondary;
   padding: 0 27%;
 
-  // Media
   @include tablet {
-    padding: 0 20%;
+    padding: 0 20%; // Media
   }
 
   @include mobile {
-    padding: 0 3%;
+    padding: 0 3%; // Media
   }
 }
