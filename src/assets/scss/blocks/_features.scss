@@ -9,6 +9,7 @@
   @include mobile {
     display: block; // Media
     text-align: left;
+    margin-bottom: rem(23px);
   }
 }
 
@@ -76,7 +77,7 @@
 
   @include mobile {
     margin-bottom: 0; // Media
-    margin-right: rem(12px);
+    margin-right: rem(10px);
     flex-shrink: 0;
   }
 }

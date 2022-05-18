@@ -2,12 +2,9 @@
   display: flex;
   position: relative;
 
-  // Media
   @include tablet {
-    display: block;
+    display: block; // Media
   }
-
-  @include mobile {}
 }
 
 .shop__slider-container {
@@ -25,9 +22,8 @@
   flex-shrink: 0;
   gap: rem(57px);
 
-  // Media
   @include tablet {
-    display: block;
+    display: block; // Media
     gap: 0;
     text-align: center;
   }
@@ -36,7 +32,7 @@
 .shop__product {
   @include tablet {
     display: block; // Media
-    margin: 0 auto rem(-15px);
+    margin: 0 auto rem(-40px);
 
     .shop__img {
       width: rem(318px);
@@ -45,6 +41,8 @@
   }
 
   @include mobile {
+    margin: 0 auto;
+
     .shop__img {
       width: rem(253px); // Media
       height: rem(331px);
@@ -55,8 +53,10 @@
 .shop__content {
   display: block;
   margin-top: rem(14px);
-  position: relative;
 
+  @include tablet {
+    margin-top: rem(36px); // Media
+  }
 
   &-title {
     margin-bottom: rem(25px);
@@ -80,11 +80,16 @@
 
     @include tablet {
       max-width: rem(528px); // Media
+      max-height: rem(88px);
       margin: 0 auto rem(24px);
+      overflow: hidden;
     }
 
     @include mobile {
       max-width: rem(380px); // Media
+      max-height: rem(110px);
+      margin-bottom: rem(22px);
+      overflow: hidden;
     }
   }
 
@@ -100,8 +105,7 @@
     }
 
     @include mobile {
-      margin-bottom: rem(15px); // Media
-      margin-left: rem(115px);
+      margin-bottom: rem(22px); // Media
     }
 
     .content-parameter__item {
@@ -129,12 +133,12 @@
     @include tablet {
       justify-content: center; // Media
       align-items: center;
-      margin-bottom: 50px;
+      margin-bottom: rem(30px);
       gap: rem(40px);
     }
 
     @include mobile {
-      margin-left: rem(73px); // Media
+      margin-bottom: rem(28px);
       gap: rem(30px);
     }
   }
@@ -158,6 +162,7 @@
   box-sizing: border-box;
   padding: rem(18px) 0;
   cursor: pointer;
+  position: relative;
 
   &::before {
     content: "";
@@ -166,6 +171,11 @@
     left: rem(72px);
     width: rem(20px);
     height: rem(110px);
+  }
+
+  &:hover &-info {
+    left: 100%;
+    opacity: 1;
   }
 
   &-icon {
@@ -182,7 +192,7 @@
   }
 
   &-info {
-    display: none;
+    opacity: 0;
     width: rem(273px);
     height: rem(291px);
 
@@ -193,7 +203,9 @@
 
     position: absolute;
     top: 0;
-    left: rem(91px);
+    left: rem(-9999px);
+    z-index: 1;
+    transition: opacity .5s linear;
 
     &__content {
       padding: rem(25px) rem(5px) rem(31px) rem(30px);
@@ -277,15 +289,14 @@
     }
   }
 
-  // Media
   @include tablet {
-    display: none;
+    display: none; // Media
   }
 }
 
 // Стрелочки вперед и назад
 
-.sliderCarousel__btn {
+.slider__carousel-btn {
   font-size: 0;
   color: $black;
   cursor: pointer;
@@ -295,51 +306,53 @@
   z-index: 1;
   transform: translateY(-50%);
 
-  // Media
   @include tablet {
-    top: 29%;
+    top: 29%; // Media
   }
 
   @include mobile {
-    top: 24%;
-  }
-}
-
-.sliderCarousel__btn::after {
-  content: "";
-  display: block;
-  width: rem(23px);
-  height: rem(23px);
-
-  border-top: rem(4px) solid $black;
-  border-left: rem(4px) solid $black;
-  border-radius: rem(4px);
-}
-
-.sliderCarousel__btn--prev {
-  left: -78px;
-  transform: rotate(-45deg);
-
-  // Media
-  @include tablet {
-    left: rem(156px);
+    top: 24%; // Media
   }
 
-  @include mobile {
-    left: rem(19spx);
-  }
-}
+  &::after {
+    content: "";
+    display: block;
+    width: rem(23px);
+    height: rem(23px);
 
-.sliderCarousel__btn--next {
-  right: rem(47px);
-  transform: rotate(135deg);
-
-  // Media
-  @include tablet {
-    right: rem(160px);
+    border-top: rem(4px) solid $black;
+    border-left: rem(4px) solid $black;
+    border-radius: rem(4px);
   }
 
-  @include mobile {
-    right: rem(13px);
+  &:hover::after {
+    border-top: rem(4px) solid $Yellow;
+    border-left: rem(4px) solid $Yellow;
+  }
+
+  &--prev {
+    left: rem(-78px);
+    transform: rotate(-45deg);
+
+    @include tablet {
+      left: rem(156px); // Media
+    }
+
+    @include mobile {
+      left: rem(17px); // Media
+    }
+  }
+
+  &--next {
+    right: rem(47px);
+    transform: rotate(135deg);
+
+    @include tablet {
+      right: rem(160px); // Media
+    }
+
+    @include mobile {
+      right: rem(17px); // Media
+    }
   }
 }

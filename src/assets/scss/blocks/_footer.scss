@@ -15,6 +15,13 @@ footer {
   @include tablet {
     padding: rem(27px) rem(25px) rem(27px) rem(31px); // Media
   }
+
+  @include mobile {
+    display: block; // Media
+    text-align: center;
+    padding: rem(20px) rem(91px) rem(35px);
+  }
+
 }
 
 .footer__address {
@@ -27,7 +34,7 @@ footer {
   margin-bottom: rem(12px);
 
   @include tablet {
-    margin-bottom: rem(6px);
+    margin-bottom: rem(6px); // Media
   }
 }
 
@@ -42,5 +49,9 @@ footer {
 
   @include tablet {
     margin-bottom: 0; // Media
+  }
+
+  @include mobile {
+    margin-bottom: rem(18px); // Media
   }
 }

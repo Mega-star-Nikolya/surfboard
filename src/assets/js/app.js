@@ -50,28 +50,38 @@ $("#jsnav").toggleClass("active");
 })
 // Бургер меню с открытием навигации конец
 
-// Секция shop со слайдером - при наведение на блок параметры всплывает окно. -начало-
-// const parametersHover = document.querySelector('.shop__parameters');
-// const parameterShow = document.querySelector('.shop__parameters-info');
-// const parameterClose = document.querySelector('.section--shop');
+// Секция shop со слайдером - сам слайдер -начало-
 
-const parametersHover = document.querySelectorAll('.shop__parameters')[0];
-const parameterShow = document.querySelectorAll('.shop__parameters-info') [0];
-const parameterClose = document.querySelectorAll('.shop__item') [0];
+var slideShopIndex = 1;
+showSlides(slideShopIndex);
 
-parametersHover.onmouseover = hover => {
-    parameterShow.style.display = 'block';
+function plusItem() {
+    showShopItem(slideShopIndex += 1);
 }
 
-parameterShow.onmouseover = show => {
-    parameterShow.style.display = 'block';
+function minusItem() {
+    showShopItem(slideShopIndex -= 1); // Функция уменьшяет индекс на 1, показывает предыдущий слайд
 }
 
-parameterClose.onmouseout = close => {
-    parameterShow.style.display = 'none';
+function currentItem(s) {
+    showShopItem(slideShopIndex = s); // Устанавливает текущий слайд
 }
 
-// Секция shop со слайдером - при наведение на блок параметры всплывает окно. -конец-
-
-
+/* Основная функция слайдера */
+function showShopItem(s) {
+    var element;
+    var shopItem = document.getElementsByClassName("shop__item");
+    if (s > shopItem.length) {
+        slideShopIndex = 1
+    }
+    if (s < 1) {
+        slideShopIndex = shopItem.length
+    }
+    for (element = 0; element < shopItem.length; element++) {
+        shopItem[element].style.display = "none";
+    }
+    shopItem[slideShopIndex - 1].style.display = "";
+    shopBtn[slideShopIndex - 1];
+}
+// Секция shop со слайдером - сам слайдер -конец-
 

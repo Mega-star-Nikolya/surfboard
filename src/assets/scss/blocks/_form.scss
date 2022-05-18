@@ -38,23 +38,29 @@ textarea {
     @include tablet {
       margin-bottom: rem(14px); // Media
     }
+
+    @include mobile {
+      margin-bottom: rem(10px); // Media
+    }
   }
 
   &--radio {
     @include tablet {
       margin-bottom: rem(14px); // Media
     }
-  }
 
-  &--checkbox {
-    @include tablet {
-      margin-bottom: rem(25px); // Media
+    @include mobile {
+      margin-bottom: rem(24px); // Media
     }
   }
 
   &--checkbox {
     @include tablet {
       margin-bottom: rem(25px); // Media
+    }
+
+    @include mobile {
+      margin-bottom: rem(38px); // Media
     }
   }
 
@@ -62,9 +68,12 @@ textarea {
     margin-top: rem(46px);
     margin-left: rem(-10px);
 
-    // Media
     @include tablet {
       margin: 0 0 rem(9px); // Media
+    }
+
+    @include mobile {
+      margin: 0; // Media
     }
   }
 }

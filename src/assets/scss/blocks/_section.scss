@@ -16,8 +16,7 @@
     }
 
     @include mobile {
-      margin-top: rem(-4px); // Media
-      min-height: rem(1000px);
+      min-height: rem(690px); // Media
     }
   }
 
@@ -64,7 +63,8 @@
     }
 
     @include mobile {
-      min-height: rem(800px); // Media
+      margin-top: rem(16px);
+      min-height: rem(792px); // Media
     }
   }
 
@@ -106,8 +106,6 @@
     background-size: cover;
 
     @include tablet {
-      background: url(#{$assetImages}/map/map_tablet.jpg) center no-repeat;
-      background-size: cover;
       min-height: rem(633px); // Media
     }
   }
@@ -124,7 +122,7 @@
 
   &--features {
     @include mobile {
-      margin-bottom: rem(54px); // Media
+      margin-bottom: rem(53px); // Media
     }
   }
 
@@ -132,7 +130,7 @@
     margin-bottom: rem(32px);
 
     @include mobile {
-      margin-bottom: rem(26px); // Media
+      margin-bottom: rem(20px); // Media
     }
   }
 
@@ -156,8 +154,7 @@
     }
 
     @include mobile {
-      margin-top: rem(9px); // Media
-      margin-bottom: rem(39px);
+      margin-bottom: rem(39px); // Media
     }
   }
 }
