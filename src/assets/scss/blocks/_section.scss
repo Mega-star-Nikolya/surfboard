@@ -96,7 +96,9 @@
     }
 
     @include mobileSmall {
-      min-height: rem(1100px); // Media
+      height: 100vh; // Media
+      min-height: rem(1100px);
+      background-position: 11%;
     }
   }
 

@@ -11,6 +11,11 @@ textarea {
     flex-direction: column; // Media
     align-items: center;
   }
+
+  @include mobileSmall {
+    display: block; // Media
+    text-align: center;
+  }
 }
 
 .form__col {
@@ -32,6 +37,10 @@ textarea {
 
   @include tablet {
     margin-bottom: 0; // Media
+  }
+
+  @include mobileSmall {
+    display: block; // Media
   }
 
   &--textarea {
@@ -80,6 +89,11 @@ textarea {
 
 .form__item {
   margin-bottom: rem(14px);
+
+  @include mobileSmall {
+    margin-bottom: rem(16px);
+    ; // Media
+  }
 }
 
 .form__btn {
@@ -88,6 +102,10 @@ textarea {
 
   @include tablet {
     margin: 0 auto; // Media
+  }
+
+  @include mobileSmall {
+    justify-content: center; // Media
   }
 }
 
@@ -104,6 +122,11 @@ textarea {
     margin-right: rem(11px); // Media
   }
 
+  @include mobileSmall {
+    margin-right: 0; // Media
+    margin-left: 0;
+  }
+
   &:last-child {
     margin-right: 0;
   }
@@ -117,6 +140,11 @@ textarea {
 
     @include mobile {
       margin-right: rem(17px); // Media
+    }
+
+    @include mobileSmall {
+      margin-right: 0; // Media
+      margin-left: 0;
     }
   }
 }
@@ -139,6 +167,7 @@ textarea {
 
   @include mobileSmall {
     width: rem(350px); // Media
+    margin: 0 auto;
   }
 
   &:focus {
