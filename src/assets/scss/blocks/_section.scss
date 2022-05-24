@@ -16,7 +16,7 @@
     }
 
     @include mobile {
-      min-height: rem(690px); // Media
+      min-height: rem(707px); // Media
     }
   }
 
@@ -128,6 +128,12 @@
     }
   }
 
+  &--team {
+    @include tablet {
+      margin-bottom: rem(35px); // Media
+    }
+  }
+
   &--reviews {
     margin-bottom: rem(32px);
 
@@ -172,6 +178,13 @@
     margin-bottom: rem(6px); // Media
     font-size: rem(40px);
     line-height: 1.11111; //36px
+  }
+
+
+  &--team {
+    @include tablet {
+      margin-bottom: 0; // Media
+    }
   }
 
   &--cta {

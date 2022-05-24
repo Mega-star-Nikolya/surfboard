@@ -1091,6 +1091,12 @@ p {
     }
 }
 
+@media screen and (max-width: 768px) {
+    .sestion__header--team {
+        margin-bottom: 1.2222222222rem;
+    }
+}
+
 .sestion__header--reviews {
     margin-bottom: 1.7777777778rem;
 }
@@ -1149,6 +1155,12 @@ p {
         margin-bottom: 0.3333333333rem;
         font-size: 2.2222222222rem;
         line-height: 1.11111;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .section__title--team {
+        margin-bottom: 0;
     }
 }
 
@@ -1334,7 +1346,6 @@ p {
     font-weight: 300;
     font-size: 1rem;
     line-height: 1.22222;
-    color: #666666;
 }
 
 @media screen and (max-width: 480px) {
@@ -1523,7 +1534,7 @@ p {
         justify-content: center;
         -ms-flex-align: center;
         align-items: center;
-        margin-bottom: 1.6666666667rem;
+        margin-bottom: 2.7777777778rem;
         gap: 2.2222222222rem;
     }
 }
@@ -1757,8 +1768,163 @@ p {
 }
 
 .team {
-    display: block;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    z-index: 2;
+    min-height: 26.6666666667rem;
+    gap: 1.1111111111rem;
+}
+
+@media screen and (max-width: 768px) {
+    .team {
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -ms-flex-align: center;
+        align-items: center;
+        min-height: 565px;
+        gap: 0;
+    }
+}
+
+.team__card {
+    width: 24%;
     text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .team__card {
+        width: 100%;
+        max-width: 222px;
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .team__card:nth-child(even) {
+        padding-top: 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .team__card {
+        width: 44%;
+    }
+}
+
+.team__photo {
+    margin-bottom: 1.2777777778rem;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+    .team__photo {
+        display: none;
+    }
+}
+
+.team__photo--mobile {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .team__photo--mobile {
+        display: block;
+    }
+}
+
+.team__pic {
+    display: block;
+    max-width: 100%;
+}
+
+.team__name {
+    display: block;
+    margin-bottom: 0.5555555556rem;
+    -ms-flex-align: center;
+    align-items: center;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 1.1666666667rem;
+    line-height: 1.19;
+    color: #292929;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+    .team__name {
+        margin-bottom: 17px;
+    }
+}
+
+.team__name.has-name {
+    position: relative;
+    padding-right: 0.8333333333rem;
+}
+
+.team__name.has-name::after {
+    content: "";
+    border-style: solid;
+    border-width: 7px 4px 0 4px;
+    border-color: #292929 transparent transparent transparent;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    margin-left: 0.3333333333rem;
+}
+
+.team__name.has-name--active {
+    position: relative;
+    padding-right: 0.8333333333rem;
+}
+
+.team__name.has-name--active::after {
+    content: "";
+    border-style: solid;
+    border-width: 0 4px 7px 4px;
+    border-color: transparent transparent #292929 transparent;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    margin-left: 0.3333333333rem;
+}
+
+.team__desc {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s;
+}
+
+.team__prof {
+    margin-bottom: 0.2222222222rem;
+    font-family: inherit;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.22222;
+    color: #000000;
+}
+
+@media screen and (max-width: 768px) {
+    .team__prof {
+        margin-bottom: 0;
+    }
+}
+
+.team__text {
+    font-family: inherit;
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1.22222;
+    color: #666666;
 }
 
 .embed {

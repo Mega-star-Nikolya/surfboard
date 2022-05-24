@@ -21,12 +21,18 @@
   line-height: 1.19; //25px
 }
 
+@mixin subtitleTextTem {
+  font-family: inherit;
+  font-weight: 700;
+  font-size: rem(21px);
+  line-height: 1.19; //25px
+}
+
 @mixin textLight {
   font-family: inherit;
   font-weight: 300;
   font-size: rem(18px);
   line-height: 1.22222; //22px
-  color: $secondary;
 }
 
 @mixin textRegular {

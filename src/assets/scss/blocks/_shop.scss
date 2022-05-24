@@ -133,12 +133,12 @@
     @include tablet {
       justify-content: center; // Media
       align-items: center;
-      margin-bottom: rem(30px);
+      margin-bottom: rem(50px);
       gap: rem(40px);
     }
 
     @include mobile {
-      margin-bottom: rem(28px);
+      margin-bottom: rem(74px);
       gap: rem(30px);
     }
   }

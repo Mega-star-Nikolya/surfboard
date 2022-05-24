@@ -15,6 +15,7 @@
   }
 
   @include mobile {
+    height: 0;
     background: url(#{$assetImages}/main/main_mobile.jpg) center no-repeat;
     background-position: 100% rem(91px);
     min-height: rem(800px);

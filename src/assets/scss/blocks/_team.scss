@@ -1,4 +1,153 @@
 .team {
-  display: block;
+  display: flex;
+  justify-content: space-between;
+  z-index: 2;
+  min-height: rem(480px);
+  gap: rem(20px);
+
+  @include tablet {
+    flex-direction: column; // Media
+    justify-content: center;
+    align-items: center;
+    min-height: initial;
+    gap: 0;
+    margin-bottom: 20px;
+  }
+
+  @include mobile {
+    margin-bottom: 74px;
+  }
+
+}
+
+.team__card {
+  width: 24%;
   text-align: center;
+
+  @include tablet {
+    width: 100%; // Media
+    max-width: 222px;
+    text-align: center;
+    margin-left: 0;
+
+    &:nth-child(even) {
+      padding-top: 0;
+    }
+  }
+
+  @include mobile {
+    width: 44%; // Media
+  }
+}
+
+.team__photo {
+  margin-bottom: rem(23px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include tablet {
+    display: none;
+  }
+
+  @include mobile {
+    width: 138px;
+    height: 180px;
+    margin: 0 auto 17px;
+  }
+
+  &--mobile {
+    display: none;
+
+    @include tablet {
+      display: block;
+    }
+  }
+}
+
+.team__pic {
+  display: block;
+  max-width: 100%;
+}
+
+.team__name {
+  display: block;
+  margin-bottom: rem(10px);
+  align-items: center;
+  @include subtitleTextTem;
+  color: $primary;
+  text-decoration: none;
+
+  &--active {
+    color: $Yellow;
+  }
+
+  @include tablet {
+    margin-bottom: 17px;
+    color: $black;
+
+    &--active {
+      color: $Yellow;
+    }
+  }
+
+  @include mobile {
+    margin-bottom: 7px;
+  }
+
+  &.has-name {
+    position: relative;
+    padding-right: rem(15px);
+
+    &::after {
+      content: "";
+      border-style: solid;
+      border-width: 7px 4px 0 4px;
+      border-color: $primary transparent transparent transparent;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      margin-left: rem(6px);
+    }
+
+    &--active {
+      position: relative;
+      padding-right: rem(15px);
+
+      &::after {
+        content: "";
+        border-style: solid;
+        border-width: 0 4px 7px 4px;
+        border-color: transparent transparent $Yellow transparent;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        margin-left: rem(6px);
+      }
+    }
+  }
+}
+
+.team__desc {
+  height: 0;
+  overflow: hidden;
+  transition: height .3s;
+}
+
+.team__prof {
+  margin-bottom: rem(4px);
+  @include textRegular;
+
+  color: $black;
+
+  @include tablet {
+    font-weight: 700;
+    margin-bottom: 0;
+  }
+}
+
+.team__text {
+  @include textLight;
+
+  color: $secondary;
 }
