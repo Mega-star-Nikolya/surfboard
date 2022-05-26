@@ -5,18 +5,19 @@
   @include flexColumnCentr;
 
   @include tablet {
-    height: 0;
-    min-height: rem(500px); // Media
+    // height: 0;
+    // min-height: rem(500px); // Media
+    min-height: auto;
   }
 
   &--features {
     @include tablet {
       // Media
-      min-height: rem(1000px);
+      // min-height: rem(1000px);
     }
 
     @include mobile {
-      min-height: rem(707px); // Media
+      // min-height: rem(707px); // Media
     }
   }
 
@@ -25,46 +26,46 @@
     background-size: cover;
 
     @include tablet {
-      min-height: rem(816px); // Media
+      // min-height: rem(816px); // Media
     }
 
     @include mobile {
-      min-height: rem(816px); // Media
+      // min-height: rem(816px); // Media
     }
   }
 
   &--team {
     @include tablet {
-      min-height: rem(1000px);
+      // min-height: rem(1000px);
     }
 
     @include mobile {
-      min-height: rem(756px); // Media
+      // min-height: rem(756px); // Media
     }
   }
 
   &--slider {
     @include tablet {
-      min-height: rem(908px); // Media
+      // min-height: rem(908px); // Media
     }
 
     @include mobile {
-      min-height: rem(634px); // Media
+      // min-height: rem(634px); // Media
 
       img {
-        height: rem(634px); // Media
+        // height: rem(634px); // Media
       }
     }
   }
 
   &--reviews {
     @include tablet {
-      min-height: rem(976px); // Media
+      // min-height: rem(976px); // Media
     }
 
     @include mobile {
       margin-top: rem(16px);
-      min-height: rem(792px); // Media
+      // min-height: rem(792px); // Media
     }
   }
 
@@ -73,11 +74,11 @@
     background-size: cover;
 
     @include tablet {
-      min-height: rem(606px); // Media
+      // min-height: rem(606px); // Media
     }
 
     @include mobile {
-      min-height: rem(511px); // Media
+      // min-height: rem(511px); // Media
     }
   }
 
@@ -88,16 +89,16 @@
     @include tablet {
       background: url(#{$assetImages}/cta_form/cta_tablet.jpg) center no-repeat;
       background-size: cover;
-      min-height: rem(966px); // Media
+      // min-height: rem(966px); // Media
     }
 
     @include mobile {
-      min-height: rem(766px); // Media
+      // min-height: rem(766px); // Media
     }
 
     @include mobileSmall {
-      height: 100vh; // Media
-      min-height: rem(1100px);
+      // height: 100vh; // Media
+      // min-height: rem(1100px);
       background-position: 11%;
     }
   }
@@ -108,7 +109,7 @@
     background-size: cover;
 
     @include tablet {
-      min-height: rem(633px); // Media
+      // min-height: rem(633px); // Media
     }
   }
 }

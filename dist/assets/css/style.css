@@ -458,6 +458,18 @@ p {
 }
 
 @media screen and (max-width: 768px) {
+    .container--team {
+        min-height: 60vh;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
     .container--reviews {
         padding: 0 1.2222222222rem;
     }
@@ -738,6 +750,7 @@ p {
 
 @media screen and (max-width: 480px) {
     .hero__section {
+        height: 0;
         background: url(../images/main/main_mobile.jpg) center no-repeat;
         background-position: 100% 5.0555555556rem;
         min-height: 44.4444444444rem;
@@ -788,7 +801,7 @@ p {
 
 @media screen and (max-width: 480px) {
     .main {
-        margin-top: 0;
+        margin-top: 20px;
         padding: 0 3%;
     }
 }
@@ -955,7 +968,7 @@ p {
 
 @media screen and (max-width: 480px) {
     .section--features {
-        min-height: 38.3333333333rem;
+        min-height: 39.2777777778rem;
     }
 }
 
@@ -1093,7 +1106,7 @@ p {
 
 @media screen and (max-width: 768px) {
     .sestion__header--team {
-        margin-bottom: 1.2222222222rem;
+        margin-bottom: 1.9444444444rem;
     }
 }
 
@@ -1223,7 +1236,7 @@ p {
     .features {
         display: block;
         text-align: left;
-        margin-bottom: 1.2777777778rem;
+        margin-bottom: 0.4444444444rem;
     }
 }
 
@@ -1541,7 +1554,7 @@ p {
 
 @media screen and (max-width: 480px) {
     .shop__content-price {
-        margin-bottom: 1.5555555556rem;
+        margin-bottom: 4.1111111111rem;
         gap: 1.6666666667rem;
     }
 }
@@ -1785,8 +1798,15 @@ p {
         justify-content: center;
         -ms-flex-align: center;
         align-items: center;
-        min-height: 565px;
+        min-height: initial;
         gap: 0;
+        margin-bottom: 1.1111111111rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .team {
+        margin-bottom: 4.1111111111rem;
     }
 }
 
@@ -1798,7 +1818,7 @@ p {
 @media screen and (max-width: 768px) {
     .team__card {
         width: 100%;
-        max-width: 222px;
+        max-width: 12.3333333333rem;
         text-align: center;
         margin-left: 0;
     }
@@ -1830,6 +1850,14 @@ p {
     }
 }
 
+@media screen and (max-width: 480px) {
+    .team__photo {
+        width: 7.6666666667rem;
+        height: 10rem;
+        margin: 0 auto 0.9444444444rem;
+    }
+}
+
 .team__photo--mobile {
     display: none;
 }
@@ -1858,9 +1886,24 @@ p {
     text-decoration: none;
 }
 
+.team__name--active {
+    color: #FEDB3F;
+}
+
 @media screen and (max-width: 768px) {
     .team__name {
-        margin-bottom: 17px;
+        margin-bottom: 0.9444444444rem;
+        color: #000000;
+    }
+
+    .team__name--active {
+        color: #FEDB3F;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .team__name {
+        margin-bottom: 0.3888888889rem;
     }
 }
 
@@ -1872,7 +1915,7 @@ p {
 .team__name.has-name::after {
     content: "";
     border-style: solid;
-    border-width: 7px 4px 0 4px;
+    border-width: 0.3888888889rem 0.2222222222rem 0 0.2222222222rem;
     border-color: #292929 transparent transparent transparent;
     position: absolute;
     top: 50%;
@@ -1889,8 +1932,8 @@ p {
 .team__name.has-name--active::after {
     content: "";
     border-style: solid;
-    border-width: 0 4px 7px 4px;
-    border-color: transparent transparent #292929 transparent;
+    border-width: 0 0.2222222222rem 0.3888888889rem 0.2222222222rem;
+    border-color: transparent transparent #FEDB3F transparent;
     position: absolute;
     top: 50%;
     -webkit-transform: translateY(-50%);
@@ -1915,6 +1958,7 @@ p {
 
 @media screen and (max-width: 768px) {
     .team__prof {
+        font-weight: 700;
         margin-bottom: 0;
     }
 }
@@ -1925,6 +1969,12 @@ p {
     font-size: 1rem;
     line-height: 1.22222;
     color: #666666;
+}
+
+@media screen and (max-width: 768px) {
+    .team__text {
+        padding-bottom: 1.7777777778rem;
+    }
 }
 
 .embed {
@@ -2525,6 +2575,37 @@ textarea {
     .form__input--textarea {
         width: 19.4444444444rem;
     }
+}
+
+.modal {
+    display: none;
+}
+
+.modal.error-modal .modal__content {
+    color: red;
+}
+
+.modal__container {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-align: center;
+    align-items: center;
+    background: #FFF;
+    padding: 0 24px;
+}
+
+.modal__content {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.fancybox-button svg {
+    display: none;
 }
 
 .controls {

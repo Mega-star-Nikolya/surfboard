@@ -5,6 +5,7 @@
     </div>
 
     <form class="form">
+      <input type="hidden" name="to" value="mega-star@bk.ru" />
       <div class="form__col">
         <div class="form__row form__row--contants">
           <label class="form__item form__item--contact">
@@ -32,7 +33,7 @@
             Улица
             <input
               type="text"
-              name="name"
+              name="street"
               class="form__input form__input--street"
             />
           </label>
@@ -72,7 +73,10 @@
         <div class="form__row form__row--textarea">
           <label class="form__item">
             Комментарий
-            <textarea class="form__input form__input--textarea"></textarea>
+            <textarea
+              name="comment"
+              class="form__input form__input--textarea"
+            ></textarea>
           </label>
         </div>
         <div class="form__row form__row--radio">
@@ -114,5 +118,13 @@
         </div>
       </div>
     </form>
+  </div>
+  <div id="modal" class="modal">
+    <div class="modal__container">
+      <div class="modal__content">Сообщение отправлено</div>
+      <div class="modal__button-container">
+        <a href="#" class="btn js-submit-btn btn--yellow">Закрыть</a>
+      </div>
+    </div>
   </div>
 </section>

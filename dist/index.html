@@ -28,7 +28,13 @@
       href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Play:wght@700&display=swap"
       rel="stylesheet"
     />
-    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
+      integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <!-- Подключение иконок -->
     <script
       src="https://kit.fontawesome.com/11f3843a4c.js"
@@ -597,7 +603,7 @@
         </section>
         <!-- 3) section- Team title(h2) + container -->
         <section class="section section--team">
-          <div class="container">
+          <div class="container container--team">
             <div class="sestion__header sestion__header--team">
               <h2 class="section__title section__title--team">команда</h2>
             </div>
@@ -842,6 +848,7 @@
             </div>
         
             <form class="form">
+              <input type="hidden" name="to" value="mega-star@bk.ru" />
               <div class="form__col">
                 <div class="form__row form__row--contants">
                   <label class="form__item form__item--contact">
@@ -869,7 +876,7 @@
                     Улица
                     <input
                       type="text"
-                      name="name"
+                      name="street"
                       class="form__input form__input--street"
                     />
                   </label>
@@ -909,7 +916,10 @@
                 <div class="form__row form__row--textarea">
                   <label class="form__item">
                     Комментарий
-                    <textarea class="form__input form__input--textarea"></textarea>
+                    <textarea
+                      name="comment"
+                      class="form__input form__input--textarea"
+                    ></textarea>
                   </label>
                 </div>
                 <div class="form__row form__row--radio">
@@ -951,6 +961,14 @@
                 </div>
               </div>
             </form>
+          </div>
+          <div id="modal" class="modal">
+            <div class="modal__container">
+              <div class="modal__content">Сообщение отправлено</div>
+              <div class="modal__button-container">
+                <a href="#" class="btn js-submit-btn btn--yellow">Закрыть</a>
+              </div>
+            </div>
           </div>
         </section>
         <!-- 8) div- map -->
@@ -1077,6 +1095,14 @@
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
       integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- Библиотека jquery fancybox-->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"
+      integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>

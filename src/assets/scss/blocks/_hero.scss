@@ -11,14 +11,15 @@
     background: url(#{$assetImages}/main/main_tablet.jpg) center no-repeat;
     background-position: 100% rem(91px);
     border: none;
-    min-height: rem(1000px);
+    min-height: auto;
+    // min-height: rem(1000px);
   }
 
   @include mobile {
-    height: 0;
+    // height: 0;
     background: url(#{$assetImages}/main/main_mobile.jpg) center no-repeat;
     background-position: 100% rem(91px);
-    min-height: rem(800px);
+    // min-height: rem(800px);
   }
 }
 

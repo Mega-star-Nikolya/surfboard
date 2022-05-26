@@ -1,0 +1,29 @@
+.modal {
+  display: none;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #FFF;
+    padding: 0 24px;
+  }
+
+  &__content {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: $black;
+    margin-bottom: 10px;
+  }
+}
+
+.error-modal {
+  .modal__content {
+    color: red;
+  }
+}
+
+.fancybox-slide--html .fancybox-close-small {
+  display: none;
+}

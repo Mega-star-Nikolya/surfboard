@@ -21,7 +21,7 @@
 
 html {
     font-size: $htmlFontSize;
-   
+
     @include mobile {
         font-size: 3.75vmin;
     }
@@ -78,6 +78,15 @@ p {
         }
     }
 
+    &--team {
+        @include tablet {
+            min-height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+
     &--reviews {
 
         @include tablet {
@@ -109,6 +118,7 @@ p {
 @import "blocks/embed";
 @import "blocks/reviews";
 @import "blocks/form";
+@import "blocks/modal";
 @import "blocks/controls";
 @import "blocks/map";
 @import "blocks/footer";

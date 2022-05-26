@@ -457,6 +457,14 @@ p {
   }
 }
 @media screen and (max-width: 768px) {
+  .container--team {
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 768px) {
   .container--reviews {
     padding: 0 1.2222222222rem;
   }
@@ -694,15 +702,13 @@ p {
     background: url(../images/main/main_tablet.jpg) center no-repeat;
     background-position: 100% 5.0555555556rem;
     border: none;
-    min-height: 55.5555555556rem;
+    min-height: auto;
   }
 }
 @media screen and (max-width: 480px) {
   .hero__section {
-    height: 0;
     background: url(../images/main/main_mobile.jpg) center no-repeat;
     background-position: 100% 5.0555555556rem;
-    min-height: 44.4444444444rem;
   }
 }
 
@@ -876,81 +882,21 @@ p {
 }
 @media screen and (max-width: 768px) {
   .section {
-    height: 0;
-    min-height: 27.7777777778rem;
-  }
-}
-@media screen and (max-width: 768px) {
-  .section--features {
-    min-height: 55.5555555556rem;
-  }
-}
-@media screen and (max-width: 480px) {
-  .section--features {
-    min-height: 39.2777777778rem;
+    min-height: auto;
   }
 }
 .section--shop {
   background: #F8FAF9;
   background-size: cover;
 }
-@media screen and (max-width: 768px) {
-  .section--shop {
-    min-height: 45.3333333333rem;
-  }
-}
-@media screen and (max-width: 480px) {
-  .section--shop {
-    min-height: 45.3333333333rem;
-  }
-}
-@media screen and (max-width: 768px) {
-  .section--team {
-    min-height: 55.5555555556rem;
-  }
-}
-@media screen and (max-width: 480px) {
-  .section--team {
-    min-height: 42rem;
-  }
-}
-@media screen and (max-width: 768px) {
-  .section--slider {
-    min-height: 50.4444444444rem;
-  }
-}
-@media screen and (max-width: 480px) {
-  .section--slider {
-    min-height: 35.2222222222rem;
-  }
-  .section--slider img {
-    height: 35.2222222222rem;
-  }
-}
-@media screen and (max-width: 768px) {
-  .section--reviews {
-    min-height: 54.2222222222rem;
-  }
-}
 @media screen and (max-width: 480px) {
   .section--reviews {
     margin-top: 0.8888888889rem;
-    min-height: 44rem;
   }
 }
 .section--video {
   background: #F8FAF9;
   background-size: cover;
-}
-@media screen and (max-width: 768px) {
-  .section--video {
-    min-height: 33.6666666667rem;
-  }
-}
-@media screen and (max-width: 480px) {
-  .section--video {
-    min-height: 28.3888888889rem;
-  }
 }
 .section--cta {
   background: #2B2B2B url(../images/cta_form/bg_cta.jpg) center no-repeat;
@@ -960,18 +906,10 @@ p {
   .section--cta {
     background: url(../images/cta_form/cta_tablet.jpg) center no-repeat;
     background-size: cover;
-    min-height: 53.6666666667rem;
-  }
-}
-@media screen and (max-width: 480px) {
-  .section--cta {
-    min-height: 42.5555555556rem;
   }
 }
 @media screen and (max-width: 460px) {
   .section--cta {
-    height: 100vh;
-    min-height: 61.1111111111rem;
     background-position: 11%;
   }
 }
@@ -980,12 +918,6 @@ p {
   background: url(../images/map/map.jpg) center no-repeat;
   background-size: cover;
 }
-@media screen and (max-width: 768px) {
-  .section--map {
-    min-height: 35.1666666667rem;
-  }
-}
-
 /* HEADER */
 .sestion__header {
   text-align: center;
@@ -1586,12 +1518,12 @@ p {
     align-items: center;
     min-height: initial;
     gap: 0;
-    margin-bottom: 20px;
+    margin-bottom: 1.1111111111rem;
   }
 }
 @media screen and (max-width: 480px) {
   .team {
-    margin-bottom: 74px;
+    margin-bottom: 4.1111111111rem;
   }
 }
 
@@ -1602,7 +1534,7 @@ p {
 @media screen and (max-width: 768px) {
   .team__card {
     width: 100%;
-    max-width: 222px;
+    max-width: 12.3333333333rem;
     text-align: center;
     margin-left: 0;
   }
@@ -1629,9 +1561,9 @@ p {
 }
 @media screen and (max-width: 480px) {
   .team__photo {
-    width: 138px;
-    height: 180px;
-    margin: 0 auto 17px;
+    width: 7.6666666667rem;
+    height: 10rem;
+    margin: 0 auto 0.9444444444rem;
   }
 }
 .team__photo--mobile {
@@ -1664,7 +1596,7 @@ p {
 }
 @media screen and (max-width: 768px) {
   .team__name {
-    margin-bottom: 17px;
+    margin-bottom: 0.9444444444rem;
     color: #000000;
   }
   .team__name--active {
@@ -1673,7 +1605,7 @@ p {
 }
 @media screen and (max-width: 480px) {
   .team__name {
-    margin-bottom: 7px;
+    margin-bottom: 0.3888888889rem;
   }
 }
 .team__name.has-name {
@@ -1683,7 +1615,7 @@ p {
 .team__name.has-name::after {
   content: "";
   border-style: solid;
-  border-width: 7px 4px 0 4px;
+  border-width: 0.3888888889rem 0.2222222222rem 0 0.2222222222rem;
   border-color: #292929 transparent transparent transparent;
   position: absolute;
   top: 50%;
@@ -1697,7 +1629,7 @@ p {
 .team__name.has-name--active::after {
   content: "";
   border-style: solid;
-  border-width: 0 4px 7px 4px;
+  border-width: 0 0.2222222222rem 0.3888888889rem 0.2222222222rem;
   border-color: transparent transparent #FEDB3F transparent;
   position: absolute;
   top: 50%;
@@ -1732,6 +1664,11 @@ p {
   font-size: 1rem;
   line-height: 1.22222;
   color: #666666;
+}
+@media screen and (max-width: 768px) {
+  .team__text {
+    padding-bottom: 1.7777777778rem;
+  }
 }
 
 .embed {
@@ -2235,6 +2172,36 @@ textarea {
   .form__input--textarea {
     width: 19.4444444444rem;
   }
+}
+
+.input-error {
+  border-color: red;
+}
+
+.modal {
+  display: none;
+}
+.modal__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #FFF;
+  padding: 0 24px;
+}
+.modal__content {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  color: #000000;
+  margin-bottom: 10px;
+}
+
+.error-modal .modal__content {
+  color: red;
+}
+
+.fancybox-slide--html .fancybox-close-small {
+  display: none;
 }
 
 .controls {

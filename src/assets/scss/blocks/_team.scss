@@ -11,11 +11,11 @@
     align-items: center;
     min-height: initial;
     gap: 0;
-    margin-bottom: 20px;
+    margin-bottom: rem(20px);
   }
 
   @include mobile {
-    margin-bottom: 74px;
+    margin-bottom: rem(74px);
   }
 
 }
@@ -26,7 +26,7 @@
 
   @include tablet {
     width: 100%; // Media
-    max-width: 222px;
+    max-width: rem(222px);
     text-align: center;
     margin-left: 0;
 
@@ -51,9 +51,9 @@
   }
 
   @include mobile {
-    width: 138px;
-    height: 180px;
-    margin: 0 auto 17px;
+    width: rem(138px);
+    height: rem(180px);
+    margin: 0 auto rem(17px);
   }
 
   &--mobile {
@@ -83,7 +83,7 @@
   }
 
   @include tablet {
-    margin-bottom: 17px;
+    margin-bottom: rem(17px);
     color: $black;
 
     &--active {
@@ -92,7 +92,7 @@
   }
 
   @include mobile {
-    margin-bottom: 7px;
+    margin-bottom: rem(7px);
   }
 
   &.has-name {
@@ -102,7 +102,7 @@
     &::after {
       content: "";
       border-style: solid;
-      border-width: 7px 4px 0 4px;
+      border-width: rem(7px) rem(4px) 0 rem(4px);
       border-color: $primary transparent transparent transparent;
       position: absolute;
       top: 50%;
@@ -117,7 +117,7 @@
       &::after {
         content: "";
         border-style: solid;
-        border-width: 0 4px 7px 4px;
+        border-width: 0 rem(4px) rem(7px) rem(4px);
         border-color: transparent transparent $Yellow transparent;
         position: absolute;
         top: 50%;
@@ -150,4 +150,8 @@
   @include textLight;
 
   color: $secondary;
+
+  @include tablet {
+    padding-bottom: rem(32px);
+  }
 }
