@@ -44,7 +44,10 @@
     }
   }
 
-  &--slider {
+  &--menu {
+    position: relative;
+    background: $black url(#{$assetImages}/menu_accordion/menu_bg.jpg) center center / cover no-repeat;
+
     @include tablet {
       // min-height: rem(908px); // Media
     }
@@ -97,8 +100,8 @@
     }
 
     @include mobileSmall {
-      // height: 100vh; // Media
-      // min-height: rem(1100px);
+      height: 100vh; // Media
+      min-height: rem(1100px);
       background-position: 11%;
     }
   }
@@ -188,6 +191,24 @@
     }
   }
 
+  &--menu {
+    position: absolute;
+    left: rem(84px);
+    top: rem(109px);
+    @include titleText;
+    color: $white;
+    margin-bottom: 0;
+
+    @include mobile {
+      left: rem(15px);
+      top: rem(30px);
+    }
+  }
+
+  &--video {
+    color: $primary;
+  }
+
   &--cta {
     color: $white;
     margin-bottom: rem(21px);
@@ -199,10 +220,6 @@
     @include mobile {
       margin-bottom: 0; // Media
     }
-  }
-
-  &--video {
-    color: $primary;
   }
 }
 

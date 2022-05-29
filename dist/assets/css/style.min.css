@@ -889,6 +889,10 @@ p {
   background: #F8FAF9;
   background-size: cover;
 }
+.section--menu {
+  position: relative;
+  background: #000000 url(../images/menu_accordion/menu_bg.jpg) center center/cover no-repeat;
+}
 @media screen and (max-width: 480px) {
   .section--reviews {
     margin-top: 0.8888888889rem;
@@ -910,6 +914,8 @@ p {
 }
 @media screen and (max-width: 460px) {
   .section--cta {
+    height: 100vh;
+    min-height: 61.1111111111rem;
     background-position: 11%;
   }
 }
@@ -995,6 +1001,26 @@ p {
     margin-bottom: 0;
   }
 }
+.section__title--menu {
+  position: absolute;
+  left: 4.6666666667rem;
+  top: 6.0555555556rem;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 2.6666666667rem;
+  line-height: 1.208;
+  color: white;
+  margin-bottom: 0;
+}
+@media screen and (max-width: 480px) {
+  .section__title--menu {
+    left: 0.8333333333rem;
+    top: 1.6666666667rem;
+  }
+}
+.section__title--video {
+  color: #292929;
+}
 .section__title--cta {
   color: white;
   margin-bottom: 1.1666666667rem;
@@ -1008,9 +1034,6 @@ p {
   .section__title--cta {
     margin-bottom: 0;
   }
-}
-.section__title--video {
-  color: #292929;
 }
 
 /* SUBTITLE */
@@ -1669,6 +1692,76 @@ p {
   .team__text {
     padding-bottom: 1.7777777778rem;
   }
+}
+
+.menu__accordion {
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+@media screen and (max-width: 480px) {
+  .menu__accordion {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
+
+.menu__item {
+  display: flex;
+}
+.menu__item--active .menu__content-text {
+  opacity: 1;
+}
+@media screen and (max-width: 480px) {
+  .menu__item--active {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 5;
+  }
+}
+
+.menu__button {
+  position: relative;
+  width: 5.6666666667rem;
+  background: center center/cover no-repeat;
+  background-position: 60%;
+  text-decoration: none;
+}
+.menu__button-img {
+  display: none;
+}
+.menu__button-text {
+  position: absolute;
+  left: 50%;
+  bottom: 2.2222222222rem;
+  transform: rotate(-90deg) translateY(-50%);
+  transform-origin: 0 0;
+  white-space: nowrap;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 2.6666666667rem;
+  line-height: 1.208;
+  color: white;
+}
+
+.menu__content {
+  width: 0;
+  background: rgba(51, 53, 55, 0.9);
+  overflow: hidden;
+  transition: width 0.3s linear;
+}
+.menu__content-text {
+  padding: 1.7222222222rem 2.1111111111rem;
+  font-weight: 400;
+  font-size: 0.8888888889rem;
+  line-height: 1.5;
+  color: white;
+  opacity: 0;
 }
 
 .embed {

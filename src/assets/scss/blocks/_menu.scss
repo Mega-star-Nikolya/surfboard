@@ -1,0 +1,72 @@
+.menu__accordion {
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+
+  @include mobile {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
+
+.menu__item {
+  display: flex;
+
+  &--active {
+    .menu__content-text {
+      opacity: 1;
+    }
+  }
+
+  @include mobile {
+    &--active {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: 5;
+    }
+  }
+}
+
+.menu__button {
+  position: relative;
+  width: rem(102px);
+  background: center center / cover no-repeat;
+  background-position: 60%;
+  text-decoration: none;
+
+  &-img {
+    display: none;
+  }
+
+  &-text {
+    position: absolute;
+    left: 50%;
+    bottom: rem(40px);
+    transform: rotate(-90deg) translateY(-50%);
+    transform-origin: 0 0; // разворот происходит по 0 точки  X-Y
+    white-space: nowrap; // запрещаем перенос строк
+    @include titleText;
+    color: $white;
+  }
+}
+
+.menu__content {
+  width: 0;
+  background: rgba(51, 53, 55, 0.9);
+  overflow: hidden;
+  transition: width .3s linear;
+
+  &-text {
+    padding: rem(31px) rem(38px);
+    font-weight: 400;
+    font-size: rem(16px);
+    line-height: 1.5; //24px
+    color: $white;
+    opacity: 0;
+  }
+}
