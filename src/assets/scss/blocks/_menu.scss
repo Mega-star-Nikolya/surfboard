@@ -1,3 +1,8 @@
+.section--menu {
+  position: relative;
+  background: $black url(#{$assetImages}/menu_accordion/menu_bg.jpg) center center / cover no-repeat;
+}
+
 .menu__accordion {
   display: flex;
   position: absolute;
