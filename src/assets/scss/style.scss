@@ -16,9 +16,6 @@
 @import "vendor/adaptive"; // Медиа-запросы и брейкпоинты для адаптивной верстки
 
 
-//Стилизация input для видео
-@import "vendor/inputVideo";
-
 html {
     font-size: $htmlFontSize;
 
@@ -114,7 +111,7 @@ p {
 @import "blocks/shop";
 @import "blocks/team";
 @import "blocks/menu";
-@import "blocks/embed";
+@import "blocks/video";
 @import "blocks/reviews";
 @import "blocks/form";
 @import "blocks/modal";

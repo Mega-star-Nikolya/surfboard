@@ -1,3 +1,13 @@
+.section--form {
+  background: #2B2B2B url(#{$assetImages}/cta_form/bg_cta.jpg) center no-repeat;
+  background-size: cover;
+
+  @include tablet {
+    background: url(#{$assetImages}/cta_form/cta_tablet.jpg) center no-repeat;
+    background-size: cover;
+  }
+}
+
 label,
 input,
 textarea {

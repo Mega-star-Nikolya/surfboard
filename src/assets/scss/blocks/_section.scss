@@ -22,9 +22,6 @@
   }
 
   &--shop {
-    background: $bcSectionGray;
-    background-size: cover;
-
     @include tablet {
       // min-height: rem(816px); // Media
     }
@@ -45,9 +42,6 @@
   }
 
   &--menu {
-    position: relative;
-    background: $black url(#{$assetImages}/menu_accordion/menu_bg.jpg) center center / cover no-repeat;
-
     @include tablet {
       // min-height: rem(908px); // Media
     }
@@ -73,9 +67,6 @@
   }
 
   &--video {
-    background: $bcSectionGray;
-    background-size: cover;
-
     @include tablet {
       // min-height: rem(606px); // Media
     }
@@ -85,13 +76,8 @@
     }
   }
 
-  &--cta {
-    background: #2B2B2B url(#{$assetImages}/cta_form/bg_cta.jpg) center no-repeat;
-    background-size: cover;
-
+  &--form {
     @include tablet {
-      background: url(#{$assetImages}/cta_form/cta_tablet.jpg) center no-repeat;
-      background-size: cover;
       // min-height: rem(966px); // Media
     }
 
@@ -158,7 +144,7 @@
     }
   }
 
-  &--cta {
+  &--form {
     margin-bottom: rem(59px);
 
     @include tablet {
@@ -209,7 +195,7 @@
     color: $primary;
   }
 
-  &--cta {
+  &--form {
     color: $white;
     margin-bottom: rem(21px);
 
