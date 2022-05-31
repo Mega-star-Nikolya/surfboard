@@ -160,12 +160,12 @@
     &::before {
         content: '';
         display: block;
-        width: rem(31px);
-        height: rem(3px);
+        width: rem(34px);
+        height: rem(2px);
         background-color: red;
         position: absolute;
         left: rem(4px);
-        top: 50%;
+        top: 54%;
         transform: translateY(-50%) rotate(42deg);
         z-index: 2;
         opacity: 0;

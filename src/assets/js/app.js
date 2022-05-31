@@ -6,3 +6,5 @@ $("#jsburger").on("click", function (event) {
     $("#jsnav").toggleClass("active");
 });
 // Бургер меню с открытием навигации конец
+
+
