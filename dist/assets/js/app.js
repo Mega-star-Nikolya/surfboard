@@ -1,196 +1,92 @@
 var __webpack_exports__ = {};
+// This entry need to be wrapped in an IIFE because it need to be isolated against other entry modules.
+!function() {
 /*!******************************!*\
   !*** ./src/assets/js/app.js ***!
   \******************************/
-// Слайдер в секции с отзывами начало
-/* Индекс слайда по умолчанию */
-var slideIndex = 1;
-showSlides(slideIndex);
-
-/* Функция увеличивает индекс на 1, показывает следующй слайд*/
-function plusSlide() {
-    showSlides(slideIndex += 1);
-}
-
-/* Функция уменьшяет индекс на 1, показывает предыдущий слайд*/
-function minusSlide() {
-    showSlides(slideIndex -= 1);
-}
-
-/* Устанавливает текущий слайд */
-function currentSlide(n) {
-    showSlides(slideIndex = n);
-}
-
-/* Основная функция сладера */
-function showSlides(n) {
-    var i;
-    var slides = document.getElementsByClassName("slider__track");
-    var dots = document.getElementsByClassName("slider__dots-item");
-    if (n > slides.length) {
-        slideIndex = 1
-    }
-    if (n < 1) {
-        slideIndex = slides.length
-    }
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" actives", "");
-    }
-    slides[slideIndex - 1].style.display = "flex";
-    dots[slideIndex - 1].className += " actives";
-}
-// Слайдер в секции с отзывами конец
-
 // Бургер меню с открытием навигации начало
-$("#jsburger").on("click", function(event) {
+$("#jsburger").on("click", function (event) {
     event.preventDefault(); // запрещаем перекидывать вверх или перезагрузать страницу
 
-$(this).toggleClass("active");
-$("#jsnav").toggleClass("active");
-})
+    $(this).toggleClass("active");
+    $("#jsnav").toggleClass("active");
+});
 // Бургер меню с открытием навигации конец
 
-// Секция shop со слайдером - сам слайдер -начало-
+}();
+// This entry need to be wrapped in an IIFE because it need to be isolated against other entry modules.
+!function() {
+/*!************************************!*\
+  !*** ./src/assets/js/formModal.js ***!
+  \************************************/
 
-var slideShopIndex = 1;
-showSlides(slideShopIndex);
-
-function plusItem() {
-    showShopItem(slideShopIndex += 1);
-}
-
-function minusItem() {
-    showShopItem(slideShopIndex -= 1); // Функция уменьшяет индекс на 1, показывает предыдущий слайд
-}
-
-function currentItem(s) {
-    showShopItem(slideShopIndex = s); // Устанавливает текущий слайд
-}
-
-/* Основная функция слайдера */
-function showShopItem(s) {
-    var element;
-    var shopItem = document.getElementsByClassName("shop__item");
-    var shopBtn = document.getElementsByClassName("slider__carousel-btn");
-    if (s > shopItem.length) {
-        slideShopIndex = 1
-    }
-    if (s < 1) {
-        slideShopIndex = shopItem.length
-    }
-    for (element = 0; element < shopItem.length; element++) {
-        shopItem[element].style.display = "none";
-    }
-    shopItem[slideShopIndex - 1].style.display = "";
-    shopBtn[slideShopIndex - 1];
-}
-// Секция shop со слайдером - сам слайдер -конец-
-
-
-// Секция Team аккардион -начало-
-const team = document.querySelector('.team');
-/* Функция для открытия контента по нажатию на ссылку */
-function openItem(button) {
-    const contentWrap = button.nextElementSibling;
-    const content = contentWrap.firstElementChild;
-    const currentHeight = content.offsetHeight;
-
-    contentWrap.style.height = currentHeight + 'px';
-    button.classList.add('team__name--active', 'has-name--active');
-}
-
-/* Функция для закрытия контента по нажатию на ссылку */
-function closeItem(button) {
-    if (!button) return;
-    const contentWrap = button.nextElementSibling;
-    contentWrap.style.height = 0;
-    button.classList.remove('team__name--active', 'has-name--active');
-}
-
-team.addEventListener('click', function (event) {
-    event.preventDefault(); // запрещаем перекидывать вверх или перезагрузать страницу
-    const target = event.target;
-    const activeItem = document.querySelector('.team__name--active', '.has-name--active');
-
-    if (target.classList.contains('team__name')) {
-        if (target.classList.contains('team__name--active','has-name--active')) {
-            closeItem(target);
-        } else {
-            closeItem(activeItem);
-            openItem(target);
-        }
-    }
-})
-// Секция Team аккардион -конец-
-
-
-// Секция form модельное окно -начало-
 const validateFields = (form, fieldsArray) => {
 
-    fieldsArray.forEach(field => {
-        field.removeClass("input-error");
-        if (field.val().trim() === "") {
-            field.addClass("input-error");
-        }
-    });
-    const errorFields = form.find(".input-error");
-    return errorFields.length === 0;
+fieldsArray.forEach(field => {
+    field.removeClass("input-error");
+    if (field.val().trim() === "") {
+        field.addClass("input-error");
+    }
+});
+const errorFields = form.find(".input-error");
+return errorFields.length === 0;
 };
 
 $('.form').submit(e => {
-    e.preventDefault(); // запрещаем перекидывать вверх или перезагрузать страницу
-    const form = $(e.currentTarget);
-    const name = form.find("[name='name']");
-    const phone = form.find("[name='tel']");
-    const comment = form.find("[name='comment']");
-    const to = form.find("[name='to']");
+  e.preventDefault(); // запрещаем перекидывать вверх или перезагрузать страницу
+const form = $(e.currentTarget);
+const name = form.find("[name='name']");
+const phone = form.find("[name='tel']");
+const comment = form.find("[name='comment']");
+const to = form.find("[name='to']");
 
-    const modal = $("#modal");
-    const content = modal.find(".modal__content");
+const modal = $("#modal");
+const content = modal.find(".modal__content");
 
-    modal.removeClass("error-modal");
+modal.removeClass("error-modal");
 
-    const isValid = validateFields(form, [name, phone, comment, to]);
+const isValid = validateFields(form, [name, phone, comment, to]);
 
-    if (isValid) {
-        const request = $.ajax({
-            url: "https://webdev-api.loftschool.com/sendmail",
-            method: "post",
-            data: {
-                name: name.val(),
-                phone: phone.val(),
-                comment: comment.val(),
-                to: to.val(),
-            },
+if (isValid) {
+    const request = $.ajax({
+        url: "https://webdev-api.loftschool.com/sendmail",
+        method: "post",
+        data: {
+            name: name.val(),
+            phone: phone.val(),
+            comment: comment.val(),
+            to: to.val(),
+        },
+    });
+    request.done(data => {
+        content.text(data.message);
+    });
+    request.fail(data => {
+        const message = data.responseJSON.message;
+        content.text(message);
+        modal.addClass("error-modal");
+    });
+    request.always(() => {
+        $.fancybox.open({
+            src: "#modal",
+            type: "inline"
         });
-        request.done(data => {
-            content.text(data.message);
-        });
-        request.fail(data => {
-            const message = data.responseJSON.message;
-            content.text(message);
-            modal.addClass("error-modal");
-        });
-        request.always(() => {
-            $.fancybox.open({
-                src: "#modal",
-                type: "inline"
-            });
-        });
-    }
+    });
+}
 });
 
 $(".js-submit-btn").click(e => {
-    e.preventDefault();
+e.preventDefault();
 
-    $.fancybox.close();
+$.fancybox.close();
 });
-// Секция form модельное окно -конец-
 
-// Секция меню с вертикальным аккордеонам -начало-
+}();
+// This entry need to be wrapped in an IIFE because it need to be isolated against other entry modules.
+!function() {
+/*!*****************************************!*\
+  !*** ./src/assets/js/horixontalMenu.js ***!
+  \*****************************************/
 
 const menu = document.getElementById('horixontalMenu');
 const items = document.querySelectorAll(".menu__item");
@@ -258,9 +154,139 @@ window.addEventListener('resize', () => {
         closesItem(activeElement);
 }
 });
-// Секция меню с вертикальным аккордеонам -конец-
 
-// Секция видео проигрыватель -начало-
+}();
+// This entry need to be wrapped in an IIFE because it need to be isolated against other entry modules.
+!function() {
+/*!****************************************!*\
+  !*** ./src/assets/js/sliderReviews.js ***!
+  \****************************************/
+/* Индекс слайда по умолчанию */
+var slideIndex = 1;
+showSlides(slideIndex);
+
+/* Функция увеличивает индекс на 1, показывает следующй слайд*/
+function plusSlide() {
+    showSlides(slideIndex += 1);
+};
+
+/* Функция уменьшяет индекс на 1, показывает предыдущий слайд*/
+function minusSlide() {
+    showSlides(slideIndex -= 1);
+};
+
+/* Устанавливает текущий слайд */
+window.currentSlide = function (n) {
+    showSlides(slideIndex = n);
+};
+
+/* Основная функция сладера */
+function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("slider__track");
+    var dots = document.getElementsByClassName("slider__dots-item");
+    if (n > slides.length) {
+        slideIndex = 1
+    }
+    if (n < 1) {
+        slideIndex = slides.length
+    }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" actives", "");
+    }
+    slides[slideIndex - 1].style.display = "flex";
+    dots[slideIndex - 1].className += " actives";
+};
+
+}();
+// This entry need to be wrapped in an IIFE because it need to be isolated against other entry modules.
+!function() {
+/*!**************************************!*\
+  !*** ./src/assets/js/slider_shop.js ***!
+  \**************************************/
+var slideShopIndex = 1;
+
+window.plusItem = function (plusItem) {
+    showShopItem(slideShopIndex += 1);
+};
+
+window.minusItem = function (minusItem) {
+    showShopItem(slideShopIndex -= 1); // Функция уменьшяет индекс на 1, показывает предыдущий слайд
+};
+
+function currentItem(s) {
+    showShopItem(slideShopIndex = s); // Устанавливает текущий слайд
+};
+
+/* Основная функция слайдера */
+function showShopItem(s) {
+    var element;
+    var shopItem = document.getElementsByClassName("shop__item");
+    var shopBtn = document.getElementsByClassName("slider__carousel-btn");
+    if (s > shopItem.length) {
+        slideShopIndex = 1
+    }
+    if (s < 1) {
+        slideShopIndex = shopItem.length
+    }
+    for (element = 0; element < shopItem.length; element++) {
+        shopItem[element].style.display = "none";
+    }
+    shopItem[slideShopIndex - 1].style.display = "";
+    shopBtn[slideShopIndex - 1];
+};
+
+}();
+// This entry need to be wrapped in an IIFE because it need to be isolated against other entry modules.
+!function() {
+/*!****************************************!*\
+  !*** ./src/assets/js/teamAccardion.js ***!
+  \****************************************/
+
+const team = document.querySelector('.team');
+/* Функция для открытия контента по нажатию на ссылку */
+function openItem(button) {
+    const contentWrap = button.nextElementSibling;
+    const content = contentWrap.firstElementChild;
+    const currentHeight = content.offsetHeight;
+
+    contentWrap.style.height = currentHeight + 'px';
+    button.classList.add('team__name--active', 'has-name--active');
+};
+
+/* Функция для закрытия контента по нажатию на ссылку */
+function closeItem(button) {
+    if (!button) return;
+    const contentWrap = button.nextElementSibling;
+    contentWrap.style.height = 0;
+    button.classList.remove('team__name--active', 'has-name--active');
+};
+
+team.addEventListener('click', function (event) {
+  event.preventDefault(); // запрещаем перекидывать вверх или перезагрузать страницу
+  const target = event.target;
+  const activeItem = document.querySelector('.team__name--active', '.has-name--active');
+
+  if (target.classList.contains('team__name')) {
+    if (target.classList.contains('team__name--active', 'has-name--active')) {
+      closeItem(target);
+    } else {
+      closeItem(activeItem);
+      openItem(target);
+    }
+  }
+});
+
+
+}();
+// This entry need to be wrapped in an IIFE because it need to be isolated against other entry modules.
+!function() {
+/*!**************************************!*\
+  !*** ./src/assets/js/videoPlayer.js ***!
+  \**************************************/
 
 /* Большая кнопка воспроизведения */
 const playBtn = document.querySelector(".video__player-img");
@@ -301,6 +327,14 @@ window.addEventListener('load', () => {
         /* При клике на эти кнопки выполняем функию playStop */
         playButtons[i].addEventListener("click", playStop);
     }
+
+    /* Выставляем минимальное значение ползунка времени воспроизведения */
+    durationControl.min = 0;
+
+    /* Выставляем время воспроизведения в ноль */
+    durationControl.value = 0;
+
+    /*  */
 });
 
 /* Функция воспроизводить/поставить на паузу */
@@ -321,8 +355,8 @@ function playStop() {
         // Ставим видео на паузу
         video.pause();
     }
+};
 
-}
-// Секция видео проигрыватель -конец-
+}();
 
 //# sourceMappingURL=app.js.map
