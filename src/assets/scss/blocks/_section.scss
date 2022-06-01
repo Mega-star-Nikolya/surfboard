@@ -93,10 +93,6 @@
   }
 
   &--map {
-    position: relative;
-    background: url(#{$assetImages}/map/map.jpg) center no-repeat;
-    background-size: cover;
-
     @include tablet {
       // min-height: rem(633px); // Media
     }
