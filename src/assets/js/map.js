@@ -33,7 +33,7 @@ const init = () => {
   myMap.geoObjects.add(myCollection);
 
   // Отключаем возможность прокрутки 
-  // myMap.behaviors.disable('scrollZoom');
+  myMap.behaviors.disable('scrollZoom');
 }
 
 ymaps.ready(init);
