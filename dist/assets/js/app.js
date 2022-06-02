@@ -175,7 +175,9 @@ const init = () => {
     zoom: 15,
   
     // отключаем все ненужные элементы - Пробки
-    controls: []
+    // controls: []
+    controls: ['zoomControl', 'fullscreenControl']
+
   });
 
   // Задаем точки геолокации можно не одну
