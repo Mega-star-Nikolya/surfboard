@@ -11,9 +11,13 @@ let inScroll = false;
 sections.first().addClass("active");
 
 const countSectionPosition = sectionEq => {
-  const position = sectionEq * -11.1111;
+  const position = sectionEq * -11.1111; //sectionEq - номер секции
 
-  if (isNaN(position)) {
+  display.css({
+    transform: `translateY(${position}%)`
+  });
+
+   if (isNaN(position)) {
     console.error("передано не верное значение в countSectionPosition")
     return 0;
   }
@@ -50,11 +54,7 @@ const performTransition = sectionEq => {
   const position = countSectionPosition(sectionEq);
   changeMenuThemeSection(sectionEq);
 
-  display.css({
-    transform: `translateY(${position}%)`
-  });
-
-  resetActiveClassForItem(sections, sectionEq, "active");
+   resetActiveClassForItem(sections, sectionEq, "active");
 
   setTimeout(() => {
     inScroll = false;

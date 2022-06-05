@@ -14,7 +14,28 @@ $("#jsburger").on("click", function (event) {
 // Бургер меню с открытием навигации конец
 
 
+$(function() {
+    var header = $("#jsheader"),
+        introH = $("#jsintro").innerHeight(),
+        scrolloffset = $(window).scrollTop();
 
+
+    /* Fixed Header */
+    checkScroll(scrolloffset);
+
+    $(window).on("scroll", function() {
+        scrolloffset = $(this).scrollTop();
+        checkScroll(scrolloffset);
+    });
+
+    function checkScroll(scrolloffset) {
+        if (scrolloffset >= introH) {
+            header.addClass("fixed")
+        } else {
+            header.removeClass("fixed")
+        }
+    }
+});
 }();
 // This entry need to be wrapped in an IIFE because it need to be isolated against other entry modules.
 !function() {
@@ -223,9 +244,13 @@ let inScroll = false;
 sections.first().addClass("active");
 
 const countSectionPosition = sectionEq => {
-  const position = sectionEq * -11.1111;
+  const position = sectionEq * -11.1111; //sectionEq - номер секции
 
-  if (isNaN(position)) {
+  display.css({
+    transform: `translateY(${position}%)`
+  });
+
+   if (isNaN(position)) {
     console.error("передано не верное значение в countSectionPosition")
     return 0;
   }
@@ -262,11 +287,7 @@ const performTransition = sectionEq => {
   const position = countSectionPosition(sectionEq);
   changeMenuThemeSection(sectionEq);
 
-  display.css({
-    transform: `translateY(${position}%)`
-  });
-
-  resetActiveClassForItem(sections, sectionEq, "active");
+   resetActiveClassForItem(sections, sectionEq, "active");
 
   setTimeout(() => {
     inScroll = false;

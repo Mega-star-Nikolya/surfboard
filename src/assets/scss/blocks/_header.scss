@@ -1,7 +1,9 @@
 .header {
   @include tablet {
+    width: 100%;
     height: rem(91px); // Media
     background-color: $bcheader;
+
   }
 }
 
@@ -17,6 +19,7 @@
     justify-content: space-between;
   }
 }
+
 
 .header__left {
   width: 6%;

@@ -12,7 +12,7 @@
   position: absolute;
   top: rem(45px);
   right: rem(36px);
-  z-index: 1;
+  z-index: 2;
 
   // Media
   @include tablet {
@@ -34,7 +34,7 @@
   background-color: $white;
 
   position: absolute;
-  top: 0px;
+  top: 0;
   right: 0;
   bottom: 0;
   left: 0;
