@@ -10,7 +10,7 @@ sections.first().addClass("active");
 const countSectionPosition = sectionEq => {
   const position = sectionEq * -11.1111;
 
-  if (isNaN(position)) { 
+  if (isNaN(position)) {
     console.error("передано не верное значение в countSectionPosition")
     return 0;
   }
@@ -94,7 +94,7 @@ $(window).on("wheel", e => {
   }
 });
 
-/* Функция что бы в textarea можно было перемещаться с помощью стрелочек и 
+/* Функция что бы в textarea можно было перемещаться с помощью стрелочек и
 при этом не скроллить страницу */
 $(window).on("keydown", e => {
   const tagName = e.target.tagName.toLowerCase();
@@ -123,5 +123,19 @@ $("[data-scroll-to]").click(e => {
   const reqSection = $(`[data-section-id=${target}]`);
 
   performTransition(reqSection.index());
+});
+
+/* Скролл на мобильных устроиствах */
+$("body").swipe( {
+  //Generic swipe handler for all directions
+  swipe: function (event,direction) {
+    const scroller = viewportScroller();
+    let scrollDirection = "";
+
+    if (direction === "up") scrollDirection = "next";
+    if (direction === "down") scrollDirection = "prev";
+
+    scroller[scrollDirection]();
+  }
 });
 
