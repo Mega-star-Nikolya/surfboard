@@ -1,0 +1,42 @@
+.container {
+  width: 100%;
+  max-width: rem(940px);
+  margin: 0 auto;
+
+
+  @include mobileSmall {
+    padding: 0 rem(11px); // Media
+  }
+
+  &--features {
+
+    @include tablet {
+      padding: 0 rem(7px); // Media
+    }
+
+    @include mobile {
+      padding: 0 rem(10px); // Media
+    }
+  }
+
+  &--team {
+    @include tablet {
+      min-height: 60vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+
+  &--reviews {
+
+    @include tablet {
+      padding: 0 rem(22px); // Media
+    }
+
+    @include mobile {
+      padding: 0 rem(15px); // Media
+    }
+  }
+
+}

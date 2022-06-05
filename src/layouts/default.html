@@ -6,13 +6,12 @@
   <body>
     <div class="wrapper">
       <main class="page">
-        <!-- Hero:
-            1)  Задаем задний фон для Header и Main - 3 картинки(слайдер)
-            -->
-        <section class="hero hero__section">
-          <!-- Контейнер:
-            1)  Задаем для контента габаритную рамку
-            -->
+        <!-- 1) section--hero -->
+        <section
+          data-sidemenu-theme="white"
+          data-section-id="hero"
+          class="hero hero__section"
+        >
           <div class="container hero__container">
             <!-- Header:
             1) Logo (div_img) header__left
@@ -32,27 +31,26 @@
             {{> bullet }}
           </div>
         </section>
-        <!-- 1) Section - features title(h2) subtitle(h3) + container -->
+        <!-- 2) section--features -->
         {{> features }}
-        <!-- 2) div-Shop -->
+        <!-- 3) section--shop -->
         {{> shop }}
-        <!-- 3) section- Team title(h2) + container -->
+        <!-- 4) section--team -->
         {{> team }}
-        <!-- 4) div- Slider -->
+        <!-- 5) section--menu menu-slaider -->
         {{> menu }}
-        <!-- 5) section - reviews title(h2) + container -->
+        <!-- 6) section--reviews-->
         {{> reviews }}
-        <!-- 6) section- video title(h2) + container -->
+        <!-- 7) section--video-->
         {{> videoPlayer }}
-        <!-- 7) section- CTA (call to action)  title(h2) -->
+        <!-- 8) section--form-->
         {{> form }}
-        <!-- 8) div- map -->
-        <!-- 9)footer -->
+        <!-- 9) section--map(в него вложенный и footer)  -->
         {{> body }}
       </main>
     </div>
     <!-- Фиксированная навигация -->
-    {{> fixedMenu }}
+    {{> onePageScroll }}
     <!-- Бургер меню -->
     <button class="burger" id="jsburger" type="button">
       <span class="burger__item">Menu</span>

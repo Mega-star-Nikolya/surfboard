@@ -1,7 +1,7 @@
 /* SECTION */
 .section {
   height: 100vh;
-  min-height: rem(652px);
+  min-height: 652px;
   @include flexColumnCentr;
 
   @include tablet {

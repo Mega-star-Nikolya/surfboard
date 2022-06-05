@@ -4,6 +4,18 @@
   right: 3%;
   z-index: 1000;
 
+  &--shadowed {
+    .fixed-menu__item--active {
+      .fixed-menu__link {
+        border-color: $black;
+      }
+    }
+
+    .fixed-menu__link::before {
+      background: $black;
+    }
+  }
+
   @include tablet {
     display: none; // Media
   }
