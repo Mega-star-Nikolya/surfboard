@@ -7,6 +7,18 @@
   }
 }
 
+.fixed-header {
+  @include tablet {
+    width: 100%;
+    height: rem(91px); // Media
+    background-color: $bcheader;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+}
+
 .header__inner {
   @include flexCentr;
   gap: rem(47px);
@@ -32,6 +44,18 @@
   @include mobile {
     padding-left: 2%; // Media
     padding-top: 10%;
+  }
+}
+
+.fixed-header__logo {
+  @include tablet {
+    padding-left: 5%; // Media
+    padding-top: 3%;
+  }
+
+  @include mobile {
+    padding-left: 5%; // Media
+    padding-top: 5%;
   }
 }
 

@@ -73,5 +73,9 @@
     line-height: 1.5; //24px
     color: $white;
     opacity: 0;
+
+    @include tablet {
+      padding-top: rem(110px);
+    }
   }
 }

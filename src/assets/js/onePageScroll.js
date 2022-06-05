@@ -3,6 +3,7 @@ const display = $(".page");
 const sideMenu = $(".fixed-menu");
 const menuItems = sideMenu.find(".fixed-menu__item");
 
+
 // const mobileDetect = new MobileDetect(window.navigator.userAgent);
 // const isMobile = mobileDetect.mobile();
 
@@ -55,7 +56,7 @@ const performTransition = sectionEq => {
   changeMenuThemeSection(sectionEq);
 
    resetActiveClassForItem(sections, sectionEq, "active");
-
+  
   setTimeout(() => {
     inScroll = false;
     resetActiveClassForItem(menuItems, sectionEq, "fixed-menu__item--active");
@@ -126,9 +127,10 @@ $("[data-scroll-to]").click(e => {
   const $this = $(e.currentTarget);
   const target = $this.attr("data-scroll-to");
   const reqSection = $(`[data-section-id=${target}]`);
-
-  performTransition(reqSection.index());
+    performTransition(reqSection.index());
 });
+
+
 
 // if (isMobile) {
 //   /* Скролл на мобильных устроиствах */
@@ -147,3 +149,17 @@ $("[data-scroll-to]").click(e => {
 // };
 
 
+
+// Функция которая возвращает после перезагрузки на начало страницы
+/* History.scrollRestoration -cвойство Historyinterface позволяет веб-приложениям явно устанавливать поведение восстановления прокрутки по умолчанию при навигации по истории. 
+auto
+Местоположение на странице, на которую пользователь прокрутил, будет восстановлено.
+
+manual
+Расположение на странице не восстанавливается. Пользователю придется прокручивать местоположение вручную.*/
+
+history.scrollRestoration = "manual";
+
+$(window).on('beforeunload', function(){
+      $(window).scrollTop(0);
+});

@@ -1,32 +1,23 @@
 // Бургер меню с открытием навигации начало
-$("#jsburger").on("click", function (event) {
-    event.preventDefault(); // запрещаем перекидывать вверх или перезагрузать страницу
-
-    $(this).toggleClass("active");
-    $("#jsnav").toggleClass("active");
-});
+// $("#jsburger").on("click", function (event) {
+//     event.preventDefault(); // запрещаем перекидывать вверх или перезагрузать страницу
+// 
+//     $(this).toggleClass("active");
+//     $("#jsnav").toggleClass("active");
+// });
 // Бургер меню с открытием навигации конец
 
 
-$(function() {
-    var header = $("#jsheader"),
-        introH = $("#jsintro").innerHeight(),
-        scrolloffset = $(window).scrollTop();
-
-
-    /* Fixed Header */
-    checkScroll(scrolloffset);
-
-    $(window).on("scroll", function() {
-        scrolloffset = $(this).scrollTop();
-        checkScroll(scrolloffset);
-    });
-
-    function checkScroll(scrolloffset) {
-        if (scrolloffset >= introH) {
-            header.addClass("fixed")
-        } else {
-            header.removeClass("fixed")
-        }
-    }
+let nav = $("#jsnav");
+let jsburger = $("#jsburger");
+jsburger.on("click", function(event) {
+    event.preventDefault(); // запрещаем перекидывать вверх или перезагрузать страницу
+    jsburger.toggleClass("active"); // при нажатие появляется крестик
+    nav.toggleClass("show"); // при нажатие появляется меню
 });
+
+$("[data-scroll-to]").on("click", function(event) {
+    event.preventDefault();
+        nav.removeClass("show");
+    jsburger.removeClass("active");
+  });

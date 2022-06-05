@@ -5,37 +5,28 @@ var __webpack_exports__ = {};
   !*** ./src/assets/js/app.js ***!
   \******************************/
 // Бургер меню с открытием навигации начало
-$("#jsburger").on("click", function (event) {
-    event.preventDefault(); // запрещаем перекидывать вверх или перезагрузать страницу
-
-    $(this).toggleClass("active");
-    $("#jsnav").toggleClass("active");
-});
+// $("#jsburger").on("click", function (event) {
+//     event.preventDefault(); // запрещаем перекидывать вверх или перезагрузать страницу
+// 
+//     $(this).toggleClass("active");
+//     $("#jsnav").toggleClass("active");
+// });
 // Бургер меню с открытием навигации конец
 
 
-$(function() {
-    var header = $("#jsheader"),
-        introH = $("#jsintro").innerHeight(),
-        scrolloffset = $(window).scrollTop();
-
-
-    /* Fixed Header */
-    checkScroll(scrolloffset);
-
-    $(window).on("scroll", function() {
-        scrolloffset = $(this).scrollTop();
-        checkScroll(scrolloffset);
-    });
-
-    function checkScroll(scrolloffset) {
-        if (scrolloffset >= introH) {
-            header.addClass("fixed")
-        } else {
-            header.removeClass("fixed")
-        }
-    }
+let nav = $("#jsnav");
+let jsburger = $("#jsburger");
+jsburger.on("click", function(event) {
+    event.preventDefault(); // запрещаем перекидывать вверх или перезагрузать страницу
+    jsburger.toggleClass("active"); // при нажатие появляется крестик
+    nav.toggleClass("show"); // при нажатие появляется меню
 });
+
+$("[data-scroll-to]").on("click", function(event) {
+    event.preventDefault();
+        nav.removeClass("show");
+    jsburger.removeClass("active");
+  });
 }();
 // This entry need to be wrapped in an IIFE because it need to be isolated against other entry modules.
 !function() {
@@ -236,6 +227,7 @@ const display = $(".page");
 const sideMenu = $(".fixed-menu");
 const menuItems = sideMenu.find(".fixed-menu__item");
 
+
 // const mobileDetect = new MobileDetect(window.navigator.userAgent);
 // const isMobile = mobileDetect.mobile();
 
@@ -288,7 +280,7 @@ const performTransition = sectionEq => {
   changeMenuThemeSection(sectionEq);
 
    resetActiveClassForItem(sections, sectionEq, "active");
-
+  
   setTimeout(() => {
     inScroll = false;
     resetActiveClassForItem(menuItems, sectionEq, "fixed-menu__item--active");
@@ -359,9 +351,10 @@ $("[data-scroll-to]").click(e => {
   const $this = $(e.currentTarget);
   const target = $this.attr("data-scroll-to");
   const reqSection = $(`[data-section-id=${target}]`);
-
-  performTransition(reqSection.index());
+    performTransition(reqSection.index());
 });
+
+
 
 // if (isMobile) {
 //   /* Скролл на мобильных устроиствах */
@@ -381,6 +374,19 @@ $("[data-scroll-to]").click(e => {
 
 
 
+// Функция которая возвращает после перезагрузки на начало страницы
+/* History.scrollRestoration -cвойство Historyinterface позволяет веб-приложениям явно устанавливать поведение восстановления прокрутки по умолчанию при навигации по истории. 
+auto
+Местоположение на странице, на которую пользователь прокрутил, будет восстановлено.
+
+manual
+Расположение на странице не восстанавливается. Пользователю придется прокручивать местоположение вручную.*/
+
+history.scrollRestoration = "manual";
+
+$(window).on('beforeunload', function(){
+      $(window).scrollTop(0);
+});
 }();
 // This entry need to be wrapped in an IIFE because it need to be isolated against other entry modules.
 !function() {

@@ -5,7 +5,6 @@
   @include flexColumnCentr;
 
   @include mobile {
-    height: 100vh;
     min-height: auto;
   }
 
@@ -182,7 +181,7 @@
 
     @include mobile {
       left: rem(15px);
-      top: rem(30px);
+      top: rem(120px);
     }
   }
 
