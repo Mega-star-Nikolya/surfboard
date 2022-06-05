@@ -384,6 +384,7 @@ body {
   background-color: white;
   color: #666666;
   overflow: hidden;
+  touch-action: none;
 }
 
 *,

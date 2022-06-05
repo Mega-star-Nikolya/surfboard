@@ -215,6 +215,9 @@ const display = $(".page");
 const sideMenu = $(".fixed-menu");
 const menuItems = sideMenu.find(".fixed-menu__item");
 
+// const mobileDetect = new MobileDetect(window.navigator.userAgent);
+// const isMobile = mobileDetect.mobile();
+
 let inScroll = false;
 
 sections.first().addClass("active");
@@ -327,6 +330,8 @@ $(window).on("keydown", e => {
 
 /* Скролл при нажатие по навигации  - в html к секции  навешиваем data-section-id="имя секции", в навигации на ссылки навешиваем data-scroll-to="имя секции" к которой хотим привязять */
 
+$(".wrapper").on("touchmove", e => e.preventDefault());
+
 $("[data-scroll-to]").click(e => {
   e.preventDefault();
 
@@ -337,19 +342,22 @@ $("[data-scroll-to]").click(e => {
   performTransition(reqSection.index());
 });
 
-/* Скролл на мобильных устроиствах */
-$("body").swipe( {
-  //Generic swipe handler for all directions
-  swipe: function (event,direction) {
-    const scroller = viewportScroller();
-    let scrollDirection = "";
+// if (isMobile) {
+//   /* Скролл на мобильных устроиствах */
+// $("body").swipe( {
+//   //Generic swipe handler for all directions
+//   swipe: function (event,direction) {
+//     const scroller = viewportScroller();
+//     let scrollDirection = "";
+//
+//     if (direction === "up") scrollDirection = "next";
+//     if (direction === "down") scrollDirection = "prev";
+//
+//     scroller[scrollDirection]();
+//   }
+// });
+// };
 
-    if (direction === "up") scrollDirection = "next";
-    if (direction === "down") scrollDirection = "prev";
-
-    scroller[scrollDirection]();
-  }
-});
 
 
 }();
