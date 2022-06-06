@@ -8,15 +8,15 @@
 
   // Media
   @include tablet {
-    background: url(#{$assetImages}/main/main_tablet.jpg) center no-repeat;
-    background-position: 100% rem(91px);
+    background-position: 83% rem(91px);
     border: none;
     min-height: auto;
     // min-height: rem(1000px);
   }
 
   @include mobile {
-    background-position: 50% 91px;
+    background: url(#{$assetImages}/main/main_tablet.jpg) center no-repeat;
+    background-position: 50% rem(91px);
   }
 }
 

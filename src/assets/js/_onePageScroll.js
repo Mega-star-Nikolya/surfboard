@@ -3,9 +3,8 @@ const display = $(".page");
 const sideMenu = $(".fixed-menu");
 const menuItems = sideMenu.find(".fixed-menu__item");
 
-
-// const mobileDetect = new MobileDetect(window.navigator.userAgent);
-// const isMobile = mobileDetect.mobile();
+const mobileDetect = new MobileDetect(window.navigator.userAgent);
+const isMobile = mobileDetect.mobile();
 
 let inScroll = false;
 
@@ -18,7 +17,7 @@ const countSectionPosition = sectionEq => {
     transform: `translateY(${position}%)`
   });
 
-   if (isNaN(position)) {
+  if (isNaN(position)) {
     console.error("передано не верное значение в countSectionPosition")
     return 0;
   }
@@ -132,21 +131,26 @@ $("[data-scroll-to]").click(e => {
 
 
 
-// if (isMobile) {
-//   /* Скролл на мобильных устроиствах */
-// $("body").swipe( {
-//   //Generic swipe handler for all directions
-//   swipe: function (event,direction) {
-//     const scroller = viewportScroller();
-//     let scrollDirection = "";
-//
-//     if (direction === "up") scrollDirection = "next";
-//     if (direction === "down") scrollDirection = "prev";
-//
-//     scroller[scrollDirection]();
-//   }
-// });
-// };
+//Универсальный обработчик скролл-тач для всех направлений для мобильных устроиств
+// https://github.com/mattbryson/TouchSwipe-Jquery-Plugin
+
+if (isMobile) {
+  $('body').swipe({
+    swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
+  
+      const scroller = viewportScroller();
+      let scrollDirection = "";
+  
+      if (direction === "up") scrollDirection = "next";
+      if (direction === "down") scrollDirection = "prev";
+  
+      scroller[scrollDirection]();
+    },
+  });
+};
+
+
+
 
 
 

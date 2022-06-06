@@ -59,11 +59,13 @@
     <header class="fixed-header">
       <div class="header__inner">
         <div class="header__left">
-          <img
-            class="header__logo"
-            src="assets/images/header/logo.png"
-            alt="Surfboard logo"
-          />
+          <a href="#" data-scroll-to="hero">
+            <img
+              class="header__logo"
+              src="assets/images/header/logo.png"
+              alt="Surfboard logo"
+            />
+          </a>
         </div>
         <div class="header__center">
           <nav class="nav" id="jsnav">
@@ -119,7 +121,10 @@
     ></script>
 
     <!-- TouchSwipe 1.6 -->
-    <!-- <script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script> -->
+    <script src="https://unpkg.com/jquery-touchswipe@latest/jquery.touchSwipe.min.js"></script>
+
+    <!-- Mobile-detect -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.5/mobile-detect.min.js"></script>
 
     <!-- Яндекс API карта -->
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
