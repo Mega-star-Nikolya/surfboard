@@ -397,7 +397,7 @@ window.addEventListener('load', function() {
     durationControl.value = 0;
 
     /* Выставляем максимальное значение ползунка времени воспроизведения*/
-    durationControl.max = video.duration;
+    durationControl.max = parseInt(video.duration);
 
     /* При кликах или перетягивании ползунка выполняем функцию setVideoDuration */
     durationControl.addEventListener("input", setVideoDuration);
@@ -674,9 +674,13 @@ if (isMobile) {
       const scroller = viewportScroller();
       let scrollDirection = "";
   
-      if (direction === "up") scrollDirection = "next";
+      if (direction === "up") scrollDirection = "next";  
       if (direction === "down") scrollDirection = "prev";
   
+      /*  начинаем свайпить в лево право и возникает ошибка, пишем что есть функция не прописна 
+      прекращаем выполнение функции */
+       if(!scrollDirection) return; 
+
       scroller[scrollDirection]();
     },
   });

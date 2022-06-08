@@ -3,96 +3,17 @@
   height: 100vh;
   min-height: rem(652px);
   @include flexColumnCentr;
+  border: 1px solid #000000;
 
   @include mobile {
     min-height: auto;
   }
 
-  &--features {
-    @include tablet {
-      // Media
-      // min-height: rem(1000px);
-    }
-
-    @include mobile {
-      // min-height: rem(707px); // Media
-    }
-  }
-
-  &--shop {
-    @include tablet {
-      // min-height: rem(816px); // Media
-    }
-
-    @include mobile {
-      // min-height: rem(816px); // Media
-    }
-  }
-
-  &--team {
-    @include tablet {
-      // min-height: rem(1000px);
-    }
-
-    @include mobile {
-      // min-height: rem(756px); // Media
-    }
-  }
-
-  &--menu {
-    @include tablet {
-      // min-height: rem(908px); // Media
-    }
-
-    @include mobile {
-      // min-height: rem(634px); // Media
-
-      img {
-        // height: rem(634px); // Media
-      }
-    }
-  }
-
-  &--reviews {
-    @include tablet {
-      // min-height: rem(976px); // Media
-    }
-
-    @include mobile {
-      margin-top: rem(16px);
-      // min-height: rem(792px); // Media
-    }
-  }
-
-  &--video {
-    @include tablet {
-      // min-height: rem(606px); // Media
-    }
-
-    @include mobile {
-      // min-height: rem(511px); // Media
-    }
-  }
-
   &--form {
-    @include tablet {
-      // min-height: rem(966px); // Media
-    }
-
-    @include mobile {
-      // min-height: rem(766px); // Media
-    }
-
     @include mobileSmall {
       height: 100vh; // Media
       min-height: rem(1100px);
       background-position: 11%;
-    }
-  }
-
-  &--map {
-    @include tablet {
-      // min-height: rem(633px); // Media
     }
   }
 }

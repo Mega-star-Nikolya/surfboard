@@ -141,9 +141,13 @@ if (isMobile) {
       const scroller = viewportScroller();
       let scrollDirection = "";
   
-      if (direction === "up") scrollDirection = "next";
+      if (direction === "up") scrollDirection = "next";  
       if (direction === "down") scrollDirection = "prev";
   
+      /*  начинаем свайпить в лево право и возникает ошибка, пишем что есть функция не прописна 
+      прекращаем выполнение функции */
+       if(!scrollDirection) return; 
+
       scroller[scrollDirection]();
     },
   });

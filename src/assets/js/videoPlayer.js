@@ -47,7 +47,7 @@ window.addEventListener('load', function() {
     durationControl.value = 0;
 
     /* Выставляем максимальное значение ползунка времени воспроизведения*/
-    durationControl.max = video.duration;
+    durationControl.max = parseInt(video.duration);
 
     /* При кликах или перетягивании ползунка выполняем функцию setVideoDuration */
     durationControl.addEventListener("input", setVideoDuration);
